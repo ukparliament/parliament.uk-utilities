@@ -1,4 +1,5 @@
 class SearchController < ApplicationController
+
   def index
     # Setup Parliament Opensearch
     begin
@@ -14,7 +15,7 @@ class SearchController < ApplicationController
 
     # Escape @query_parameter that replaces all 'unsafe' characters with a UTF-8 hexcode which is safer to use when making an OpenSearch request
     @query_parameter = Sanitize.fragment(@query_parameter, Sanitize::Config::RELAXED)
-    @escaped_query_parameter = CGI.escape(@query_parameter)[0, 2048]
+    escaped_query_parameter = CGI.escape(@query_parameter)[0, 2048]
     @start_page = params[:start_page] || Parliament::Request::OpenSearchRequest.open_search_parameters[:start_page]
     @start_page = @start_page.to_i
     @count = Parliament::Request::OpenSearchRequest.open_search_parameters[:count]
@@ -24,8 +25,8 @@ class SearchController < ApplicationController
                                                          builder: Parliament::Builder::OpenSearchResponseBuilder)
 
     begin
-      logger.info "Making a query for '#{@query_parameter}' => '#{@escaped_query_parameter}' using the base_url: '#{request.base_url}'"
-      @results = request.get({ query: @escaped_query_parameter, start_page: @start_page })
+      logger.info "Making a query for '#{@query_parameter}' => '#{escaped_query_parameter}' using the base_url: '#{request.base_url}'"
+      @results = request.get({ query: escaped_query_parameter, start_page: @start_page })
       @results.entries.each { |result| result.summary.gsub!(/<br>/, '') if result.summary }
 
       @results_total = @results.totalResults

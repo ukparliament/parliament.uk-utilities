@@ -19,6 +19,11 @@ require 'pugin'
 
 module ParliamentUkUtilities
   class Application < Rails::Application
+    # Rewrite trailing slashes
+    config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+      r301 %r{^/(.*)/$}, '/$1'
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
