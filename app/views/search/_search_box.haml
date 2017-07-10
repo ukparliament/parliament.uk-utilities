@@ -1,0 +1,5 @@
+%form
+  .form-group
+    %label{ for: 'search_box' }
+    %input{ type: 'text', name: 'q', placeholder: 'Enter a keyword', value: @query_parameter, id: 'search_box', maxlength: '1000', pattern: '^(?!.*<script|<Script).*$'}
+    %button{ class: 'btn--secondary', type: 'submit', value: 'Search' } Search

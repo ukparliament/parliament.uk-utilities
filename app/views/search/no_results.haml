@@ -1,0 +1,13 @@
+- content_for :title do
+  No Results - Search
+
+.section--primary
+  .container
+    %h1 Search
+
+    = render partial: 'search_box'
+
+%section#content
+  .container
+    .highlight--box.highlight--caution__soft
+      %p= "There are no results for your search."

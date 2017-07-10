@@ -1,0 +1,44 @@
+- content_for :title do
+  #{@query_parameter} - Search
+
+.section--primary
+  .container
+    %h1
+      Search results for
+      %span.sr-only &ldquo;#{@query_parameter}&rdquo;
+
+    = render partial: 'search_box'
+
+    %p= "About #{@results_total} results"
+
+- if @results_total.to_i >= 1
+  %section#content
+    .container
+      %ol.list--box
+        - @results.entries.each do |entry|
+          %li{ style: 'word-wrap: break-word;' }
+            %h2
+              %a{ href: "#{entry.url}" }= entry.title
+            %p= entry.url
+            %p= entry.summary
+
+%section
+  .container
+    - if @results_total.to_i >= 1
+      %nav.navigation--number{ aria:{ label: 'Pagination' } }
+        - unless current_page == 1
+          %a.navigation-control--left{ href: "/search?q=#{@query_parameter}&start_page=#{start_page(previous_page)}" } Previous
+
+        - unless current_page == last_page
+          %a.navigation-control--right{ href: "/search?q=#{@query_parameter}&start_page=#{start_page(next_page)}" } Next
+
+        %ol
+          - page_range.each do |page|
+            %li{ class: ('active' if (page == current_page)), 'data-number': page }
+              - unless page == current_page
+                %a{ href: "/search?q=#{@query_parameter}&start_page=#{start_page(page)}" }= page
+              - else
+                %span= current_page
+    - else
+      .highlight--box.highlight--caution__soft
+        %p= 'There are no results for your search.'
