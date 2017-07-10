@@ -16,7 +16,7 @@ gem 'haml'
 gem 'parliament-ruby', '~> 0.7'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.2'
+gem 'parliament-opensearch', '~> 0.2', require: false
 
 # Use bandiera-client for feature flagging
 gem 'bandiera-client'
@@ -27,8 +27,8 @@ gem 'pugin', '~> 0.8'
 # Use dotenv to override environment variables
 gem 'dotenv'
 
-# # Use sanitize to prevent cross site scripting
-# gem 'sanitize'
+# Use sanitize to prevent cross site scripting
+gem 'sanitize'
 
 # Use Airbrake for error monitoring
 gem 'airbrake'

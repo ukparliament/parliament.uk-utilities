@@ -18,9 +18,9 @@
         - @results.entries.each do |entry|
           %li{ style: 'word-wrap: break-word;' }
             %h2
-              %a{ href: "#{entry.url}" }= entry.title
-            %p= entry.url
-            %p= entry.summary
+              %a{ href: "#{entry.url}" }= entry.title.html_safe
+            %p= entry.url.html_safe
+            %p= entry.summary.html_safe
 
 %section
   .container
