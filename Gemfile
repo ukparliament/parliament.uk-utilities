@@ -5,6 +5,7 @@ gem 'rails', '~> 5.1.2'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+gem 'rack-timeout'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -17,6 +18,12 @@ gem 'parliament-ruby', '~> 0.7'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
 gem 'parliament-opensearch', '~> 0.2', require: false
+
+# Parliament Grom Decorators decorates Grom nodes
+gem 'parliament-grom-decorators', '~> 0.2'
+
+# Parliament NTriple processes N-triple data
+gem 'parliament-ntriple', '~> 0.1', require: false
 
 # Use bandiera-client for feature flagging
 gem 'bandiera-client'

@@ -40,10 +40,6 @@ RSpec.describe SearchController, vcr: true do
 
         it 'assigns @results' do
           expect(assigns(:results)).to be_a(Feedjira::Parser::Atom)
-          #
-          # expect(assigns(:results)).to include('Trade dispute between the EU and the USA over <b>bananas</b>')
-          # expect(assigns(:results)).to include('http://researchbriefings.files.parliament.uk/documents/RP99-28/RP99-28.pdf')
-          # expect(assigns(:results)).to include('Mar 12, 1999')
         end
 
         it 'renders the results template' do
@@ -90,7 +86,10 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'should strip <br> tag' do
-          expect(response.body).not_to include('<br>')
+          assigns(:results).entries.each do |entry|
+            expect(entry.summary).not_to include('<br>')
+            expect(entry.title).not_to include('<br>')
+          end
         end
       end
 
@@ -100,11 +99,11 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'should prevent xss on search' do
-          expect(response.body).not_to include('<script>alert(document.cookie)</script>')
+          expect(assigns(:query_parameter)).not_to eq('<script>alert(document.cookie)</script>')
         end
 
         it 'should sanitize the search term' do
-          expect(response.body).to include('alert(document.cookie)')
+          expect(assigns(:query_parameter)).to eq('alert(document.cookie)')
         end
       end
     end
