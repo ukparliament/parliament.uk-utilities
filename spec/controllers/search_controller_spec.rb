@@ -99,11 +99,11 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'should prevent xss on search' do
-          expect(assigns(:query_parameter)).not_to eq('<script>alert(document.cookie)</script>')
+          expect(response.body).not_to include('<script>alert(document.cookie)</script>')
         end
 
         it 'should sanitize the search term' do
-          expect(assigns(:query_parameter)).to eq('alert(document.cookie)')
+          expect(response.body).to include('alert(document.cookie)')
         end
       end
     end

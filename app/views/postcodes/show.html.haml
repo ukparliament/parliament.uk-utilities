@@ -1,0 +1,18 @@
+#content.section--primary
+  .container
+    %h1
+      %span= title("#{t('.results_for')} #{@postcode.upcase}")
+    .inner-container--focus
+      %h2= link_to(@constituency.name, constituency_path(@constituency.graph_id))
+
+    - if @person.empty?
+      - if FlagHelper.post_election?
+        = render partial: 'shared/election_message'
+      - else
+        .highlight--box.highlight--caution__soft
+          %p
+            = t('no_content.empty_list.no_mp')
+    - else
+      = render partial: "pugin/elements/list", locals: {item_type: "people", data: @person}
+    %p
+      = link_to(t('.check_different_postcode').capitalize, postcodes_path)

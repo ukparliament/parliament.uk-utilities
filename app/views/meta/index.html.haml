@@ -1,0 +1,12 @@
+- page_title = title(t('.title'))
+
+#content.section--primary
+  .container
+    %h1= page_title
+
+%section
+  .container
+    %ul.list--box
+      - @meta_routes.each do |route|
+        %li
+          %h2= link_to(t("meta.#{route[:translation].underscore}.title"), route[:url])
