@@ -106,6 +106,16 @@ RSpec.describe SearchController, vcr: true do
           expect(response.body).to include('alert(document.cookie)')
         end
       end
+
+      context 'setting up Parliament Opensearch with a connection refused error' do
+        before(:each) do
+          allow(Parliament::Request::OpenSearchRequest).to receive(:description_url=).and_raise(Errno::ECONNREFUSED)
+        end
+
+        it 'should raise an error' do
+          expect { get :index }.to raise_error(StandardError)
+        end
+      end
     end
   end
 end
