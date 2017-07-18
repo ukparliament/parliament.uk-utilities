@@ -22,6 +22,9 @@ gem 'parliament-opensearch', '~> 0.2', require: false
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '~> 0.2'
 
+# Parliament routing
+gem 'parliament-routes', '~> 0.1'
+
 # Parliament NTriple processes N-triple data
 gem 'parliament-ntriple', '~> 0.1', require: false
 
@@ -49,6 +52,10 @@ gem 'tzinfo-data'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Use parallel_tests to run specs across all CPU cores locally
+  gem 'parallel_tests'
+
 end
 
 group :development do
