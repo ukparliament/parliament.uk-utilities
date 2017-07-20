@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   before_action :data_check, :build_request, only: :mps
 
   ROUTE_MAP = {
-      mps: proc { ParliamentHelper.parliament_request.people.mps }
+      mps: proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.people.mps }
   }.freeze
 
   def index; end
@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     enable_top_navigation
     enable_status_banner
 
-    @parliaments, @parties, @speaker = RequestHelper.filter_response_data(
+    @parliaments, @parties, @speaker = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
         @request,
         'http://id.ukpds.org/schema/ParliamentPeriod',
         'http://id.ukpds.org/schema/Party',
