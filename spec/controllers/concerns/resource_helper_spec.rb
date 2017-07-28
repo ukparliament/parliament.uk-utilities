@@ -46,7 +46,7 @@ RSpec.describe ResourceHelper, vcr: true do
 
     before(:each) do
       resource_uri = "http://id.ukpds.org/sYpq0s7D"
-      @results = ParliamentHelper.parliament_request.resources.get(params: { uri: resource_uri })
+      @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resources.get(params: { uri: resource_uri })
     end
 
     it 'produces an array of single statements' do
@@ -61,7 +61,7 @@ RSpec.describe ResourceHelper, vcr: true do
 
     before(:each) do
       resource_uri = "http://id.ukpds.org/sYpq0s7D"
-      @results = ParliamentHelper.parliament_request.resources.get(params: { uri: resource_uri })
+      @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resources.get(params: { uri: resource_uri })
     end
 
     it 'produces an array of types' do

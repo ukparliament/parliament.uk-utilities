@@ -6,7 +6,7 @@
       %h2= link_to(@constituency.name, constituency_path(@constituency.graph_id))
 
     - if @person.empty?
-      - if FlagHelper.post_election?
+      - if Parliament::Utils::Helpers::FlagHelper.post_election?
         = render partial: 'shared/election_message'
       - else
         .highlight--box.highlight--caution__soft

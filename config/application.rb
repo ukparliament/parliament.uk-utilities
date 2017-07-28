@@ -18,6 +18,7 @@ Bundler.require(*Rails.groups)
 
 require 'parliament/engine'
 require 'pugin'
+require 'parliament/utils'
 
 module MembersPrototype
   class Application < Rails::Application
