@@ -69,17 +69,6 @@ RSpec.describe SearchController, vcr: true do
         end
       end
 
-      context 'very long query' do
-        before(:each) do
-          get :index, params: { q: File.read('spec/fixtures/strings/long_search_string') }
-        end
-
-        it 'should cut query to maximum 2048 characters' do
-          expect(WebMock).to have_requested(:get, "https://apidataparliament.azure-api.net/search?pagesize=10&q=#{File.read('spec/fixtures/strings/escaped_parameter_string')}&start=1")
-                                 .with(headers: {'Accept'=>['*/*', 'application/atom+xml'], 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Ocp-Apim-Subscription-Key'=>ENV['OPENSEARCH_AUTH_TOKEN'], 'User-Agent'=>'Ruby'}).once
-        end
-      end
-
       context '<br> tag in search results' do
         before(:each) do
           get :index, params: { q: 'banana' }

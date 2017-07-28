@@ -16,6 +16,7 @@ require 'rack/rewrite'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+require 'parliament/engine'
 require 'pugin'
 
 module MembersPrototype
