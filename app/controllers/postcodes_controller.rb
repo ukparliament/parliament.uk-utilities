@@ -5,7 +5,7 @@ class PostcodesController < ApplicationController
   before_action :data_check, :build_request, only: :show
 
   ROUTE_MAP = {
-    show: proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.postcode_lookup(params[:postcode]) }
+    show: proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_lookup_by_postcode.set_url_params({ postcode: params[:postcode] }) }
   }.freeze
 
   def index; end

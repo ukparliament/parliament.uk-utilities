@@ -1,4 +1,4 @@
-require 'rails_helper.rb'
+require 'rails_helper'
 
 RSpec.describe 'trailing slashes', vcr: true, :type => :feature do
   it 'removes trailing slashes from url' do
