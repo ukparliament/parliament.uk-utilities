@@ -7,7 +7,7 @@ class ResourceController < ApplicationController
   end
 
   def show
-    @results = parliament_request.resources.get(params: { uri: @resource_uri })
+    @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resources.get(params: { uri: @resource_uri })
 
     types = ResourceHelper.store_types(@results)
     path = ResourceHelper.check_acceptable_object_type(types)

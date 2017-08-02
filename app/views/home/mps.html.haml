@@ -2,11 +2,11 @@
   .container
     %h1= title(t('mp_plural'))
 
-- if FlagHelper.dissolution?
+- if Parliament::Utils::Helpers::FlagHelper.dissolution?
   %section
     .container
       = render partial: 'shared/dissolution_message'
-- elsif FlagHelper.election?
+- elsif Parliament::Utils::Helpers::FlagHelper.election?
   %section
     .container
       = render partial: 'shared/election_message'
@@ -21,7 +21,7 @@
         %ol.list--box
           %li
             .list--details
-              %h2= link_to t('.a_z_surname'), house_members_current_a_z_letter_path(HousesHelper.commons_id, 'a')
+              %h2= link_to t('.a_z_surname'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id, 'a')
               %p= "#{t('view_all').capitalize} #{t('mp_plural')}."
   %section
     .container
@@ -33,7 +33,7 @@
             - unless party.name == "Speaker" # Exclude speaker from list
               %li
                 .list--details
-                  %h3= link_to(party.name, house_parties_party_members_current_a_z_letter_path(HousesHelper.commons_id,party.graph_id, 'a'))
+                  %h3= link_to(party.name, house_parties_party_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id,party.graph_id, 'a'))
                   %p= "- #{party.member_count} #{t('mp_count', count: party.member_count)}"
         %p= t('.speaker_clarification', speaker_link: link_to(t('.the_speaker'), person_path(@speaker.first.graph_id))).html_safe
 
