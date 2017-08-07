@@ -34,13 +34,13 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=805c2491375cb99688705ea9b53fd3699437dea86054c9e040cc24406d1ad374;Path=/;HttpOnly;Domain=search201706210753.azurewebsites.net
+      - ARRAffinity=620d224054e8c23062aad9205829834fffbb21071ba6849e6c752df7b91274a3;Path=/;HttpOnly;Domain=search201706210753.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Fri, 28 Jul 2017 10:26:38 GMT
+      - Mon, 07 Aug 2017 12:41:33 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
@@ -53,7 +53,7 @@ http_interactions:
         type=\"text/xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Fri, 28 Jul 2017 10:26:41 GMT
+  recorded_at: Mon, 07 Aug 2017 12:45:20 GMT
 - request:
     method: get
     uri: https://apidataparliament.azure-api.net/search?pagesize=10&q=banana&start=1
@@ -80,7 +80,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '2269'
+      - '2271'
       Content-Type:
       - application/atom+xml
       Expires:
@@ -90,88 +90,88 @@ http_interactions:
       Request-Context:
       - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=805c2491375cb99688705ea9b53fd3699437dea86054c9e040cc24406d1ad374;Path=/;HttpOnly;Domain=search201706210753.azurewebsites.net
+      - ARRAffinity=620d224054e8c23062aad9205829834fffbb21071ba6849e6c752df7b91274a3;Path=/;HttpOnly;Domain=search201706210753.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Fri, 28 Jul 2017 10:26:38 GMT
+      - Mon, 07 Aug 2017 12:41:33 GMT
     body:
       encoding: ASCII-8BIT
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?><feed xmlns=\"http://www.w3.org/2005/Atom\"><title
-        type=\"text\"></title><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=124</id><updated>2017-07-28T10:26:39Z</updated><author><name>parliament.uk</name></author><Query
-        role=\"request\" searchTerms=\"banana\" totalResults=\"19900\" count=\"10\"
+        type=\"text\"></title><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=212</id><updated>2017-08-07T12:41:35Z</updated><author><name>parliament.uk</name></author><Query
+        role=\"request\" searchTerms=\"banana\" totalResults=\"19500\" count=\"10\"
         startIndex=\"1\" xmlns=\"http://a9.com/-/spec/opensearch/1.1/\" /><totalResults
-        xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">19900</totalResults><startIndex
-        xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">1</startIndex><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=125</id><title
+        xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">19500</totalResults><startIndex
+        xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">1</startIndex><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=213</id><title
         type=\"html\">EU: Trade Agreement on &lt;b&gt;Banana&lt;/b&gt; Imports - Hansard
         Online</title><summary type=\"html\">Feb 7, 2012 &lt;b&gt;...&lt;/b&gt; Most
         &lt;b&gt;bananas&lt;/b&gt; carry a country-of-origin label and you know whether
         you are &lt;br&gt;\r\nbuying Colombian, Costa Rican or Ecuadorian &lt;b&gt;bananas&lt;/b&gt;.
-        But fair&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        But fair&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"https://hansard.parliament.uk/Lords/2012-02-07/debates/12020792000204/EUTradeAgreementOnBananaImports\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=126</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=214</id><title
         type=\"html\">Trade dispute between the EU and the US over &lt;b&gt;bananas&lt;/b&gt;</title><summary
         type=\"html\">Mar 12, 1999 &lt;b&gt;...&lt;/b&gt; describes why the EU import
         regime for &lt;b&gt;bananas&lt;/b&gt; arose, ... The EU &lt;b&gt;banana&lt;/b&gt;
         &lt;br&gt;\r\nregime is an attempt to combine obligations to former colonies
-        with&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link rel=\"alternate\"
+        with&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link rel=\"alternate\"
         type=\"application/pdf\" href=\"http://researchbriefings.files.parliament.uk/documents/RP99-28/RP99-28.pdf\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=127</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=215</id><title
         type=\"html\">House of Lords - European Communities - Second Report</title><summary
         type=\"html\">The letter explained why the then Government, while arguing
         for liberalisation of &lt;br&gt;\r\nthe CAP, nevertheless supported protectionist
-        measures for &lt;b&gt;bananas&lt;/b&gt; imported&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        measures for &lt;b&gt;bananas&lt;/b&gt; imported&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"http://www.publications.parliament.uk/pa/ld199900/ldselect/ldeucom/21/2118.htm\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=128</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=216</id><title
         type=\"html\">44 The EU and &lt;b&gt;banana&lt;/b&gt; producers</title><summary
         type=\"html\">Sep 22, 2010 &lt;b&gt;...&lt;/b&gt; Draft Council Decision on
         the signature and provisional application of a Geneva &lt;br&gt;\r\nAgreement
-        on Trade in &lt;b&gt;Bananas&lt;/b&gt; between the European Union&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        on Trade in &lt;b&gt;Bananas&lt;/b&gt; between the European Union&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"https://www.publications.parliament.uk/pa/cm201011/cmselect/cmeuleg/428/428i46.htm\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=129</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=217</id><title
         type=\"html\">Allow bendy &lt;b&gt;bananas&lt;/b&gt; and wonky carrots to
         be sold same as straight ...</title><summary type=\"html\">Jun 24, 2016 &lt;b&gt;...&lt;/b&gt;
         Commission Regulation (EC) No. 2257/94 of 16 September 1994 laying down &lt;br&gt;\r\nquality
-        standards for &lt;b&gt;bananas&lt;/b&gt;, also known informally as bendy&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        standards for &lt;b&gt;bananas&lt;/b&gt;, also known informally as bendy&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"https://petition.parliament.uk/petitions/133639\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=130</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=218</id><title
         type=\"html\">House of Commons - International Development - Minutes of Evidence</title><summary
         type=\"html\">Since its inception, Chiquita has dominated &lt;b&gt;banana&lt;/b&gt;
         production in Central &lt;br&gt;\r\nAmerica and &lt;b&gt;banana&lt;/b&gt;
-        marketing in the United States, European and latterly Japan&lt;br&gt;\r\n.</summary><updated>2017-07-28T10:26:39Z</updated><link
+        marketing in the United States, European and latterly Japan&lt;br&gt;\r\n.</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"https://www.publications.parliament.uk/pa/cm199798/cmselect/cmintdev/365/8020305.htm\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=131</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=219</id><title
         type=\"html\">&lt;b&gt;Bananas&lt;/b&gt;</title><summary type=\"html\">Mar
         25, 1998 &lt;b&gt;...&lt;/b&gt; The EU &lt;b&gt;banana&lt;/b&gt; regime, agreed
         in principle under the previous United Kingdom &lt;br&gt;\r\npresidency in
-        1992, replaced our national arrangements, and&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        1992, replaced our national arrangements, and&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"http://www.publications.parliament.uk/pa/cm199798/cmstand/euroa/st980325/80325s01.htm\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=132</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=220</id><title
         type=\"html\">Make The &lt;b&gt;Banana&lt;/b&gt; Splits compulsary Saturday
         Mornng Television ...</title><summary type=\"html\">Petition Make The &lt;b&gt;Banana&lt;/b&gt;
         Splits compulsary Saturday Mornng Television. Re-&lt;br&gt;\r\nintroduce decent
-        kids television - Size of an Elephant! This petition has been&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        kids television - Size of an Elephant! This petition has been&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"https://petition.parliament.uk/petitions/14327\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=133</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=221</id><title
         type=\"html\">43 The EU and ACP &lt;b&gt;banana&lt;/b&gt; producers</title><summary
         type=\"html\">Sep 22, 2010 &lt;b&gt;...&lt;/b&gt; Commission Communication:
         Biennial Report on the Special Framework of &lt;br&gt;\r\nAssistance for Traditional
-        ACP Suppliers of &lt;b&gt;Bananas&lt;/b&gt;. Commission&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        ACP Suppliers of &lt;b&gt;Bananas&lt;/b&gt;. Commission&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"http://www.publications.parliament.uk/pa/cm201011/cmselect/cmeuleg/428/428i45.htm\"
-        /></entry><entry><id>uuid:30727062-4233-46c1-bb7e-e36d87a693cb;id=134</id><title
+        /></entry><entry><id>uuid:30d580ba-fdf9-4c93-9409-be1769dc7863;id=222</id><title
         type=\"html\">&lt;b&gt;Banana&lt;/b&gt; Imports</title><summary type=\"html\">Apr
         4, 2000 &lt;b&gt;...&lt;/b&gt; The House has shown considerable interest in
         the future of the European Union &lt;br&gt;\r\n&lt;b&gt;banana&lt;/b&gt; regime.
-        Indeed, it was debated in this Committee two&amp;nbsp;...</summary><updated>2017-07-28T10:26:39Z</updated><link
+        Indeed, it was debated in this Committee two&amp;nbsp;...</summary><updated>2017-08-07T12:41:35Z</updated><link
         rel=\"alternate\" href=\"http://www.publications.parliament.uk/pa/cm199900/cmstand/euroa/st000404/00404s01.htm\"
         /></entry></feed>"
     http_version: 
-  recorded_at: Fri, 28 Jul 2017 10:26:41 GMT
+  recorded_at: Mon, 07 Aug 2017 12:45:21 GMT
 - request:
     method: get
-    uri: http://localhost:3030/houses
+    uri: http://localhost:3030/house_index
     body:
       encoding: US-ASCII
       string: ''
@@ -191,25 +191,25 @@ http_interactions:
       message: OK
     headers:
       Cache-Control:
-      - public, must-revalidate, max-age=1446
+      - public, must-revalidate, max-age=1616
       Content-Length:
       - '420'
       Content-Type:
       - application/n-triples
       Expires:
-      - Fri, 28 Jul 2017 10:50:45 GMT
+      - Mon, 07 Aug 2017 13:08:30 GMT
       Last-Modified:
-      - Fri, 28 Jul 2017 10:20:45 GMT
+      - Mon, 07 Aug 2017 12:38:30 GMT
       Vary:
       - Accept,Accept-Charset
       Set-Cookie:
-      - ARRAffinity=805c2491375cb99688705ea9b53fd3699437dea86054c9e040cc24406d1ad374;Path=/;HttpOnly;Domain=fixedquery201706210753.azurewebsites.net
+      - ARRAffinity=620d224054e8c23062aad9205829834fffbb21071ba6849e6c752df7b91274a3;Path=/;HttpOnly;Domain=fixedquery201706210753.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Fri, 28 Jul 2017 10:26:38 GMT
+      - Mon, 07 Aug 2017 12:41:33 GMT
     body:
       encoding: UTF-8
       string: "<http://id.ukpds.org/Kz7ncmrt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
@@ -218,5 +218,5 @@ http_interactions:
         <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/MvLURLV5> <http://id.ukpds.org/schema/houseName>
         \"houseName - 2\" .\r\n"
     http_version: 
-  recorded_at: Fri, 28 Jul 2017 10:26:41 GMT
+  recorded_at: Mon, 07 Aug 2017 12:45:21 GMT
 recorded_with: VCR 3.0.3
