@@ -10,7 +10,7 @@
   .container
     %h2= t('.whats_on.title')
     %h3= t('.members_info.title')
-    %ol.list--box
+    %ol.list--block
       %li
         .list--details
           %h4= link_to t('mp_plural'), mps_path
@@ -31,7 +31,7 @@
       %p= t('.latest_members.blog', link: link_to(t('.latest_members.blog_link'), 'https://pds.blog.parliament.uk/2017/03/27/uk-parliament-website-public-beta/')).html_safe
 
     %h3= t('search').capitalize
-    %ol.list--box
+    %ol.list--block
       %li
         .list--details
           %h4= link_to t('search').capitalize, '/search'
