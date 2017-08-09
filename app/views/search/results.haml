@@ -16,11 +16,11 @@
     .container
       %ol.list--block
         - @results.entries.each do |entry|
-          %li{ style: 'word-wrap: break-word;' }
-            %h2
-              %a{ href: "#{entry.url}" }= entry.title.html_safe
-            %p= entry.url.html_safe
-            %p= entry.summary.html_safe
+          %li
+            .list--details
+              %h2
+                %a{ href: "#{entry.url}" }= entry.title.html_safe
+              %p= entry.summary.html_safe
 
 %section
   .container
@@ -40,5 +40,5 @@
               - else
                 %span= current_page
     - else
-      .highlight--box.highlight--caution__soft
+      .status--highlight.theme--caution
         %p= 'There are no results for your search.'
