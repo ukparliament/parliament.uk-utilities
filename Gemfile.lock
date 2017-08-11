@@ -162,7 +162,7 @@ GEM
       ast (~> 2.2)
     powerpack (0.1.1)
     public_suffix (2.0.5)
-    pugin (1.0.0.pre)
+    pugin (1.0.1)
     puma (3.9.1)
     rack (2.0.3)
     rack-rewrite (1.5.1)
@@ -318,7 +318,7 @@ DEPENDENCIES
   parliament-routes (~> 0.1)
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.2)
-  pugin (= 1.0.0.pre)
+  pugin (~> 1.0)
   puma (~> 3.7)
   rack-rewrite
   rack-timeout
@@ -338,4 +338,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.15.2
+   1.15.3
