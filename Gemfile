@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.1.2'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', :git => "https://github.com/puma/puma.git", :branch => 'master'
 gem 'rack-timeout'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -51,6 +51,10 @@ gem 'rack-rewrite'
 
 # Include time zone information
 gem 'tzinfo-data'
+
+if %w(2.2.7 2.3.4 2.4.1).include? RUBY_VERSION
+  gem "stopgap_13632", "~> 1.0", :platforms => ["mri", "mingw", "x64_mingw"]
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
