@@ -319,7 +319,7 @@ DEPENDENCIES
   parliament-grom-decorators (~> 0.2)
   parliament-ntriple (~> 0.1)
   parliament-opensearch (~> 0.2)
-  parliament-routes (~> 0.1)
+  parliament-routes (~> 0.2)
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.2)
   pugin (~> 1.0)

@@ -47,6 +47,21 @@ RSpec.describe HomeController, vcr: true do
     end
   end
 
+  describe 'GET find-your-constituency' do
+    before(:each) do
+      get :find_your_constituency
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'should render mps page' do
+      expect(response).to render_template('find_your_constituency')
+    end
+  end
+
+
   describe '#data_check' do
     context 'data available' do
       before(:each) do

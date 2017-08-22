@@ -21,4 +21,10 @@ class HomeController < ApplicationController
 
     @parties = @parties.multi_direction_sort({ member_count: :desc, name: :asc })
   end
+
+  def find_your_constituency
+    enable_top_navigation
+    enable_status_banner
+  end
+
 end

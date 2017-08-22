@@ -54,6 +54,11 @@ en:
   # global parliaments translations
   parliament: 'parliament'
   parliament_plural: 'parliaments'
+  # global places translations
+  place: 'place'
+  place_plural: 'places'
+  region: 'region'
+  region_plural: 'regions'
   # global generic translations
   view_all: 'view all'
   all: 'all'
@@ -371,6 +376,9 @@ en:
       find_mp_date_range: 'Find a former MP by date range'
       speaker_link: 'The Speaker'
       speaker_clarification: '%{speaker_link} is not a member of a party.'
+    find_your_constituency:
+      find_constituency: 'Find your constituency'
+      find_by_region: 'Find a constituency by region.'
   # meta information translations
   meta:
     index:
