@@ -48,4 +48,19 @@ RSpec.describe MetaController, vcr: true do
       expect(response).to render_template('cookie_policy')
     end
   end
+
+  describe 'GET "who should i contact with my issue?"' do
+    before(:each) do
+      get :who_should_i_contact_with_my_issue
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'renders the cookie_policy template' do
+      expect(response).to render_template('who_should_i_contact_with_my_issue')
+    end
+  end
+
 end

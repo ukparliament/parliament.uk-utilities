@@ -1,0 +1,164 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/find_your_constituency
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public, must-revalidate, max-age=1606
+      Content-Length:
+      - '6265'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Thu, 24 Aug 2017 14:08:46 GMT
+      Last-Modified:
+      - Thu, 24 Aug 2017 13:38:46 GMT
+      Vary:
+      - Accept,Accept-Charset
+      Set-Cookie:
+      - ARRAffinity=2bc84f7540cae9fa0e13ee9b377da85ae072e0086c414b5b16e61e8788fd31c6;Path=/;HttpOnly;Domain=fixedquery201706210753.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 24 Aug 2017 13:41:59 GMT
+    body:
+      encoding: UTF-8
+      string: "<http://data.ordnancesurvey.co.uk/id/7000000000041430> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion> .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041430>
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode> \"gssCode - 1\"
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041430> <http://id.ukpds.org/schema/count>
+        \"54\"^^<http://www.w3.org/2001/XMLSchema#integer> .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041430>
+        <http://www.w3.org/2004/02/skos/core#prefLabel> \"core#prefLabel - 1\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041424>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041424> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 2\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041424>
+        <http://id.ukpds.org/schema/count> \"40\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041424> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 2\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041429>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041429> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 3\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041429>
+        <http://id.ukpds.org/schema/count> \"41\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041429> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 3\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041422>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041422> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 4\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041422>
+        <http://id.ukpds.org/schema/count> \"29\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041422> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 4\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041427>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041427> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 5\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041427>
+        <http://id.ukpds.org/schema/count> \"55\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041427> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 5\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041431>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041431> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 6\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041431>
+        <http://id.ukpds.org/schema/count> \"75\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041431> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 6\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041425>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041425> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 7\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041425>
+        <http://id.ukpds.org/schema/count> \"58\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041425> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 7\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041423>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041423> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 8\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041423>
+        <http://id.ukpds.org/schema/count> \"46\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041423> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 8\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041428>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041428> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 9\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041428>
+        <http://id.ukpds.org/schema/count> \"72\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041428> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 9\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041421>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041421> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 10\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041421>
+        <http://id.ukpds.org/schema/count> \"84\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041421> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 10\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041426>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041426> <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+        \"gssCode - 11\" .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041426>
+        <http://id.ukpds.org/schema/count> \"59\"^^<http://www.w3.org/2001/XMLSchema#integer>
+        .\r\n<http://data.ordnancesurvey.co.uk/id/7000000000041426> <http://www.w3.org/2004/02/skos/core#prefLabel>
+        \"core#prefLabel - 11\" .\r\n"
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 13:42:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/house_index
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public, must-revalidate, max-age=988
+      Content-Length:
+      - '420'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Thu, 24 Aug 2017 13:58:28 GMT
+      Last-Modified:
+      - Thu, 24 Aug 2017 13:28:28 GMT
+      Vary:
+      - Accept,Accept-Charset
+      Set-Cookie:
+      - ARRAffinity=2bc84f7540cae9fa0e13ee9b377da85ae072e0086c414b5b16e61e8788fd31c6;Path=/;HttpOnly;Domain=fixedquery201706210753.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 24 Aug 2017 13:41:59 GMT
+    body:
+      encoding: UTF-8
+      string: "<http://id.ukpds.org/Kz7ncmrt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/Kz7ncmrt> <http://id.ukpds.org/schema/houseName>
+        \"houseName - 1\" .\r\n<http://id.ukpds.org/MvLURLV5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/MvLURLV5> <http://id.ukpds.org/schema/houseName>
+        \"houseName - 2\" .\r\n"
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 13:42:21 GMT
+recorded_with: VCR 3.0.3

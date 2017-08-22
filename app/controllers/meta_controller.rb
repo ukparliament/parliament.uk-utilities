@@ -19,4 +19,8 @@ class MetaController < ApplicationController
   def cookie_policy
     render 'cookie_policy'
   end
+
+  def who_should_i_contact_with_my_issue
+    enable_top_navigation
+  end
 end

@@ -25,10 +25,10 @@
       %h2= t('region_plural').capitalize
       %p= t('.find_by_region')
       %ul.list--block__inline-50
-        - @regions.each do |party|
+        - @regions.each do |region|
           %li
             .list--details
-              %h3= link_to "#{@region.name}", place_show_constituencies_path(@region.id)
-              %p= "#{@region.constituency_count} #{t('constituency_plural')}"
+              %h3= link_to "#{region.name}", places_show_constituencies_path(region.graph_id)
+              %p= "#{region.constituency_count} #{t('constituency_plural')}"
 
 

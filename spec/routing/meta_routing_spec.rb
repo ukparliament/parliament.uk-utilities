@@ -12,5 +12,15 @@ RSpec.describe 'meta', type: :routing do
         )
       end
     end
+
+    context 'Who should I contact with my issue?' do
+      it 'GET meta#who_should_i_contact_with_my_issue' do
+        expect(get: '/who-should-i-contact-with-my-issue').to route_to(
+          controller: 'meta',
+          action:     'who_should_i_contact_with_my_issue'
+        )
+      end
+    end
+
   end
 end
