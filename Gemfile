@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.1.2'
 
 # Use Puma as the app server
-gem 'puma', :git => "https://github.com/puma/puma.git", :branch => 'master'
+gem 'puma', '~> 3.10.0'
 gem 'rack-timeout'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
