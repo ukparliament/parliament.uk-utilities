@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/puma/puma.git
-  revision: a771ec3655f7ee7a0e0b620c1cadd0c1a1650aff
+  revision: 39dc3dfe1b7e6096c7feb466d2ac47b435b93e98
   branch: master
   specs:
-    puma (3.9.1)
+    puma (3.10.0)
 
 GEM
   remote: https://rubygems.org/
@@ -57,7 +57,7 @@ GEM
       rest-client
     bindex (0.5.0)
     builder (3.2.3)
-    byebug (9.0.6)
+    byebug (9.1.0)
     capybara (2.15.1)
       addressable
       mini_mime (>= 0.1.3)
@@ -84,7 +84,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     erubi (1.6.1)
-    faraday (0.12.2)
+    faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
@@ -96,15 +96,16 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    grom (0.3.9)
+    grom (0.4.0)
       activesupport (>= 5.0.0.1)
       rdf (= 2.2.3)
+      rdf-vocab (~> 2.2)
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    hashdiff (0.3.5)
+    hashdiff (0.3.6)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
@@ -145,15 +146,15 @@ GEM
     nokogumbo (1.4.13)
       nokogiri
     parallel (1.12.0)
-    parallel_tests (2.14.2)
+    parallel_tests (2.14.3)
       parallel
-    parliament-grom-decorators (0.2.7)
-    parliament-ntriple (0.1.3)
-      grom (~> 0.3.9)
+    parliament-grom-decorators (0.3.0)
+    parliament-ntriple (0.1.5)
+      grom (~> 0.3)
     parliament-opensearch (0.2.6)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
-    parliament-routes (0.1.5)
+    parliament-routes (0.2.1)
     parliament-ruby (0.8.0)
     parliament-utils (0.2.1)
       bandiera-client
@@ -170,7 +171,7 @@ GEM
       ast (~> 2.2)
     powerpack (0.1.1)
     public_suffix (2.0.5)
-    pugin (1.0.1)
+    pugin (1.1.2)
     rack (2.0.3)
     rack-rewrite (1.5.1)
     rack-test (0.6.3)
@@ -212,6 +213,8 @@ GEM
     rdf (2.2.3)
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
+    rdf-vocab (2.2.6)
+      rdf (~> 2.2)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -347,4 +350,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
