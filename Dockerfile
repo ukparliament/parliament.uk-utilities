@@ -73,4 +73,4 @@ LABEL git-sha=$GIT_SHA \
 EXPOSE 3000
 
 # Launch puma
-CMD ["bundle", "exec", "rails", "s"]
+CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
