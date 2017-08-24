@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://apidataparliament.azure-api.net/search/description
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/opensearchdescription+xml
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - 1dd99ef487ce4ad4b27a9ac173fabcc9
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/opensearchdescription+xml
+      Expires:
+      - "-1"
+      Request-Context:
+      - appId=cid-v1:cf98d81d-29e1-42f1-aebd-a1f2caad36a5
+      Set-Cookie:
+      - ARRAffinity=1f4e2b1cdeb2fb0e8a50f1913fa679f540cc88e7fb213a9a8b4e948e022cc5c2;Path=/;HttpOnly;Domain=lzjefbizeuboief.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 24 Aug 2017 17:19:23 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
+        \ <ShortName>parliament.uk</ShortName>\r\n  <Description>UK Parliament</Description>\r\n
+        \ <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/atom+xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/rss+xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"text/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"text/xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startIndex?}&amp;count={count?}\"
+        type=\"application/xml\" />\r\n</OpenSearchDescription>"
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 17:19:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/house_index
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '420'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Thu, 24 Aug 2017 17:19:25 GMT
+      Set-Cookie:
+      - ARRAffinity=60b7dea47b9603f0cce6fd9ee1526046f40954a68974df7e235788dfa959eded;Path=/;HttpOnly;Domain=20170418155059fixedquery.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 24 Aug 2017 17:19:24 GMT
+    body:
+      encoding: UTF-8
+      string: "<http://id.ukpds.org/KL2k1BGP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/KL2k1BGP> <http://id.ukpds.org/schema/houseName>
+        \"houseName - 1\" .\r\n<http://id.ukpds.org/m1EgVTLj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/m1EgVTLj> <http://id.ukpds.org/schema/houseName>
+        \"houseName - 2\" .\r\n"
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 17:19:24 GMT
+recorded_with: VCR 3.0.3
