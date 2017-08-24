@@ -15,5 +15,13 @@ RSpec.describe 'home', type: :routing do
         action:     'mps'
       )
     end
+
+    it 'GET home#find_your_constituency' do
+      expect(get: '/find-your-constituency').to route_to(
+        controller: 'home',
+        action:     'find_your_constituency'
+      )
+    end
+
   end
 end

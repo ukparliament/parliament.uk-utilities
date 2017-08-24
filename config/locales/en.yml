@@ -54,6 +54,11 @@ en:
   # global parliaments translations
   parliament: 'parliament'
   parliament_plural: 'parliaments'
+  # global places translations
+  place: 'place'
+  place_plural: 'places'
+  region: 'region'
+  region_plural: 'regions'
   # global generic translations
   view_all: 'view all'
   all: 'all'
@@ -371,6 +376,9 @@ en:
       find_mp_date_range: 'Find a former MP by date range'
       speaker_link: 'The Speaker'
       speaker_clarification: '%{speaker_link} is not a member of a party.'
+    find_your_constituency:
+      find_constituency: 'Find your constituency'
+      find_by_region: 'Find a constituency by region.'
   # meta information translations
   meta:
     index:
@@ -414,3 +422,84 @@ en:
         find_out_link: "manage and delete cookies"
         opt_out: "You can %{link}."
         opt_out_link: "opt out of %{service} cookies"
+    who_should_i_contact_with_my_issue:
+      title: 'Who should I contact with my issue?'
+      intro_text_1: 'MPs and Lords can help with issues that are the responsibility of UK Parliament.'
+      intro_text_2: 'But often the right person to contact will be a local councillor, Citizens Advice or an ombudsman.'
+      intro_text_3: 'If you live in Scotland, Wales or Northern Ireland you may need to contact your Member of the Scottish Parliament, Welsh Assembly Member or Member of the Legislative Assembly.'
+      when_should_i_contact_my_mp:
+        title: 'When should I contact my MP?'
+        intro_text: 'MPs can help with issues that are the responsibility of UK Parliament. They represent their constituents and can help with issues such as:'
+        bullet_hospitals: 'hospitals and the NHS'
+        bullet_problems: 'problems with benefits, pensions and national insurance'
+        bullet_immigration: 'immigration'
+        bullet_school: 'school closures and funding'
+        bullet_transport: 'transport facilities'
+        find_mp: 'Find your MP'
+      when_should_i_contact_a_lord:
+        title: 'When should I contact a Lord?'
+        intro_text: 'Members of the Lords examine matters of public interest, so you may find you want to get in touch with an individual member to ask them about a bill they are working on.'
+        find_lord: 'Find a Lord'
+      when_should_i_contact_my_local_council:
+        title: 'When should I contact my Local Council?'
+        intro_text: 'Your local council can help with local issues such as:'
+        bullet_council: 'council tax'
+        bullet_housing: 'housing'
+        bullet_bins: 'bins and recycling'
+        bullet_street: 'street repairs and parking'
+        bullet_children: 'children and families'
+        bullet_schools: 'schools and learning'
+        find_local_council: 'Find your local council'
+      when_should_i_contact_citizens_advice:
+        title: 'When should I contact Citizens Advice?'
+        intro_text: 'For free, impartial advice on money, legal and consumer issues contact %{link}.'
+        intro_text_link: 'Citizens Advice'
+      when_should_i_contact_the_ombudsman_association:
+        title: 'When should i contact the Ombudsman Association?'
+        intro_text: 'If you have a private dispute with a landlord, employer or company, the %{link} may be able to help.'
+        intro_text_link: 'Ombudsman Association'
+      when_should_i_contact_the_government:
+        title: 'When should I contact the Government?'
+        intro_text: 'Visit %{link} for Government services such as:'
+        intro_text_link: 'GOV.UK'
+        bullet_benefits: 'benefits entitlement'
+        bullet_money: 'money and tax'
+        bullet_business: 'business guidance'
+        bullet_vias: 'visas and citizenship'
+        bullet_license: 'license applications'
+        bullet_passports: 'passports and travel advice'
+      when_should_i_contact_my_member_of_european_parliament:
+        title: 'When should I contact my Member of European Parliament?'
+        intro_text: 'Your MEP (Member of European Parliament) can help with EU-wide issues such as:'
+        bullet_employment: 'employment and working conditions'
+        bullet_consumer: 'consumer protection (for example roaming charges for mobile phones)'
+        bullet_environmental: 'environmental standards'
+      do_you_live_in_scotland_wales_or_northern_ireland:
+        title: 'Do you live in Scotland, Wales or Northern Ireland?'
+        scotland:
+          title: 'Scotland'
+          intro_text: 'Your MSP (Member of the Scottish Parliament) can help you with issues such as:'
+          bullet_health: 'health services'
+          bullet_education: 'education'
+          bullet_law: 'law and courts'
+          bullet_transport: 'transport'
+          bullet_social: 'social services'
+          find_msp: 'Find your MSP'
+        wales:
+          title: 'Wales'
+          intro_text: 'AMs (Welsh Assembly Members) can help you with issues such as:'
+          bullet_health: 'health services'
+          bullet_education: 'education'
+          bullet_transport: 'transport'
+          bullet_flood: 'flood defences'
+          bullet_social: 'social services'
+          find_am: 'Find your AM'
+        northern_ireland:
+          title: 'Northern Ireland'
+          intro_text: 'MLAs (Members of the Legislative Assembly) can help you with issues such as:'
+          bullet_health: 'health services'
+          bullet_education: 'education'
+          bullet_employment: 'employment'
+          bullet_social: 'social services'
+          bullet_trade: 'trade and investment'
+          find_mla: 'Find your MLA'
