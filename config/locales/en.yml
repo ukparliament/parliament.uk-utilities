@@ -71,7 +71,7 @@ en:
   from: 'from'
   of_the: 'of the'
   in_the: 'in the'
-  search: 'search'
+  search_s: 'search'
   find_results: 'Find results from current parliament.uk websites.'
   does_not_search_beta: "This search doesn't search beta.parliament.uk"
   open_new_window: "website opens in a new window"
@@ -302,7 +302,15 @@ en:
       search_by_postcode: 'Enter your full postcode, for example SW1A 0AA.'
       do_not_know_postcode: "Don't know your postcode? Find it on the %{link}."
       do_not_know_postcode_link: 'Royal Mail postcode finder'
-
+  # search translations
+  search:
+    index:
+      title: 'Search'
+    results:
+      title: 'Search results for'
+    no_results: 'There are no results for your search.'
+    new_search: "You’re using our new search. View your results on the %{link}."
+    old_search_linktext: 'old search'
   # parliament translations
   parliaments:
     find_mp_a_to_z: 'Find an MP by A-Z list'
@@ -503,3 +511,7 @@ en:
           bullet_social: 'social services'
           bullet_trade: 'trade and investment'
           find_mla: 'Find your MLA'
+  # pagination translations
+  pagination:
+    next: 'Next'
+    previous: 'Previous'

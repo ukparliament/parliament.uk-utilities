@@ -29,11 +29,11 @@
     .status--highlight
       %p= t('.latest_members.blog', link: link_to(t('.latest_members.blog_link'), 'https://pds.blog.parliament.uk/2017/03/27/uk-parliament-website-public-beta/')).html_safe
 
-    %h2= t('search').capitalize
+    %h2= t('search_s').capitalize
     %ol.list--block
       %li
         .list--details
-          %h4= link_to t('search').capitalize, '/search'
+          %h4= link_to t('search_s').capitalize, '/search'
           %p= t('find_results')
     .status--highlight
       %p= t('.search.blog', link: link_to(t('.search.blog_link'), 'https://pds.blog.parliament.uk/2017/06/14/improving-the-search-function-on-parliament-uk/')).html_safe
