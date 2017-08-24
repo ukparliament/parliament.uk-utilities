@@ -28,6 +28,14 @@ class PostcodesController < ApplicationController
         else
           redirect_to(person_path(@person.first.graph_id)) && return
         end
+      elsif Parliament::Utils::Helpers::PostcodeHelper.previous_path == url_for(action: 'find_your_constituency', controller: 'home')
+        if @person.empty?
+          flash[:error] = "#{I18n.t('error.no_mp')} #{@constituency.name}."
+
+          redirect_to(Parliament::Utils::Helpers::PostcodeHelper.previous_path) && return
+        else
+          redirect_to(constituency_path(@constituency.graph_id)) && return
+        end
       end
     rescue Parliament::Utils::Helpers::PostcodeHelper::PostcodeError => error
       flash[:error] = error.message
