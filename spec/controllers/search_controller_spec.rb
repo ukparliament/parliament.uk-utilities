@@ -74,10 +74,21 @@ RSpec.describe SearchController, vcr: true do
           get :index, params: { q: 'banana' }
         end
 
-        it 'should strip <br> tag' do
-          assigns(:results).entries.each do |entry|
-            expect(entry.summary).not_to include('<br>')
-            expect(entry.title).not_to include('<br>')
+        context 'with summary body' do
+          it 'should strip <br> tag' do
+            assigns(:results).entries.each do |entry|
+              expect(entry.summary).not_to include('<br>')
+              expect(entry.title).not_to include('<br>')
+            end
+          end
+        end
+
+        context 'with content body' do
+          it 'should strip <br> tag' do
+            assigns(:results).entries.each do |entry|
+              expect(entry.content).not_to include('<br>')
+              expect(entry.title).not_to include('<br>')
+            end
           end
         end
       end

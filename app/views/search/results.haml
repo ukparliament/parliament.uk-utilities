@@ -20,7 +20,8 @@
             .list--details
               %h2
                 %a{ href: "#{entry.url}" }= entry.title.html_safe
-              %p= entry.summary.html_safe
+              - if entry.content
+                %p= entry.content.html_safe
 
 %section
   .container
@@ -34,7 +35,7 @@
 
         %ol
           - page_range.each do |page|
-            %li{ class: ('active' if (page == current_page)), 'data-number': page }
+            %li{ class: ('active' if (page == current_page)), data: { number: page } }
               - unless page == current_page
                 %a{ href: "/search?q=#{@query_parameter}&start_page=#{start_page(page)}" }= page
               - else

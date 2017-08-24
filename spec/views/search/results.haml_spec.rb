@@ -12,7 +12,7 @@ RSpec.describe 'search/results', vcr: true do
         entries: [double(:entry,
           title: 'Title 1',
           url: 'Url 1',
-          summary: 'Summary 1')
+          content: 'Content 1')
         ]))
 
       render
@@ -28,7 +28,7 @@ RSpec.describe 'search/results', vcr: true do
       it 'will render the title, url and summary for each entry' do
         expect(rendered).to match(/Title 1/)
         expect(rendered).to match(/Url 1/)
-        expect(rendered).to match(/Summary 1/)
+        expect(rendered).to match(/Content 1/)
       end
     end
 
