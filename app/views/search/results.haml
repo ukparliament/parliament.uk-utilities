@@ -14,6 +14,7 @@
 - if @results_total.to_i >= 1
   %section#content
     .container
+      = render partial: 'status_old_search'
       %ol.list--block
         - @results.entries.each do |entry|
           %li
@@ -41,5 +42,5 @@
               - else
                 %span= current_page
     - else
-      .status--highlight.theme--caution
-        %p= 'There are no results for your search.'
+      = render partial: 'status_old_search'
+      = render partial: 'status_no_results'

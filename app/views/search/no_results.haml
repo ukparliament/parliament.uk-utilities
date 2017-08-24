@@ -9,5 +9,5 @@
 
 %section#content
   .container
-    .status--highlight.theme--caution
-      %p= 'There are no results for your search.'
+    = render partial: 'status_old_search'
+    = render partial: 'status_no_results'
