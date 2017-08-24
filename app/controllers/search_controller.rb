@@ -30,7 +30,11 @@ class SearchController < ApplicationController
     begin
       logger.info "Making a query for '#{@query_parameter}' => '#{escaped_query_parameter}' using the base_url: '#{request.base_url}'"
       @results = request.get({ query: escaped_query_parameter, start_page: @start_page })
-      @results.entries.each { |result| result.summary.gsub!(/<br>/, '') if result.summary }
+      @results.entries.each do |result|
+        %w(summary content).each do |content_method|
+          result[content_method].gsub!(/(<br>|<br\/>|<br \/>)/, '') if result[content_method]
+        end
+      end
 
       @results_total = @results.totalResults
 
