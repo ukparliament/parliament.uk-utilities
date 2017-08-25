@@ -38,8 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     airbrake (6.2.1)
       airbrake-ruby (~> 2.3, >= 2.3.1)
     airbrake-ruby (2.3.2)
@@ -149,7 +149,7 @@ GEM
       feedjira (~> 2.1, >= 2.1.2)
     parliament-routes (0.3.0)
     parliament-ruby (0.8.0)
-    parliament-utils (0.2.2)
+    parliament-utils (0.2.3)
       bandiera-client
       coveralls
       haml
@@ -163,8 +163,8 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     powerpack (0.1.1)
-    public_suffix (2.0.5)
-    pugin (1.2.0)
+    public_suffix (3.0.0)
+    pugin (1.2.1)
     puma (3.10.0)
     rack (2.0.3)
     rack-rewrite (1.5.1)
