@@ -26,7 +26,7 @@ gem 'parliament-grom-decorators', '~> 0.2'
 gem 'parliament-utils', '~> 0.2', require: false
 
 # Parliament routing
-gem 'parliament-routes', path: '../parliament.uk-routes'
+gem 'parliament-routes', '~> 0.3'
 
 # Parliament NTriple processes N-triple data
 gem 'parliament-ntriple', '~> 0.1', require: false
@@ -35,7 +35,7 @@ gem 'parliament-ntriple', '~> 0.1', require: false
 gem 'bandiera-client'
 
 # Use Pugin for front-end components and templates
-gem 'pugin', path: '../pugin', require: false
+gem 'pugin', '~> 1.2', require: false
 
 # Use dotenv to override environment variables
 gem 'dotenv'
