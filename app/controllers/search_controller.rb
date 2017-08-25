@@ -56,7 +56,7 @@ class SearchController < ApplicationController
   <ShortName>#{I18n.t('pugin.layouts.pugin.website_brand')}</ShortName>
   <Description>Search #{I18n.t('pugin.layouts.pugin.website_brand')} online content</Description>
   <Image height="16" width="16" type="image/x-icon">#{root_url}favicon.ico</Image>
-  <Url type="text/html" template="#{opensearch_description_url}?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
+  <Url type="text/html" template="#{search_url}?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
 </OpenSearchDescription>
 XML
     render xml: description_file, content_type: 'application/opensearchdescription+xml', layout: false
