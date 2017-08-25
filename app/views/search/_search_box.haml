@@ -1,7 +1,7 @@
 %form
   .input-group
-    %label{ for: 'search_box' } Enter a keyword
-    %input{ type: 'text', name: 'q', value: @query_parameter, id: 'search_box', maxlength: '1000', pattern: '^(?!.*<script|<Script).*$'}
+    %label.sr-only{ for: 'search_box' } Enter a keyword
+    %input{ type: 'search', name: 'q', value: @query_parameter, id: 'search_box', maxlength: '1000', pattern: '^(?!.*<script|<Script).*$'}
     %button{:id => 'btn_loading', :class => 'btn--primary', :value => 'Search', :type => 'submit'}
       %span{:class => 'btn--loading__text'} Search
       %span{:class => 'btn--loading__icon'}
