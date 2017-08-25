@@ -4,7 +4,7 @@
 .section--primary
   .container
     %h1
-      Search results for
+      = t('search.results.title')
       %span.sr-only &ldquo;#{@query_parameter}&rdquo;
 
     = render partial: 'search_box'
@@ -14,6 +14,7 @@
 - if @results_total.to_i >= 1
   %section#content
     .container
+      = render partial: 'status_old_search'
       %ol.list--block
         - @results.entries.each do |entry|
           %li
@@ -28,10 +29,12 @@
     - if @results_total.to_i >= 1
       %nav.navigation--number{ aria:{ label: 'Pagination' } }
         - unless current_page == 1
-          %a.navigation-control--left{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(previous_page)}&count=#{@count}" } Previous
+          %a.navigation-control--left{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(previous_page)}&count=#{@count}" }
+            =t('pagination.previous')
 
         - unless current_page == last_page
-          %a.navigation-control--right{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(next_page)}&count=#{@count}" } Next
+          %a.navigation-control--right{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(next_page)}&count=#{@count}" }
+            =t('pagination.next')
 
         %ol
           - page_range.each do |page|
@@ -41,5 +44,5 @@
               - else
                 %span= current_page
     - else
-      .status--highlight.theme--caution
-        %p= 'There are no results for your search.'
+      = render partial: 'status_old_search'
+      = render partial: 'status_no_results'
