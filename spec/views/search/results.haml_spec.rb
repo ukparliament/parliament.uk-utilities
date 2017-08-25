@@ -6,7 +6,7 @@ RSpec.describe 'search/results', vcr: true do
       controller.params = { q: 'banana' }
 
       assign(:results_total, 1)
-      assign(:start_page, 1)
+      assign(:start_index, 1)
       assign(:count, 1)
       assign(:results, double(:results,
         entries: [double(:entry,

@@ -1,6 +1,6 @@
 module PaginationHelper
   def current_page
-    @start_page / @count + 1
+    @start_index / @count + 1
   end
 
   def first_page
@@ -29,7 +29,8 @@ module PaginationHelper
     current_page - 1
   end
 
-  def start_page(page)
+  # Generate a start index for a given page number
+  def start_index(page)
     (page - 1) * @count + 1
   end
 end

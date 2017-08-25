@@ -31,7 +31,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'assigns @start_page' do
-          expect(assigns(:start_page)).to eq(1)
+          expect(assigns(:start_index)).to eq(1)
         end
 
         it 'assigns @count' do
@@ -116,6 +116,34 @@ RSpec.describe SearchController, vcr: true do
           expect { get :index }.to raise_error(StandardError)
         end
       end
+    end
+  end
+
+  describe 'GET opensearch' do
+    before(:each) do
+      get :opensearch
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'renders the expected XML' do
+      xml_file=<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>UK Parliament</ShortName>
+  <Description>Search UK Parliament online content</Description>
+  <Image height="16" width="16" type="image/x-icon">http://test.host/favicon.ico</Image>
+  <Url type="text/html" template="http://test.host/search/opensearch?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
+</OpenSearchDescription>
+XML
+
+      expect(response.body).to eq(xml_file)
+    end
+
+    it 'uses the expected content-type header' do
+      expect(response.headers['Content-Type']).to eq('application/opensearchdescription+xml; charset=utf-8')
     end
   end
 end
