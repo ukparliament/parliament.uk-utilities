@@ -135,7 +135,7 @@ RSpec.describe SearchController, vcr: true do
   <ShortName>UK Parliament</ShortName>
   <Description>Search UK Parliament online content</Description>
   <Image height="16" width="16" type="image/x-icon">http://test.host/favicon.ico</Image>
-  <Url type="text/html" template="http://test.host/search/opensearch?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
+  <Url type="text/html" template="http://test.host/search?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
 </OpenSearchDescription>
 XML
 
