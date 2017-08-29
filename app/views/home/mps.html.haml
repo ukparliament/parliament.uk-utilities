@@ -17,7 +17,7 @@
         .block
           %h2= t('.find_mp')
           = render partial: 'postcodes/postcode_lookup', locals: { path: postcodes_lookup_path }
-          = link_to t('.view_list_constituencies'), constituencies_current_a_z_letter_path('a')
+          = link_to t('.find_by_region'), places_regions_path
         %ol.list--block
           %li
             .list--details
@@ -28,11 +28,11 @@
       .block--border__bottom
         %h2= t('party_plural').capitalize
         %p= t('.find_mp_party')
-        %ul.list--block__inline
+        %ul.list--block__inline-50
           - @parties.each do |party|
             - unless party.name == "Speaker" # Exclude speaker from list
               %li
-                .list--details
+                .list--details__inline
                   %h3= link_to(party.name, house_parties_party_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id,party.graph_id, 'a'))
                   %p= "- #{party.member_count} #{t('mp_count', count: party.member_count)}"
         %p= t('.speaker_clarification', speaker_link: link_to(t('.the_speaker'), person_path(@speaker.first.graph_id))).html_safe
