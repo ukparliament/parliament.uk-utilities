@@ -37,13 +37,16 @@ TENABLEIO_REGISTRY = cloud.flawcheck.com
 TENABLEIO_REPO = web1live
 
 # Airbrake.io
-AIRBRAKE_PROJECT_ID ?=
-AIRBRAKE_PROJECT_KEY ?=
+AIRBRAKE_PROJECT_ID = $(shell credstash get utilities/airbrake_id)
+AIRBRAKE_PROJECT_KEY = $(shell credstash get utilities/airbrake_key)
 AIRBRAKE_ENVIRONMENT = $(RACK_ENV)
 AIRBRAKE_REPOSITORY = https://github.com/ukparliament/parliament.uk-utilities
 GIT_SHA = $(or $(GO_REVISION), unknown)
 GIT_TAG = $(or $(shell git describe --tags --exact-match 2> /dev/null), unknown)
 AWS_ACCOUNT ?= unknown
+
+GTM_KEY = $(shell credstash get common/gtm_key)
+SECRET_KEY_BASE = $(shell credstash get common/secret_key_base)
 
 # The name of our Docker image
 IMAGE = $(AWS_ACCOUNT_ID).dkr.ecr.$(AWS_REGION).amazonaws.com/$(APP_NAME)
@@ -58,6 +61,15 @@ HOST_PORT = 80
 # MAKE TASKS
 #   Tasks used locally and within our build pipelines to build, test and run our Docker image.
 ##
+
+GITHUB_API=https://api.github.com
+ORG=ukparliament
+REPO=parliament.uk-utilities
+LATEST_REL=$(GITHUB_API)/repos/$(ORG)/$(REPO)/releases
+REL_TAG=$(shell curl -s $(LATEST_REL) | jq -r '.[0].tag_name')
+
+checkout_to_release:
+	git checkout -b release $(REL_TAG)
 
 build: # Using the variables defined above, run `docker build`, tagging the image and passing in the required arguments.
 	docker build -t $(IMAGE):$(VERSION) -t $(IMAGE):latest \
