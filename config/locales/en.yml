@@ -311,6 +311,7 @@ en:
     no_results: 'There are no results for your search.'
     new_search: "You’re using our new search. View your results on the %{link}."
     old_search_linktext: 'old search'
+    empty_search: 'Please enter search terms.'
   # parliament translations
   parliaments:
     find_mp_a_to_z: 'Find an MP by A-Z list'

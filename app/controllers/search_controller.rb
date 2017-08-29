@@ -14,7 +14,10 @@ class SearchController < ApplicationController
     @query_parameter = params[:q] || nil
 
     # Show the index page if there is no query passed
-    return render 'index' unless @query_parameter
+    return render 'index' if @query_parameter.nil?
+
+    # Show empty search page if user searches for an empty string
+    return render 'empty_search' if @query_parameter.empty?
 
     # Escape @query_parameter that replaces all 'unsafe' characters with a UTF-8 hexcode which is safer to use when making an OpenSearch request
     @query_parameter = Sanitize.fragment(@query_parameter, Sanitize::Config::RELAXED)

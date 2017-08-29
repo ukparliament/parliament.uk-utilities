@@ -1,0 +1,14 @@
+- content_for :title do
+  No Results - Search
+
+.section--primary
+  .container
+    %h1
+      = t('search.index.title')
+      %span.sr-only &ldquo;#{@query_parameter}&rdquo;
+
+    = render partial: 'search_box'
+
+%section#content
+  .container
+    = render partial: 'empty_search'
