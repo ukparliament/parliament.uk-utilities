@@ -380,7 +380,7 @@ en:
     mps:
       find_mp: 'Find your MP'
       a_z_surname: 'A - Z by surname'
-      view_list_constituencies: 'View list of constituencies'
+      find_by_region: 'Find by region'
       find_mp_party: 'Find an MP by party.'
       find_mp_date_range: 'Find a former MP by date range'
       speaker_link: 'The Speaker'
