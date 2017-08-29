@@ -61,6 +61,20 @@ RSpec.describe SearchController, vcr: true do
         end
       end
 
+      context 'with an empty string' do
+        before(:each) do
+          get :index, params: { q: '' }
+        end
+
+        it 'should have a response with http status ok (200)' do
+          expect(response).to have_http_status(:ok)
+        end
+
+        it 'renders the empty search template' do
+          expect(response).to render_template('empty_search')
+        end
+      end
+
       context 'search for a non-ascii character' do
         it 'should have a response with http status ok (200)' do
           get :index, params: { q: 'Ü' }
