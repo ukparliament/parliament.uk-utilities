@@ -1,0 +1,55 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      args:
+        RACK_ENV: development
+    volumes:
+      - .:/app
+      - /app/vendor/bundle/
+      - /app/tmp/
+    command: 'bundle exec rails s -b 0.0.0.0 -p 3000'
+    ports:
+      - '3000:3000'
+    environment:
+      PARLIAMENT_BASE_URL: 'http://api:5000/api/v1'
+      PARLIAMENT_AUTH_KEY: 'secret'
+      BANDIERA_URL: 'http://bandiera:5000'
+      ASSET_LOCATION_URL: 'https://s3-eu-west-1.amazonaws.com/web1devci.pugin-website'
+      GTM_KEY: 'GTM-NNXTVV8'
+      RACK_ENV: 'development'
+    depends_on:
+     - bandiera
+     - api
+
+  api:
+    image: 'mattrayner/parliament.uk-static-api:latest'
+    ports:
+      - '3030:5000'
+
+  bandiera:
+    image: 'dazoakley/bandiera:latest'
+    ports:
+      - '5000:5000'
+    environment:
+      RACK_ENV: 'production'
+      DATABASE_URL: 'postgres://bandiera:bandiera@bandiera_db/bandiera'
+      LOG_TO_STDOUT: 'true'
+    depends_on:
+      - bandiera_db
+
+  bandiera_db:
+    image: postgres
+    ports:
+      - '5432'
+    environment:
+      POSTGRES_USER: 'bandiera'
+      POSTGRES_PASSWORD: 'bandiera'
+
+  backstop:
+    image: 'node:7'
+    volumes:
+      - ./backstop/:/app
+      - /app/node_modules
+    command: app/compose.sh

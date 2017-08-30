@@ -1,0 +1,34 @@
+.section--primary
+  .container
+    %h1= title("#{t('constituency_plural').capitalize}")
+
+    - if Parliament::Utils::Helpers::FlagHelper.dissolution?
+      = render partial: 'shared/dissolution_message'
+    - elsif Parliament::Utils::Helpers::FlagHelper.election?
+      = render partial: 'shared/election_message'
+
+%section#content
+  .container
+    .block--border__bottom
+      .block
+        %h2= t('.find_constituency')
+        = render partial: 'postcodes/postcode_lookup', locals: { path: postcodes_lookup_path }
+      %ol.list--block
+        %li
+          .list--details
+            %h2= link_to "A - Z", constituencies_current_a_z_letter_path('a')
+            %p= "#{t('view_all').capitalize} #{t('constituency_plural')}."
+
+%section#content
+  .container
+    .block--border__bottom
+      %h2= t('region_plural').capitalize
+      %p= t('.find_by_region')
+      %ul.list--block__inline-50
+        - @regions.each do |region|
+          %li
+            .list--details
+              %h3= link_to "#{region.name}", places_show_constituencies_path(region.gss_code)
+              %p= "#{region.constituency_count} #{t('constituency_plural')}"
+
+

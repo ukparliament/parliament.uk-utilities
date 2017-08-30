@@ -15,7 +15,7 @@ http_interactions:
       User-Agent:
       - Ruby
       Ocp-Apim-Subscription-Key:
-      - "<AUTH_TOKEN>"
+      - 1dd99ef487ce4ad4b27a9ac173fabcc9
   response:
     status:
       code: 200
@@ -32,31 +32,31 @@ http_interactions:
       Expires:
       - "-1"
       Request-Context:
-      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      - appId=cid-v1:cf98d81d-29e1-42f1-aebd-a1f2caad36a5
       Set-Cookie:
-      - ARRAffinity=0d1e3e01ef1a879f7fe7ceee144f5b7d13d1bf6a0fc1a04c35e5b258ecc47c59;Path=/;HttpOnly;Domain=search201706210753.azurewebsites.net
+      - ARRAffinity=1f4e2b1cdeb2fb0e8a50f1913fa679f540cc88e7fb213a9a8b4e948e022cc5c2;Path=/;HttpOnly;Domain=lzjefbizeuboief.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 10 Jul 2017 15:33:26 GMT
+      - Thu, 24 Aug 2017 14:30:49 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"?>\r\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\r\n
-        \ <ShortName>parliament.uk</ShortName>\r\n  <Description>UK Parliament website</Description>\r\n
-        \ <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
-        type=\"application/atom+xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
-        type=\"application/rss+xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
-        type=\"application/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
-        type=\"text/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
-        type=\"text/xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;pagesize={count?}\"
+        \ <ShortName>parliament.uk</ShortName>\r\n  <Description>UK Parliament</Description>\r\n
+        \ <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
+        type=\"application/atom+xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
+        type=\"application/rss+xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
+        type=\"application/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
+        type=\"text/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
+        type=\"text/xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
     http_version: 
-  recorded_at: Mon, 10 Jul 2017 15:34:33 GMT
+  recorded_at: Thu, 24 Aug 2017 14:30:49 GMT
 - request:
     method: get
-    uri: https://apidataparliament.azure-api.net/search?pagesize=10&q=%C3%9C&start=1
+    uri: https://apidataparliament.azure-api.net/search?count=10&q=%C3%9C&start=1
     body:
       encoding: US-ASCII
       string: ''
@@ -69,7 +69,7 @@ http_interactions:
       User-Agent:
       - Ruby
       Ocp-Apim-Subscription-Key:
-      - "<AUTH_TOKEN>"
+      - 1dd99ef487ce4ad4b27a9ac173fabcc9
   response:
     status:
       code: 200
@@ -80,7 +80,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '2661'
+      - '2115'
       Content-Type:
       - application/atom+xml
       Expires:
@@ -88,19 +88,67 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Request-Context:
-      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      - appId=cid-v1:cf98d81d-29e1-42f1-aebd-a1f2caad36a5
       Set-Cookie:
-      - ARRAffinity=0d1e3e01ef1a879f7fe7ceee144f5b7d13d1bf6a0fc1a04c35e5b258ecc47c59;Path=/;HttpOnly;Domain=search201706210753.azurewebsites.net
+      - ARRAffinity=1f4e2b1cdeb2fb0e8a50f1913fa679f540cc88e7fb213a9a8b4e948e022cc5c2;Path=/;HttpOnly;Domain=lzjefbizeuboief.azurewebsites.net
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 10 Jul 2017 15:33:27 GMT
+      - Thu, 24 Aug 2017 14:30:50 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48ZmVlZCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9BdG9tIj48dGl0bGUgdHlwZT0idGV4dCI+PC90aXRsZT48aWQ+dXVpZDo4OGNhNzE5ZS1hMTA0LTQwMmMtYjNmZi1lNjM5NzQ4ZTMzNzY7aWQ9MTQ0MTwvaWQ+PHVwZGF0ZWQ+MjAxNy0wNy0xMFQxNTozMzoyOFo8L3VwZGF0ZWQ+PGF1dGhvcj48bmFtZT5wYXJsaWFtZW50LnVrPC9uYW1lPjwvYXV0aG9yPjxRdWVyeSByb2xlPSJyZXF1ZXN0IiBzZWFyY2hUZXJtcz0iw5wiIHRvdGFsUmVzdWx0cz0iMTEwIiBjb3VudD0iMTAiIHN0YXJ0SW5kZXg9IjEiIHhtbG5zPSJodHRwOi8vYTkuY29tLy0vc3BlYy9vcGVuc2VhcmNoLzEuMS8iIC8+PHRvdGFsUmVzdWx0cyB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIj4xMTA8L3RvdGFsUmVzdWx0cz48c3RhcnRJbmRleCB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIj4xPC9zdGFydEluZGV4PjxlbnRyeT48aWQ+dXVpZDo4OGNhNzE5ZS1hMTA0LTQwMmMtYjNmZi1lNjM5NzQ4ZTMzNzY7aWQ9MTQ0MjwvaWQ+PHRpdGxlIHR5cGU9Imh0bWwiPlNoZWV0MTwvdGl0bGU+PHN1bW1hcnkgdHlwZT0iaHRtbCI+MywgU09VVEggWU9SS1NISVJFLiA0LCBEb25jYXN0ZXIgRXRobmljIE1pbm9yaXR5IFJlZ2VuZXJhdGlvbiBQYXJ0bmVyc2hpcCwgJmx0O2JyJmd0Ow0KJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7LCAmbHQ7YiZndDvDvCZsdDsvYiZndDssICZsdDtiJmd0O8O8Jmx0Oy9iJmd0OywgwqMxMSw5ODguODgsIDkwLCBFU09MIENpdGl6ZW5zaGlwLiA1LCBCYXNpYyBMaXRlcmFjeS4gNiwgQmFzaWMgTnVtZXJhY3kuPC9zdW1tYXJ5Pjx1cGRhdGVkPjIwMTctMDctMTBUMTU6MzM6MjhaPC91cGRhdGVkPjxsaW5rIHJlbD0iYWx0ZXJuYXRlIiB0eXBlPSJhcHBsaWNhdGlvbi92bmQubXMtZXhjZWwiIGhyZWY9Imh0dHBzOi8vd3d3LnBhcmxpYW1lbnQudWsvZG9jdW1lbnRzL3VwbG9hZC95b3Jrc2hpcmVodW1iZXJzdXBwbGVhbm5leC54bHMiIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6ODhjYTcxOWUtYTEwNC00MDJjLWIzZmYtZTYzOTc0OGUzMzc2O2lkPTE0NDM8L2lkPjx0aXRsZSB0eXBlPSJodG1sIj5Ib3VzZSBvZiBDb21tb25zIC0gU3BlYWtlciZhbXA7IzM5O3MgQ29tbWl0dGVlIG9uIHRoZSBFbGVjdG9yYWwgLi4uPC90aXRsZT48c3VtbWFyeSB0eXBlPSJodG1sIj5Ob3YgMjgsIDIwMDIgJmx0O2ImZ3Q7Li4uJmx0Oy9iJmd0OyAzMCBPY3RvYmVyIDIwMDIuIE1yIFNwZWFrZXIsIFJ0IEhvbiBNaWNoYWVsIE1hcnRpbiBNUCwgJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7LCAmbHQ7YiZndDvDvCZsdDsvYiZndDssICZsdDtiJmd0O8O8Jmx0Oy9iJmd0OywgJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7LiBDaGFpcm1hbiBvZiAmbHQ7YnImZ3Q7DQpzZWxlY3QgY29tbWl0dGVlIG9uOiAoMSkgSG9tZSBBZmZhaXJzIChjb3ZlcmluZyBIb21lIE9mZmljZSZhbXA7bmJzcDsuLi48L3N1bW1hcnk+PHVwZGF0ZWQ+MjAxNy0wNy0xMFQxNTozMzoyOFo8L3VwZGF0ZWQ+PGxpbmsgcmVsPSJhbHRlcm5hdGUiIGhyZWY9Imh0dHA6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDAyMDMvY21zZWxlY3QvY21zcGVhay81Ni81NjAyLmh0bSIgLz48L2VudHJ5PjxlbnRyeT48aWQ+dXVpZDo4OGNhNzE5ZS1hMTA0LTQwMmMtYjNmZi1lNjM5NzQ4ZTMzNzY7aWQ9MTQ0NDwvaWQ+PHRpdGxlIHR5cGU9Imh0bWwiPkRvd25sb2FkIGFsbG93YW5jZSBkb2N1bWVudCBpbiBQREYgLi4uPC90aXRsZT48c3VtbWFyeSB0eXBlPSJodG1sIj5FIC4gJmx0O2ImZ3Q7w5wmbHQ7L2ImZ3Q7IG8uLi0gbSDFkyAuMCZhbXA7YW1wOzYuIFcgNSA1MTI3Li4uLiBkIDR8Li4gLjEuIDEuIE4gLiBtcsK7LiAudSBBIG8uIG52bSBuIMKrQiDFkyDFkyBOIG0uIF9uICZsdDticiZndDsNCi4gUCAxIEcgdyAxLiBHLiA1LiDFky4gTTIuIFYgbWcgbW0uIHNuIG9uIGJmbHhsLiBhIG4gQlMgTcODLiAubSBXTyAuOF8xLiDigJ4uLi4gw6QgbS48L3N1bW1hcnk+PHVwZGF0ZWQ+MjAxNy0wNy0xMFQxNTozMzoyOFo8L3VwZGF0ZWQ+PGxpbmsgcmVsPSJhbHRlcm5hdGUiIHR5cGU9ImFwcGxpY2F0aW9uL3BkZiIgaHJlZj0iaHR0cDovL21wc2FsbG93YW5jZXMucGFybGlhbWVudC51ay9tcHNsb3Jkc2FuZG9mZmljZXMvaG9jYWxsb3dhbmNlcy9hbGxvd2FuY2VzLWJ5LW1wL2pvaG4tbWNmYWxsL0pvaG5fTWNGYWxsXzA3MDhfQ0EucGRmIiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjg4Y2E3MTllLWExMDQtNDAyYy1iM2ZmLWU2Mzk3NDhlMzM3NjtpZD0xNDQ1PC9pZD48dGl0bGUgdHlwZT0iaHRtbCI+SG91c2Ugb2YgTG9yZHMgLSBUaGUgVW5pdGVkIEtpbmdkb20mYW1wOyMzOTtzIHBhcnRpY2lwYXRpb24gaW4gUHLDvG0gLi4uPC90aXRsZT48c3VtbWFyeSB0eXBlPSJodG1sIj5FdXJvcGVhbiBVbmlvbiBDb21taXR0ZWUgVGhlIFVuaXRlZCBLaW5nZG9tJmFtcDsjMzk7cyBwYXJ0aWNpcGF0aW9uIGluIFByw7xtLiA1dGggJmx0O2JyJmd0Ow0KUmVwb3J0IG9mIFNlc3Npb24gMjAxNS0xNiAtIHB1Ymxpc2hlZCA3IERlY2VtYmVyIDIwMTUgLSBITCBQYXBlciA2NiZhbXA7bmJzcDsuLi48L3N1bW1hcnk+PHVwZGF0ZWQ+MjAxNy0wNy0xMFQxNTozMzoyOFo8L3VwZGF0ZWQ+PGxpbmsgcmVsPSJhbHRlcm5hdGUiIGhyZWY9Imh0dHBzOi8vd3d3LnB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2xkMjAxNTE2L2xkc2VsZWN0L2xkZXVjb20vNjYvNjYwMi5odG0iIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6ODhjYTcxOWUtYTEwNC00MDJjLWIzZmYtZTYzOTc0OGUzMzc2O2lkPTE0NDY8L2lkPjx0aXRsZSB0eXBlPSJodG1sIj5Xcml0dGVuIGV2aWRlbmNlIGZyb20gRHIgRyAmbHQ7YiZndDvDvCZsdDsvYiZndDsgbG51ciBBeWJldDwvdGl0bGU+PHN1bW1hcnkgdHlwZT0iaHRtbCI+VUstVHVya2V5IHJlbGF0aW9ucyBhbmQgVHVya2V5JmFtcDsjMzk7cyByZWdpb25hbCByb2xlV3JpdHRlbiBldmlkZW5jZSBmcm9tIERyIEcgJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7IGxudXIgJmx0O2JyJmd0Ow0KQXliZXQuIDEuIEV4ZWN1dGl2ZSBTdW1tYXJ5LiBUaGVyZSBpcyBib3RoIGNvbnRpbnVpdHkgYW5kIGNoYW5nZSBpbiBUdXJraXNoJmFtcDtuYnNwOy4uLjwvc3VtbWFyeT48dXBkYXRlZD4yMDE3LTA3LTEwVDE1OjMzOjI4WjwvdXBkYXRlZD48bGluayByZWw9ImFsdGVybmF0ZSIgaHJlZj0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDEwMTIvY21zZWxlY3QvY21mYWZmLzE1NjcvMTU2N3dlMTguaHRtIiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjg4Y2E3MTllLWExMDQtNDAyYy1iM2ZmLWU2Mzk3NDhlMzM3NjtpZD0xNDQ3PC9pZD48dGl0bGUgdHlwZT0iaHRtbCI+dHJhbnNjcmlwdCBpbnRlcm5ldCBpbnN0cnVjdGlvbiB0aGUg4oCcb+KAnSBmb3JtPC90aXRsZT48c3VtbWFyeSB0eXBlPSJodG1sIj5PUiBVbmNvcnJlY3RlZOKApuKApuKApi4uJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7LiBZRVMgTk8uIElmIGNvcnJlY3RlZCwgaXMgdGhlcmUgYW4gdW5jb3JyZWN0ZWQgdHJhbnNjcmlwdCAmbHQ7YnImZ3Q7DQp0byBiZSByZW1vdmVkIOKYkCDimJAuIENPTU1JVFRFRTogU2NpZW5jZSBhbmQgVGVjaG5vbG9neSBDb21taXR0ZWUuIEhML0hDJmFtcDtuYnNwOy4uLjwvc3VtbWFyeT48dXBkYXRlZD4yMDE3LTA3LTEwVDE1OjMzOjI4WjwvdXBkYXRlZD48bGluayByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LndvcmRwcm9jZXNzaW5nbWwuZG9jdW1lbnQiIGhyZWY9Imh0dHA6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDEzMTQvY21zZWxlY3QvY21zY3RlY2gvdWMyNTItaS9zdCUyMDEzMDYwNSUyMGRpZ2l0YWwlMjBieSUyMGRlZmF1bHQlMjBvJTIwZm9ybSUyMChoYyUyMDI1Mi1pKS5kb2N4IiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjg4Y2E3MTllLWExMDQtNDAyYy1iM2ZmLWU2Mzk3NDhlMzM3NjtpZD0xNDQ4PC9pZD48dGl0bGUgdHlwZT0iaHRtbCI+UGFnZSAxIFBhZ2UgMiBQYWdlIDMgT2ZmaWNlIG9mIE1lZyBNdW5uIE1QIE1hcmNoIDE4JmFtcDtxdW90OyAyMDA2IC4uLjwvdGl0bGU+PHN1bW1hcnkgdHlwZT0iaHRtbCI+MS4gQSBOIEcgRiBvIFIgRCBQUkkgTiBUIEUgUiBzIMWCbnZvaWNlLiBNZWcgTXVubiBNUC4gMTAwMCB4IEdyZWVuIG9uIFdoaXRlICZsdDticiZndDsNCkhPQyBWaXNpdGluZyBDYXJkcyBGw5wgJmx0O2ImZ3Q7w5wgw5wmbHQ7L2ImZ3Q7IDEyLjI1LiBOZXcgUGxhdGUgYW5kIEFydHdvcmsgQ2hhcmdlIDIwLiBHTyAzLjVHLjwvc3VtbWFyeT48dXBkYXRlZD4yMDE3LTA3LTEwVDE1OjMzOjI4WjwvdXBkYXRlZD48bGluayByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcGRmIiBocmVmPSJodHRwOi8vbXBzYWxsb3dhbmNlcy5wYXJsaWFtZW50LnVrL21wc2xvcmRzYW5kb2ZmaWNlcy9ob2NhbGxvd2FuY2VzL2FsbG93YW5jZXMtYnktbXAvbWVnLW11bm4vbWVnX211bm5fMDUwNl9JRVAucGRmIiAvPjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjg4Y2E3MTllLWExMDQtNDAyYy1iM2ZmLWU2Mzk3NDhlMzM3NjtpZD0xNDQ5PC9pZD48dGl0bGUgdHlwZT0iaHRtbCI+RGF5IDU2LnBkZjwvdGl0bGU+PHN1bW1hcnkgdHlwZT0iaHRtbCI+TWF5IDIwLCAyMDE0ICZsdDtiJmd0Oy4uLiZsdDsvYiZndDsgRCZhbXA7cXVvdDsuIE5vci10aGlpZWxkcy4gTGVyaGkmYW1wOyMzOTtsZWxkIMO6IFEsICZsdDtiJmd0O8OcJmx0Oy9iJmd0OyBNYXJzdG9uIC4gJmx0O2ImZ3Q7w5wmbHQ7L2ImZ3Q7ICwuIExhZHYgSGxsbC4gMXwgbCBiaWwuIEV4aXN0aW5nIEFjY2VzcyAmbHQ7YnImZ3Q7DQpUcmVvayB0byBXZWxzaCBSb2FkLiA2IGxvIGwgSWwgZsOhw65sZmZpIE5ldyBIb3VzZSBGIG4mYW1wOyMzOTsgSVAuIEhpbGw7Ljwvc3VtbWFyeT48dXBkYXRlZD4yMDE3LTA3LTEwVDE1OjMzOjI4WjwvdXBkYXRlZD48bGluayByZWw9ImFsdGVybmF0ZSIgdHlwZT0iYXBwbGljYXRpb24vcGRmIiBocmVmPSJodHRwczovL3d3dy5wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9jbWhzMi9ldmlkZW5jZS8yOEphbnVhcnkyMDE1LnBkZiIgLz48L2VudHJ5PjxlbnRyeT48aWQ+dXVpZDo4OGNhNzE5ZS1hMTA0LTQwMmMtYjNmZi1lNjM5NzQ4ZTMzNzY7aWQ9MTQ1MDwvaWQ+PHRpdGxlIHR5cGU9Imh0bWwiPkdvdmVybmFuY2UgYW5kIEJlc3QgUHJhY3RpY2UgaW4gV29ya3BsYWNlIFBlbnNpb25zICgyNHRoIE1heSAuLi48L3RpdGxlPjxzdW1tYXJ5IHR5cGU9Imh0bWwiPkNvbnN1bWVyczogJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7IE9ubGluZSBhY2Nlc3MgZm9yIHRoZSBjb25zdW1lci4gJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7IEFsZXJ0cyBhbmQgdHJpZ2dlcnMgYnkgZW1haWwgKG9uICZsdDticiZndDsNCmNlcnRhaW4gZXZlbnRzIGVnIGJpcnRoZGF5cywgZ2xpZGUgcGF0aCB0byByZXRpcmVtZW50KS4gJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7IEFnZ3JlZ2F0ZWQgVmlldyBvZiBwb3RzLjwvc3VtbWFyeT48dXBkYXRlZD4yMDE3LTA3LTEwVDE1OjMzOjI4WjwvdXBkYXRlZD48bGluayByZWw9ImFsdGVybmF0ZSIgaHJlZj0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDEyMTMvY21zZWxlY3QvY213b3JwZW4vd3JpdGV2L3BlbnNpb25zL20wMi5odG0iIC8+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6ODhjYTcxOWUtYTEwNC00MDJjLWIzZmYtZTYzOTc0OGUzMzc2O2lkPTE0NTE8L2lkPjx0aXRsZSB0eXBlPSJodG1sIj5Ib3VzZSBvZiBDb21tb25zIC0gRW5lcmd5IGFuZCBDbGltYXRlIENoYW5nZSAtIFdyaXR0ZW4gRXZpZGVuY2U8L3RpdGxlPjxzdW1tYXJ5IHR5cGU9Imh0bWwiPkp1bCAyNSwgMjAxMSAmbHQ7YiZndDsuLi4mbHQ7L2ImZ3Q7IENhcHBlZCAoZm9yIGEgZml4ZWQgcGVyaW9kKSwgQ2FwcGVkIEphbiAyMDE0LCAmbHQ7YiZndDvDvCZsdDsvYiZndDssICZsdDtiJmd0O8O8Jmx0Oy9iJmd0Oy4gVW5pZmkgQ2FwcGVkWzU1XSwgJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7LiBGaXhlZCAoJmx0O2JyJmd0Ow0KZm9yIGEgZml4ZWQgcGVyaW9kKSwgRml4ZWQgUHJpY2UgRW5lcmd5LCAmbHQ7YiZndDvDvCZsdDsvYiZndDsuIFBsYXRpbnVtIEZpeGVkWzU2XSwgJmx0O2ImZ3Q7w7wmbHQ7L2ImZ3Q7Ljwvc3VtbWFyeT48dXBkYXRlZD4yMDE3LTA3LTEwVDE1OjMzOjI4WjwvdXBkYXRlZD48bGluayByZWw9ImFsdGVybmF0ZSIgaHJlZj0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDEwMTIvY21zZWxlY3QvY21lbmVyZ3kvMTA0Ni8xMDQ2d2UxOS5odG0iIC8+PC9lbnRyeT48L2ZlZWQ+
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48ZmVlZCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9BdG9tIj48dGl0bGUgdHlwZT0idGV4dCI+UGFybGlhbWVudC51ayBTZWFyY2g6IMOcPC90aXRsZT48aWQ+dXVpZDo3MzQ5NzE3MC1kYWNlLTQ4MGEtOGQ1OC1kY2QwNzNhODA5Yjk7aWQ9MTk5PC9pZD48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48YXV0aG9yPjxuYW1lPlBhcmxpYW1lbnQudWs8L25hbWU+PC9hdXRob3I+PFF1ZXJ5IHJvbGU9InJlcXVlc3QiIHNlYXJjaFRlcm1zPSLDnCIgdG90YWxSZXN1bHRzPSI1OCIgY291bnQ9IjEwIiBzdGFydEluZGV4PSIxIiB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIiAvPjx0b3RhbFJlc3VsdHMgeG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI+NTg8L3RvdGFsUmVzdWx0cz48c3RhcnRJbmRleCB4bWxucz0iaHR0cDovL2E5LmNvbS8tL3NwZWMvb3BlbnNlYXJjaC8xLjEvIj4xPC9zdGFydEluZGV4PjxpdGVtc1BlclBhZ2UgeG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI+MTA8L2l0ZW1zUGVyUGFnZT48ZW50cnk+PGlkPnV1aWQ6NzM0OTcxNzAtZGFjZS00ODBhLThkNTgtZGNkMDczYTgwOWI5O2lkPTIwMDwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPlVuY29ycmVjdGVkIEV2aWRlbmNlIDY1IC0gcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWs8L3RpdGxlPjx1cGRhdGVkPjIwMTctMDgtMjRUMTQ6MzA6NTBaPC91cGRhdGVkPjxsaW5rIHRpdGxlPSJodHRwczovL3B1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2NtMjAwNzA4L2Ntc2VsZWN0L2NtZmFmZi8uLi4iIGhyZWY9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDA3MDgvY21zZWxlY3QvY21mYWZmL21lbW8vMTQ3L3VjbTY1MDIuaHRtIiAvPjxjb250ZW50IHR5cGU9InRleHQiPsO8LiBCYXNlbCBDb252ZW50aW9uIG9uIHRoZSBDb250cm9sIG9mIFRyYW5zYm91bmRhcnkgTW92ZW1lbnRzIG9mIEhhemFyZG91cyBXYXN0ZXMgYW5kIHRoZWlyIERpc3Bvc2FsIC48L2NvbnRlbnQ+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6NzM0OTcxNzAtZGFjZS00ODBhLThkNTgtZGNkMDczYTgwOWI5O2lkPTIwMTwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPlVuY29ycmVjdGVkIEV2aWRlbmNlIG0xMjQgLSBwdWJsaWNhdGlvbnMucGFybGlhbWVudC51azwvdGl0bGU+PHVwZGF0ZWQ+MjAxNy0wOC0yNFQxNDozMDo1MFo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vd3d3LnB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2NtMjAwNzA4L2Ntc2VsZWN0L2NtZmFmZi8uLi4iIGhyZWY9Imh0dHBzOi8vd3d3LnB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2NtMjAwNzA4L2Ntc2VsZWN0L2NtZmFmZi9tZW1vLzE0Ny91Y20xMjQwMi5odG0iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+w7wgVGhlIGNvbnN0cnVjdGlvbiBhbmQgb3BlcmF0aW9uIG9mIGFuIGFpcnBvcnQgY2FwYWJsZSBvZiBzdXBwb3J0aW5nIHNlcnZpY2VzIGJ5IEJvZWluZyA3MzctODAwIG9yIGVxdWl2YWxlbnQgYWlyY3JhZnQsIMO8IFRoZSBjb25jZXB0aW9uIGFuZCBpbXBsZW1lbnRhdGlvbiBvZiBhbiAuLi48L2NvbnRlbnQ+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6NzM0OTcxNzAtZGFjZS00ODBhLThkNTgtZGNkMDczYTgwOWI5O2lkPTIwMjwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPkZJUlNUIFJFUE9SVCAtIHB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrPC90aXRsZT48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9jbTIwMDIwMy9jbXNlbGVjdC9jbXNwZWFrLzU2Ly4uLiIgaHJlZj0iaHR0cHM6Ly9wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9jbTIwMDIwMy9jbXNlbGVjdC9jbXNwZWFrLzU2LzU2MDIuaHRtIiAvPjxjb250ZW50IHR5cGU9InRleHQiPkZJUlNUIFJFUE9SVCAyMDAyLiBQcmVzZW50ZWQgdG8gdGhlIEhvdXNlIG9mIENvbW1vbnMgaW4gcHVyc3VhbmNlIG9mIFNjaGVkdWxlIDIgb2YgdGhlIFBvbGl0aWNhbCBQYXJ0aWVzLCAuLi4gw7wgw7wgw7wgw7wgQ2hhaXJtYW4gb2Ygc2VsZWN0IGNvbW1pdHRlZSBvbjogKDEpIC4uLjwvY29udGVudD48L2VudHJ5PjxlbnRyeT48aWQ+dXVpZDo3MzQ5NzE3MC1kYWNlLTQ4MGEtOGQ1OC1kY2QwNzNhODA5Yjk7aWQ9MjAzPC9pZD48dGl0bGUgdHlwZT0idGV4dCI+QWlyIFRyYXZlbCBPcmdhbmlzZXJz4oCZIExpY2Vuc2luZzwvdGl0bGU+PHVwZGF0ZWQ+MjAxNy0wOC0yNFQxNDozMDo1MFo8L3VwZGF0ZWQ+PGxpbmsgdGl0bGU9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvYmlsbHMvbGJpbGwvMjAxNy0yMDE5LzAwNTgvLi4uIiBocmVmPSJodHRwczovL3B1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2JpbGxzL2xiaWxsLzIwMTctMjAxOS8wMDU4LzE4MDU4ZW4ucGRmIiAvPjxjb250ZW50IHR5cGU9InRleHQiPjExIFRoZSBhaXIgdHJhdmVsIG9yZ2FuaXNlciBhbmQvb3IgcmV0YWlsZXIgw7sgb3JnYW5pc2VycyDDvCBvZiBhIHBhY2thZ2UgaXMgcmVxdWlyZWQgdW5kZXIgdGhlIDE5OTA8L2NvbnRlbnQ+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6NzM0OTcxNzAtZGFjZS00ODBhLThkNTgtZGNkMDczYTgwOWI5O2lkPTIwNDwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPlVuY29ycmVjdGVkIEV2aWRlbmNlIG0wNCAtIHB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrPC90aXRsZT48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDA4MDkvY21zZWxlY3QvLi4uIiBocmVmPSJodHRwczovL3d3dy5wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9jbTIwMDgwOS9jbXNlbGVjdC9jbXdvcnBlbi9tZW1vL3BlbnNpb24vdWNtMDQwMi5odG0iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+w7wuIFByb3ZpZGUgdGhlIHJpZ2h0IGluZm9ybWF0aW9uIGF0IHRoZSByaWdodCB0aW1lIHRvIERlYnQgTWFuYWdlbWVudCBlbnN1cmUgdGhhdCBhbGwgaW5jb3JyZWN0IHBheW1lbnRzIGFyZSBjb2xsZWN0ZWQgaW4gYSB0aW1lbHkgbWFubmVyLiBBbm5leCA0IEFiYnJldmlhdGlvbnMgLiBBQS48L2NvbnRlbnQ+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6NzM0OTcxNzAtZGFjZS00ODBhLThkNTgtZGNkMDczYTgwOWI5O2lkPTIwNTwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPk5hdGlvbmFsIENpdGl6ZW4gU2VydmljZSAtIHB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrPC90aXRsZT48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9iaWxscy9sYmlsbC8yMDE2LTIwMTcvMDA2NC8uLi4iIGhyZWY9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvYmlsbHMvbGJpbGwvMjAxNi0yMDE3LzAwNjQvMTcwNjRlbi5wZGYiIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+c2hvdWxkIGJlIHJlYWQgYWxvbmdzaWRlIHRoZSBSb3lhbCBDaGFydGVyICh0aGUgQ2hhcnRlciDDvCB0aGF0IGluY29ycG9yYXRlcyB0aGUgYm9keSB0aGF0IHdpbGwgZGVsaXZlciBOQ1MsIHRvIGJlIGtub3duIGFzIHRoZSBOQ1MgVHJ1c3QuPC9jb250ZW50PjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjczNDk3MTcwLWRhY2UtNDgwYS04ZDU4LWRjZDA3M2E4MDliOTtpZD0yMDY8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5Ib3VzZSBvZiBDb21tb25zIC0gRW5lcmd5IGFuZCBDbGltYXRlIENoYW5nZSAtIFdyaXR0ZW4gLi4uPC90aXRsZT48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly9wdWJsaWNhdGlvbnMucGFybGlhbWVudC51ay9wYS9jbTIwMTAxMi9jbXNlbGVjdC9jbWVuZXJneS8uLi4iIGhyZWY9Imh0dHBzOi8vcHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvY20yMDEwMTIvY21zZWxlY3QvY21lbmVyZ3kvMTA0Ni8xMDQ2d2UxOS5odG0iIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+RnVydGhlciBzdXBwbGVtZW50YXJ5IG1lbW9yYW5kdW0gc3VibWl0dGVkIGJ5IFNjb3R0aXNoUG93ZXIgLiBUaGlzIG5vdGUgcmVzcG9uZHMgdG8gdGhlIGFkZGl0aW9uYWwgcXVlc3Rpb25zIGFza2VkIGJ5IHRoZSBDb21taXR0ZWUgZm9sbG93aW5nIHRoZSBvcmFsIGV2aWRlbmNlIC4uLiDDvCAuLi48L2NvbnRlbnQ+PC9lbnRyeT48ZW50cnk+PGlkPnV1aWQ6NzM0OTcxNzAtZGFjZS00ODBhLThkNTgtZGNkMDczYTgwOWI5O2lkPTIwNzwvaWQ+PHRpdGxlIHR5cGU9InRleHQiPkFjY2VzcyB0byBNZWRpY2FsIFRyZWF0bWVudHMgKElubm92YXRpb24pPC90aXRsZT48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvYmlsbHMvbGJpbGwvMjAxNS0yMDE2Ly4uLiIgaHJlZj0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvYmlsbHMvbGJpbGwvMjAxNS0yMDE2LzAwOTMvRU4vMTYwOTNlbi5wZGYiIC8+PGNvbnRlbnQgdHlwZT0idGV4dCI+MSBUaGUgQWNjZXNzIHRvIE1lZGljYWwgVHJlYXRtZW50cyAoSW5ub3ZhdGlvbikgLi4uIDQgVGhlIEJpbGwgZm9sbG93cyBMb3JkIFNhYXRjaGlzIE1lZGljYWwgSW5ub3ZhdGlvbiBCaWxsIMO7IHRoZSBNSUIgw7wsIHdoaWNoIHdhcyBmaXJzdCBpbnRyb2R1Y2VkPC9jb250ZW50PjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjczNDk3MTcwLWRhY2UtNDgwYS04ZDU4LWRjZDA3M2E4MDliOTtpZD0yMDg8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5UaGUgUm95YWwgR2FsbGVyeSAtIFVLIFBhcmxpYW1lbnQ8L3RpdGxlPjx1cGRhdGVkPjIwMTctMDgtMjRUMTQ6MzA6NTBaPC91cGRhdGVkPjxsaW5rIHRpdGxlPSJ3d3cucGFybGlhbWVudC51ay9hYm91dC9saXZpbmctaGVyaXRhZ2UvYnVpbGRpbmcvcGFsYWNlLy4uLiIgaHJlZj0iaHR0cDovL3d3dy5wYXJsaWFtZW50LnVrL2Fib3V0L2xpdmluZy1oZXJpdGFnZS9idWlsZGluZy9wYWxhY2UvYXJjaGl0ZWN0dXJlL3BhbGFjZS1zLWludGVyaW9ycy9yb3lhbC1nYWxsZXJ5LyIgLz48Y29udGVudCB0eXBlPSJ0ZXh0Ij5UaGUgUm95YWwgR2FsbGVyeSBpcyB1c2VkIGZvciBpbXBvcnRhbnQgb2NjYXNpb25zIC4uLiB0aGUgZGVhdGggb2YgSG9yYXRpbyBOZWxzb24gYW5kIHRoZSBtZWV0aW5nIG9mIHRoZSBEdWtlIG9mIFdlbGxpbmd0b24gYW5kIEZpZWxkIE1hcnNoYWxsIEJsIMO8IGNoZXIgcHJpb3IgdG8gLi4uPC9jb250ZW50PjwvZW50cnk+PGVudHJ5PjxpZD51dWlkOjczNDk3MTcwLWRhY2UtNDgwYS04ZDU4LWRjZDA3M2E4MDliOTtpZD0yMDk8L2lkPjx0aXRsZSB0eXBlPSJ0ZXh0Ij5Kb2ludCBDb21taXR0ZWUgT24gSHVtYW4gUmlnaHRzIC0gTWVtb3JhbmRhPC90aXRsZT48dXBkYXRlZD4yMDE3LTA4LTI0VDE0OjMwOjUwWjwvdXBkYXRlZD48bGluayB0aXRsZT0iaHR0cHM6Ly93d3cucHVibGljYXRpb25zLnBhcmxpYW1lbnQudWsvcGEvanQyMDA1MDYvanRzZWxlY3QvanQuLi4iIGhyZWY9Imh0dHBzOi8vd3d3LnB1YmxpY2F0aW9ucy5wYXJsaWFtZW50LnVrL3BhL2p0MjAwNTA2L2p0c2VsZWN0L2p0cmlnaHRzL3VjNTYxLWlpL3VjNTYxbTA4Lmh0bSIgLz48Y29udGVudCB0eXBlPSJ0ZXh0Ij5TdWJtaXNzaW9uIGZyb20gUHJvZmVzc29yIENsaXZlIFdhbGtlciAuLi4gw5wgQW55IHN0YXRlbWVudCBvYnRhaW5lZCBpbiBjaXJjdW1zdGFuY2VzIHdoZXJlIGEgcGVyc29uIGhhcyBiZWVuIHN1YmplY3RlZCB0byB0aGUgZXh0cmFvcmRpbmFyeSBjb25kaXRpb25zIG9mIC4uLjwvY29udGVudD48L2VudHJ5PjwvZmVlZD4=
     http_version: 
-  recorded_at: Mon, 10 Jul 2017 15:34:34 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Thu, 24 Aug 2017 14:30:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/house_index
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      - application/n-triples
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '420'
+      Content-Type:
+      - application/n-triples
+      Expires:
+      - Thu, 24 Aug 2017 14:30:51 GMT
+      Set-Cookie:
+      - ARRAffinity=60b7dea47b9603f0cce6fd9ee1526046f40954a68974df7e235788dfa959eded;Path=/;HttpOnly;Domain=20170418155059fixedquery.azurewebsites.net
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 24 Aug 2017 14:30:50 GMT
+    body:
+      encoding: UTF-8
+      string: "<http://id.ukpds.org/KL2k1BGP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/KL2k1BGP> <http://id.ukpds.org/schema/houseName>
+        \"houseName - 1\" .\r\n<http://id.ukpds.org/m1EgVTLj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/m1EgVTLj> <http://id.ukpds.org/schema/houseName>
+        \"houseName - 2\" .\r\n"
+    http_version: 
+  recorded_at: Thu, 24 Aug 2017 14:30:51 GMT
+recorded_with: VCR 3.0.3

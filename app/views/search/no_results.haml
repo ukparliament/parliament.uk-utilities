@@ -3,11 +3,13 @@
 
 .section--primary
   .container
-    %h1 Search
+    %h1
+      = t('search.results.title')
+      %span.sr-only &ldquo;#{@query_parameter}&rdquo;
 
     = render partial: 'search_box'
 
 %section#content
   .container
-    .highlight--box.highlight--caution__soft
-      %p= 'There are no results for your search.'
+    = render partial: 'status_old_search'
+    = render partial: 'status_no_results'

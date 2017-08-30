@@ -1,8 +1,8 @@
 - content_for :title do
-  Search
+  = t('search.index.title')
 
 #content.section--primary
   .container
-    %h1 Search
+    %h1= t('search.index.title')
 
     = render partial: 'search_box'

@@ -31,7 +31,7 @@ RSpec.describe SearchController, vcr: true do
         end
 
         it 'assigns @start_page' do
-          expect(assigns(:start_page)).to eq(1)
+          expect(assigns(:start_index)).to eq(1)
         end
 
         it 'assigns @count' do
@@ -40,10 +40,6 @@ RSpec.describe SearchController, vcr: true do
 
         it 'assigns @results' do
           expect(assigns(:results)).to be_a(Feedjira::Parser::Atom)
-          #
-          # expect(assigns(:results)).to include('Trade dispute between the EU and the USA over <b>bananas</b>')
-          # expect(assigns(:results)).to include('http://researchbriefings.files.parliament.uk/documents/RP99-28/RP99-28.pdf')
-          # expect(assigns(:results)).to include('Mar 12, 1999')
         end
 
         it 'renders the results template' do
@@ -65,6 +61,20 @@ RSpec.describe SearchController, vcr: true do
         end
       end
 
+      context 'with an empty string' do
+        before(:each) do
+          get :index, params: { q: '' }
+        end
+
+        it 'should have a response with http status ok (200)' do
+          expect(response).to have_http_status(:ok)
+        end
+
+        it 'renders the empty search template' do
+          expect(response).to render_template('empty_search')
+        end
+      end
+
       context 'search for a non-ascii character' do
         it 'should have a response with http status ok (200)' do
           get :index, params: { q: 'Ü' }
@@ -73,24 +83,27 @@ RSpec.describe SearchController, vcr: true do
         end
       end
 
-      context 'very long query' do
-        before(:each) do
-          get :index, params: { q: File.read('spec/fixtures/strings/long_search_string') }
-        end
-
-        it 'should cut query to maximum 2048 characters' do
-          expect(WebMock).to have_requested(:get, "https://apidataparliament.azure-api.net/search?pagesize=10&q=#{File.read('spec/fixtures/strings/escaped_parameter_string')}&start=1")
-                                 .with(headers: {'Accept'=>['*/*', 'application/atom+xml'], 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Ocp-Apim-Subscription-Key'=>ENV['OPENSEARCH_AUTH_TOKEN'], 'User-Agent'=>'Ruby'}).once
-        end
-      end
-
       context '<br> tag in search results' do
         before(:each) do
           get :index, params: { q: 'banana' }
         end
 
-        it 'should strip <br> tag' do
-          expect(response.body).not_to include('<br>')
+        context 'with summary body' do
+          it 'should strip <br> tag' do
+            assigns(:results).entries.each do |entry|
+              expect(entry.summary).not_to include('<br>')
+              expect(entry.title).not_to include('<br>')
+            end
+          end
+        end
+
+        context 'with content body' do
+          it 'should strip <br> tag' do
+            assigns(:results).entries.each do |entry|
+              expect(entry.content).not_to include('<br>')
+              expect(entry.title).not_to include('<br>')
+            end
+          end
         end
       end
 
@@ -107,6 +120,44 @@ RSpec.describe SearchController, vcr: true do
           expect(response.body).to include('alert(document.cookie)')
         end
       end
+
+      context 'setting up Parliament Opensearch with a connection refused error' do
+        before(:each) do
+          allow(Parliament::Request::OpenSearchRequest).to receive(:description_url=).and_raise(Errno::ECONNREFUSED)
+        end
+
+        it 'should raise an error' do
+          expect { get :index }.to raise_error(StandardError)
+        end
+      end
+    end
+  end
+
+  describe 'GET opensearch' do
+    before(:each) do
+      get :opensearch
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'renders the expected XML' do
+      xml_file=<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>UK Parliament</ShortName>
+  <Description>Search UK Parliament online content</Description>
+  <Image height="16" width="16" type="image/x-icon">http://test.host/favicon.ico</Image>
+  <Url type="text/html" template="http://test.host/search?q={searchTerms}&amp;start_index={startIndex?}&amp;count={count?}" />
+</OpenSearchDescription>
+XML
+
+      expect(response.body).to eq(xml_file)
+    end
+
+    it 'uses the expected content-type header' do
+      expect(response.headers['Content-Type']).to eq('application/opensearchdescription+xml; charset=utf-8')
     end
   end
 end
