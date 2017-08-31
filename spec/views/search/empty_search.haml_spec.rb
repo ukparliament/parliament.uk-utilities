@@ -19,7 +19,7 @@ RSpec.describe 'search/empty_search', vcr: true do
 
   context 'results' do
     it 'will render the empty search message' do
-      expect(rendered).to match(/Please enter search terms./)
+      expect(rendered).to match(/Please enter a search term/)
     end
   end
 end
