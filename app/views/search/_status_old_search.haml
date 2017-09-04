@@ -1,2 +1,2 @@
-.status--highlight.theme--secondary
-  %p= t('search.new_search', link: link_to(t('search.old_search_linktext'), "https://www.parliament.uk/search/results/?q=#{@query_parameter}")).html_safe
+.status--highlight
+  %p= t('search.new_search', link: link_to(t('search.old_search_linktext'), "https://www.parliament.uk/search/results/?q=#{@query_parameter}", :data => { :type => 'old-search' })).html_safe
