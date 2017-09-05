@@ -2,7 +2,6 @@ class SearchController < ApplicationController
 
   def index
     disable_top_navigation
-    enable_status_banner
 
     # Setup Parliament Opensearch
     begin
