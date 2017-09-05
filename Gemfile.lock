@@ -147,7 +147,7 @@ GEM
     parliament-opensearch (0.2.6)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
-    parliament-routes (0.3.1)
+    parliament-routes (0.4.0)
     parliament-ruby (0.8.0)
     parliament-utils (0.2.5)
       bandiera-client
@@ -320,7 +320,7 @@ DEPENDENCIES
   parliament-grom-decorators (~> 0.2)
   parliament-ntriple (~> 0.1)
   parliament-opensearch (~> 0.2)
-  parliament-routes (~> 0.3)
+  parliament-routes (~> 0.4)
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.2)
   pugin (~> 1.2)
