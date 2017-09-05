@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'rails_helper'
 
 RSpec.describe SearchController, vcr: true do
@@ -130,7 +131,38 @@ RSpec.describe SearchController, vcr: true do
           expect { get :index }.to raise_error(StandardError)
         end
       end
+
+      context 'new search opt out' do
+        let(:headers) { { 'HTTP_REFERER' => 'http://foo.com' } }
+        before(:each) do
+          cookies[:new_search_opt_out] = 'true'
+        end
+
+        it 'will redirect' do
+          @request.headers['HTTP_REFERER'] = 'https://www.parliament.uk/search/results/?new-search-opt'
+          get :index, params: { q: 'Test' }
+          expect(response).to redirect_to("https://www.parliament.uk/search/results/?new-search-opt-out=true&q=Test")
+        end
+      end
     end
+  end
+
+  describe 'GET redirect' do
+   before(:each) do
+     get :redirect, session: {query_parameters: 'Test'}
+   end
+
+   it 'will set a cookie' do
+     expect(cookies[:new_search_opt_out]).to eq('true')
+   end
+
+   it 'will get session' do
+     expect(controller.instance_variable_get(:@query_parameter)).to eq('Test')
+   end
+
+   it 'will redirect to old search' do
+     expect(response).to redirect_to("https://www.parliament.uk/search/results/?new-search-opt-out=true&q=Test")
+   end
   end
 
   describe 'GET opensearch' do
