@@ -1,8 +1,7 @@
 class SearchController < ApplicationController
+before_action :disable_top_navigation
 
   def index
-    disable_top_navigation
-
     # Setup Parliament Opensearch
     begin
       Parliament::Request::OpenSearchRequest.description_url = ENV['OPENSEARCH_DESCRIPTION_URL']
