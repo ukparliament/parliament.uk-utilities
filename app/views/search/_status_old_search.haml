@@ -1,3 +1,4 @@
 .status--highlight
-  %p= t('search.new_search', link: link_to(t('search.old_search_linktext'), redirect_path, :data => { :type => 'old-search' })).html_safe
+  =#%p= t('search.new_search', link: link_to(t('search.old_search_linktext'), redirect_path(q: @escaped_query_parameter), :data => { :type => 'old-search' })).html_safe
+  %p= t('search.new_search', link: link_to(t('search.old_search_linktext'), "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@escaped_query_parameter}", :data => { :type => 'old-search' })).html_safe
 

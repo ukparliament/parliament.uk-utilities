@@ -20,11 +20,10 @@ class SearchController < ApplicationController
 
     # Escape @query_parameter that replaces all 'unsafe' characters with a UTF-8 hexcode which is safer to use when making an OpenSearch request
     @query_parameter = SearchHelper.sanitize_query(@query_parameter)
-    escaped_query_parameter = CGI.escape(@query_parameter)[0, 2048]
-    session[:query_parameters] = escaped_query_parameter
+    @escaped_query_parameter = CGI.escape(@query_parameter)[0, 2048]
 
     if cookies[:new_search_opt_out] == 'true' && request.headers['HTTP_REFERER']&.include?("parliament.uk/search/result")
-      redirect_to "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{escaped_query_parameter}"
+      redirect_to "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@escaped_query_parameter}"
       return
     end
 
@@ -38,8 +37,8 @@ class SearchController < ApplicationController
                                                          builder: Parliament::Builder::OpenSearchResponseBuilder)
 
     begin
-      logger.info "Making a query for '#{@query_parameter}' => '#{escaped_query_parameter}' using the base_url: '#{request.base_url}'"
-      @results = request.get({ query: escaped_query_parameter, start_index: @start_index, count: @count })
+      logger.info "Making a query for '#{@query_parameter}' => '#{@escaped_query_parameter}' using the base_url: '#{request.base_url}'"
+      @results = request.get({ query: @escaped_query_parameter, start_index: @start_index, count: @count })
 
       # Remove <br> characters from results
       @results.entries.each do |result|
@@ -59,8 +58,10 @@ class SearchController < ApplicationController
 
   def redirect
     cookies[:new_search_opt_out] = true
-    @query_parameter = session[:query_parameters]
-    redirect_to "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@query_parameter}"
+    @query_parameter = params[:q] || nil
+    @query_parameter = SearchHelper.sanitize_query(@query_parameter)
+    @escaped_query_parameter = CGI.escape(@query_parameter)[0, 2048]
+    redirect_to "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@escaped_query_parameter}"
   end
 
 
