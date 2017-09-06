@@ -42,6 +42,7 @@ RSpec.describe 'search/results', vcr: true do
   context 'with an invalid search term' do
     before do
       assign(:results_total, 0)
+      assign(:escaped_query_parameter, 'fsdfs')
 
       controller.params = { q: 'fsdfs' }
 

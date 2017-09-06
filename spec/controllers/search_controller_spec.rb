@@ -161,14 +161,14 @@ RSpec.describe SearchController, vcr: true do
 
   describe 'GET redirect' do
    before(:each) do
-     get :redirect, session: {query_parameters: 'Test'}
+     get :redirect, params: { q: 'Test' }
    end
 
    it 'will set a cookie' do
      expect(cookies[:new_search_opt_out]).to eq('true')
    end
 
-   it 'will get session' do
+   it 'will get query' do
      expect(controller.instance_variable_get(:@query_parameter)).to eq('Test')
    end
 
