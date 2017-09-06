@@ -2,7 +2,6 @@ class SearchController < ApplicationController
 
   def index
     disable_top_navigation
-    enable_status_banner
 
     # Setup Parliament Opensearch
     begin
@@ -20,8 +19,15 @@ class SearchController < ApplicationController
     return render 'empty_search' if @query_parameter.empty?
 
     # Escape @query_parameter that replaces all 'unsafe' characters with a UTF-8 hexcode which is safer to use when making an OpenSearch request
-    @query_parameter = Sanitize.fragment(@query_parameter, Sanitize::Config::RELAXED)
+    @query_parameter = SearchHelper.sanitize_query(@query_parameter)
     escaped_query_parameter = CGI.escape(@query_parameter)[0, 2048]
+    session[:query_parameters] = escaped_query_parameter
+
+    if cookies[:new_search_opt_out] == 'true' && request.headers['HTTP_REFERER']&.include?("parliament.uk/search/result")
+      redirect_to "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{escaped_query_parameter}"
+      return
+    end
+
     @start_index = params[:start_index] || Parliament::Request::OpenSearchRequest.open_search_parameters[:start_index]
     @start_index = @start_index.to_i
     @count = params[:count] || Parliament::Request::OpenSearchRequest.open_search_parameters[:count]
@@ -49,6 +55,12 @@ class SearchController < ApplicationController
       logger.warn "Server error caught from search request: #{e.message}"
       return render 'no_results'
     end
+  end
+
+  def redirect
+    cookies[:new_search_opt_out] = true
+    @query_parameter = session[:query_parameters]
+    redirect_to "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@query_parameter}"
   end
 
 
