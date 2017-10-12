@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,12 +9,34 @@
 </head>
 
 <body>
-  <a class='sr-only sr-only--focusable' href='#content' id='skiplink'>Skip to main content</a>
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' has-js' : 'has-js');
+  </script>
+
+  <a class="sr-only sr-only--focusable" href="#content" id="skiplink">Skip to main content</a>
+
+  <div class="status--banner theme--caution cookie" id="cookie">
+    <div class="container">
+      <p>Parliament.uk uses cookies to make the site simpler.
+        <a href="/meta/cookie-policy">Find out more about cookies</a>.</p>
+    </div>
+  </div>
+
+  <div class="status--banner">
+    <div class="container">
+      <p>
+        <img class="icon--inline" src="https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.3/icons/caution-circle-white.svg"> This is a test website, so may be inaccurate.
+        <a href="http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/">Give feedback</a>
+        to help improve it.
+      </p>
+    </div>
+  </div>
 
   <header>
-    <div class='container'>
-      <a href='/'>
-        <img alt='UK Parliament' class='logo' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_logo_white.png' srcset='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_logo_white.svg'>
+    <div class="container">
+      <a href="/">
+        <img alt="UK Parliament" class="logo" src="https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_logo_white.png"
+          srcset="https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_logo_white.svg">
       </a>
     </div>
   </header>
@@ -21,11 +44,29 @@
   <main id="content">
     <div class="section--primary">
       <div class="container">
-        <h1>Sorry - something has gone wrong.</h1>
+        <h1>Sorry - something has gone wrong</h1>
         <p>Please try again soon.</p>
-        <p>Or go back to <a href="/">beta.parliament.uk</a>
+        <p>Or go back to
+          <a href="/">beta.parliament.uk</a>
       </div>
     </div>
   </main>
+
+  <footer>
+    <div class="container">
+      <h2 class="logo">UK Parliament</h2>
+      <ul class="list">
+        <li>
+          <a href="https://www.parliament.uk/">Current Parliament.uk website</a>
+        </li>
+        <li>
+          <a href="http://beta.parliament.uk/meta/cookie-policy">Cookie Policy</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.3/javascripts/main.js"></script>
 </body>
+
 </html>
