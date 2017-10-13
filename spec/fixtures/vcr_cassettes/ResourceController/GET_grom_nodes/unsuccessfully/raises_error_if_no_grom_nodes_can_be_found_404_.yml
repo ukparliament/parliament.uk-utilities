@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3030/resource_by_id?uri=http://id.ukpds.org/12345678
+    uri: http://localhost:3030/resource?uri=http://id.ukpds.org/12345678
     body:
       encoding: US-ASCII
       string: ''
@@ -29,19 +29,15 @@ http_interactions:
       - '0'
       Expires:
       - "-1"
-      Server:
-      - Microsoft-IIS/8.0
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=805c2491375cb99688705ea9b53fd3699437dea86054c9e040cc24406d1ad374;Path=/;HttpOnly;Domain=paramsrobust.azurewebsites.net
+      - ARRAffinity=08e31a4953421e4acc8f85a9de4c15a37fb2c04b2d4bea64f09dfa61db9f7085;Path=/;HttpOnly;Domain=fixedquery201710091000.azurewebsites.net
       Date:
-      - Thu, 03 Aug 2017 11:24:20 GMT
+      - Fri, 13 Oct 2017 08:51:53 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 03 Aug 2017 11:27:56 GMT
+  recorded_at: Fri, 13 Oct 2017 08:51:53 GMT
 recorded_with: VCR 3.0.3
