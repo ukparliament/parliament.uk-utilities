@@ -19,12 +19,12 @@ RSpec.describe ResourceHelper, vcr: true do
   context 'checking for acceptable object type' do
 
     it 'should return route if node type is an acceptable object type' do
-      @types = [:Incumbency, :Person]
+      @types = [:ParliamentaryIncumbency, :Person]
       expect(ResourceHelper.check_acceptable_object_type(@types)).to eq('people')
     end
 
     it 'should return nil if node type is not an acceptable object type' do
-      @types = [:Test, :Incumbency]
+      @types = [:Test, :ParliamentaryIncumbency]
       expect(ResourceHelper.check_acceptable_object_type(@types)).to eq(nil)
     end
   end

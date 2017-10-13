@@ -52,14 +52,14 @@ http_interactions:
         <http://id.ukpds.org/schema/houseSeatHasConstituencyGroup> <http://id.ukpds.org/xeQCZvTU>
         .\r\n<http://id.ukpds.org/lb50tcD4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <http://id.ukpds.org/schema/SeatIncumbency> .\r\n<http://id.ukpds.org/lb50tcD4>
-        <http://id.ukpds.org/schema/incumbencyStartDate> \"2017-06-08\"^^<http://www.w3.org/2001/XMLSchema#date>
+        <http://id.ukpds.org/schema/parliamentaryIncumbencyStartDate> \"2017-06-08\"^^<http://www.w3.org/2001/XMLSchema#date>
         .\r\n<http://id.ukpds.org/lb50tcD4> <http://id.ukpds.org/schema/seatIncumbencyHasHouseSeat>
         <http://id.ukpds.org/craglpru> .\r\n<http://id.ukpds.org/FRtq40fr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <http://id.ukpds.org/schema/Person> .\r\n<http://id.ukpds.org/FRtq40fr> <http://id.ukpds.org/schema/personGivenName>
         \"personGivenName - 481\" .\r\n<http://id.ukpds.org/FRtq40fr> <http://id.ukpds.org/schema/personFamilyName>
         \"personFamilyName - 481\" .\r\n<http://id.ukpds.org/FRtq40fr> <http://example.com/F31CBD81AD8343898B49DC65743F0BDF>
         \"F31CBD81AD8343898B49DC65743F0BDF - 481\" .\r\n<http://id.ukpds.org/FRtq40fr>
-        <http://id.ukpds.org/schema/memberHasIncumbency> <http://id.ukpds.org/lb50tcD4>
+        <http://id.ukpds.org/schema/memberHasParliamentaryIncumbency> <http://id.ukpds.org/lb50tcD4>
         .\r\n<http://id.ukpds.org/FRtq40fr> <http://id.ukpds.org/schema/partyMemberHasPartyMembership>
         <http://id.ukpds.org/GBHPPW3w> .\r\n<http://id.ukpds.org/GBHPPW3w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <http://id.ukpds.org/schema/PartyMembership> .\r\n<http://id.ukpds.org/GBHPPW3w>
