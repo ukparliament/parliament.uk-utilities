@@ -7,12 +7,33 @@
 
 %section
   .container
+    %h2= t('.subtitle.ukparliament')
+    %p= t('.cookie.explanations.ukparliament')
+    %p= t('.cookie.anonymous_statement')
+
+    %h3= t('.which_cookies')
+    %table
+      %thead
+        %tr
+          %th= t('.cookie_table.meta.name')
+          %th= t('.cookie_table.meta.purpose')
+          %th= t('.cookie_table.meta.expires')
+      %tbody
+        %tr
+          %td UK_Parliament__seen_cookie_message
+          %td= t('.cookie_table.explanations.parliament.cookiebanner')
+          %td= t('.cookie_table.meta.expiration.days', count: 28)
+        %tr
+          %td _beta_parliament_session
+          %td= t('.cookie_table.explanations.parliament.session')
+          %td= t('.cookie_table.meta.expiration.session')
+
+%section
+  .container
     %h2= t('.subtitle.ga')
     %p= t('.cookie.explanations.ga')
     %p= t('.cookie.anonymous_statement')
 
-%section
-  .container
     %h3= t('.which_cookies')
     %table
       %thead
@@ -29,6 +50,10 @@
           %td _gat
           %td= t('.cookie_table.explanations.gat')
           %td= t('.cookie_table.meta.expiration.minutes', count: 10)
+        %tr
+          %td _gid
+          %td= t('.cookie_table.explanations.gid')
+          %td= t('.cookie_table.meta.expiration.days', count: 1)
 
 %section
   .container
@@ -36,8 +61,6 @@
     %p= t('.cookie.explanations.hj')
     %p= t('.cookie.anonymous_statement')
 
-%section
-  .container
     %h3= t('.which_cookies')
     %table
       %thead
@@ -65,6 +88,44 @@
         %tr
           %td _hjIncludedInSample
           %td= t('.cookie_table.explanations.hjincludedinsample')
+          %td= t('.cookie_table.meta.expiration.years', count: 1)
+
+%section
+  .container
+    %h2= t('.subtitle.azure')
+    %p= t('.cookie.explanations.azure')
+    %p= t('.cookie.anonymous_statement')
+
+    %h3= t('.which_cookies')
+    %table
+      %thead
+        %tr
+          %th= t('.cookie_table.meta.name')
+          %th= t('.cookie_table.meta.purpose')
+          %th= t('.cookie_table.meta.expires')
+      %tbody
+        %tr
+          %td AzureAppProxyUserSessionCookie_*
+          %td= t('.cookie_table.explanations.azure')
+          %td= t('.cookie_table.meta.expiration.years', count: 1)
+
+%section
+  .container
+    %h2= t('.subtitle.cloudflare')
+    %p= t('.cookie.explanations.cloudflare')
+    %p= t('.cookie.anonymous_statement')
+
+    %h3= t('.which_cookies')
+    %table
+      %thead
+        %tr
+          %th= t('.cookie_table.meta.name')
+          %th= t('.cookie_table.meta.purpose')
+          %th= t('.cookie_table.meta.expires')
+      %tbody
+        %tr
+          %td __cfduid
+          %td= t('.cookie_table.explanations.cloudflare')
           %td= t('.cookie_table.meta.expiration.years', count: 1)
 
 %section
