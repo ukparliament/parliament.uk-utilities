@@ -18,7 +18,7 @@ RSpec.describe PostcodesController, vcr: true do
   describe 'GET show' do
     context 'given a valid postcode' do
       before(:each) do
-        Parliament::Utils::Helpers::PostcodeHelper.previous_path = postcodes_path
+        session[:postcode_previous_path] = postcodes_path
 
         get :show, params: { postcode: 'SW1P 3JA' }
       end
@@ -39,7 +39,7 @@ RSpec.describe PostcodesController, vcr: true do
 
     context 'given an invalid postcode, but in the correct postcode format' do
       before(:each) do
-        Parliament::Utils::Helpers::PostcodeHelper.previous_path = constituencies_current_path
+        session[:postcode_previous_path] = constituencies_current_path
 
         get :show, params: { postcode: 'AA99 2AA' }
       end
@@ -55,7 +55,7 @@ RSpec.describe PostcodesController, vcr: true do
 
     context 'given an invalid postcode' do
       before(:each) do
-        Parliament::Utils::Helpers::PostcodeHelper.previous_path = constituencies_current_path
+        session[:postcode_previous_path] = constituencies_current_path
 
         get :show, params: { postcode: 'apple' }
       end
@@ -75,7 +75,7 @@ RSpec.describe PostcodesController, vcr: true do
 
     context 'given a xss search' do
       before(:each) do
-        Parliament::Utils::Helpers::PostcodeHelper.previous_path = constituencies_current_path
+        session[:postcode_previous_path] = constituencies_current_path
 
         get :show, params: { postcode: '<script>alert(document.cookie)</script>' }
       end
@@ -97,7 +97,7 @@ RSpec.describe PostcodesController, vcr: true do
   describe 'Previous path' do
     context 'the previous path is mps' do
       before(:each) do
-        Parliament::Utils::Helpers::PostcodeHelper.previous_path = controller.url_for(action: 'mps', controller: 'home')
+        session[:postcode_previous_path] = controller.url_for(action: 'mps', controller: 'home')
 
         get :show, params: { postcode: 'SW1P 3JA' }
       end
@@ -108,7 +108,7 @@ RSpec.describe PostcodesController, vcr: true do
         end
 
         it 'redirects to the MPs page' do
-          expect(response).to redirect_to(person_path('03gdr3Yo'))
+          expect(response).to redirect_to(person_path('rk95p4uH'))
         end
       end
 
