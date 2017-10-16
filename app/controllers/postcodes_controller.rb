@@ -20,7 +20,8 @@ class PostcodesController < ApplicationController
 
       @constituency = @constituency.first
 
-      if Parliament::Utils::Helpers::PostcodeHelper.previous_path == url_for(action: 'mps', controller: 'home')
+      if session[:postcode_previous_path] == url_for(action: 'mps', controller: 'home')
+        p 'GOT HERE'
         if @person.empty?
           flash[:error] = "#{I18n.t('error.no_mp')} #{@constituency.name}."
 
@@ -28,11 +29,12 @@ class PostcodesController < ApplicationController
         else
           redirect_to(person_path(@person.first.graph_id)) && return
         end
-      elsif Parliament::Utils::Helpers::PostcodeHelper.previous_path == url_for(action: 'find_your_constituency', controller: 'home')
+      elsif session[:postcode_previous_path] == url_for(action: 'find_your_constituency', controller: 'home')
+        p 'GOT HERE 2'
         if @person.empty?
           flash[:error] = "#{I18n.t('error.no_mp')} #{@constituency.name}."
 
-          redirect_to(Parliament::Utils::Helpers::PostcodeHelper.previous_path) && return
+          redirect_to(session[:postcode_previous_path]) && return
         else
           redirect_to(constituency_path(@constituency.graph_id)) && return
         end
@@ -52,9 +54,9 @@ class PostcodesController < ApplicationController
     previous_controller = params[:previous_controller]
     previous_action = params[:previous_action]
     previous_path = url_for(controller: previous_controller, action: previous_action)
-    Parliament::Utils::Helpers::PostcodeHelper.previous_path = previous_path
+    session[:postcode_previous_path] = previous_path
 
-    return redirect_to Parliament::Utils::Helpers::PostcodeHelper.previous_path, flash: { error: I18n.t('error.postcode_invalid').capitalize } if raw_postcode.gsub(/\s+/, '').empty?
+    return redirect_to previous_path, flash: { error: I18n.t('error.postcode_invalid').capitalize } if raw_postcode.gsub(/\s+/, '').empty?
 
     hyphenated_postcode = Parliament::Utils::Helpers::PostcodeHelper.hyphenate(raw_postcode)
 
