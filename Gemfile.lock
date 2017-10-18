@@ -143,7 +143,7 @@ GEM
     parallel (1.12.0)
     parallel_tests (2.17.0)
       parallel
-    parliament-grom-decorators (0.10.1)
+    parliament-grom-decorators (0.11.0)
     parliament-ntriple (0.2.0)
       grom (~> 0.5)
     parliament-opensearch (0.2.6)
@@ -227,7 +227,7 @@ GEM
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
-    rspec-rails (3.7.0)
+    rspec-rails (3.7.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -319,7 +319,7 @@ DEPENDENCIES
   haml
   listen (>= 3.0.5, < 3.2)
   parallel_tests
-  parliament-grom-decorators (~> 0.10)
+  parliament-grom-decorators (~> 0.11)
   parliament-ntriple (~> 0.1)
   parliament-opensearch (~> 0.2)
   parliament-routes (~> 0.4)
