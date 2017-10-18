@@ -16,9 +16,9 @@ class HomeController < ApplicationController
 
     @parliaments, @parties, @speaker = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
         @request,
-        'http://id.ukpds.org/schema/ParliamentPeriod',
-        'http://id.ukpds.org/schema/Party',
-        'http://id.ukpds.org/schema/Person'
+        Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('ParliamentPeriod'),
+        Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Party'),
+        Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Person')
     )
 
     @parties = @parties.multi_direction_sort({ member_count: :desc, name: :asc })

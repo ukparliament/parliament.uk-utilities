@@ -32,17 +32,17 @@ RSpec.describe HomeController, vcr: true do
 
       assigns(:parliaments).each do |parliament|
         expect(parliament).to be_a(Grom::Node)
-        expect(parliament.type).to eq('http://id.ukpds.org/schema/ParliamentPeriod')
+        expect(parliament.type).to eq('https://id.parliament.uk/schema/ParliamentPeriod')
       end
 
       assigns(:parties).each do |party|
         expect(party).to be_a(Grom::Node)
-        expect(party.type).to eq('http://id.ukpds.org/schema/Party')
+        expect(party.type).to eq('https://id.parliament.uk/schema/Party')
       end
 
       assigns(:speaker).each do |speaker|
         expect(speaker).to be_a(Grom::Node)
-        expect(speaker.type).to eq('http://id.ukpds.org/schema/Person')
+        expect(speaker.type).to eq('https://id.parliament.uk/schema/Person')
       end
     end
   end

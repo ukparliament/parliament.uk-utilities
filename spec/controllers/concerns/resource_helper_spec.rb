@@ -33,7 +33,7 @@ RSpec.describe ResourceHelper, vcr: true do
   context 'exctracting object type from url' do
 
     before(:each) do
-      @node_type = 'http://id.ukpds.org/schema/Person'
+      @node_type = 'https://id.parliament.uk/schema/Person'
     end
 
     it 'should extract object type from url' do
@@ -45,7 +45,7 @@ RSpec.describe ResourceHelper, vcr: true do
   context 'producing statements for view' do
 
     before(:each) do
-      resource_uri = "http://id.ukpds.org/7KNGxTli"
+      resource_uri = "https://id.parliament.uk/7KNGxTli"
       @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resource_by_id.get(params: { uri: resource_uri })
     end
 
@@ -60,7 +60,7 @@ RSpec.describe ResourceHelper, vcr: true do
   context 'produces an array of types' do
 
     before(:each) do
-      resource_uri = "http://id.ukpds.org/7KNGxTli"
+      resource_uri = "https://id.parliament.uk/7KNGxTli"
       @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resource_by_id.get(params: { uri: resource_uri })
     end
 

@@ -41,11 +41,11 @@ http_interactions:
       - Mon, 16 Oct 2017 15:47:47 GMT
     body:
       encoding: ASCII-8BIT
-      string: "<http://id.ukpds.org/QI3Y4up4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-                       <http://id.ukpds.org/schema/ConstituencyGroup> .\r\n<http://id.ukpds.org/QI3Y4up4>
-                       <http://id.ukpds.org/schema/constituencyGroupName> \"constituencyGroupName
-                       - 1\" .\r\n<http://id.ukpds.org/QI3Y4up4> <http://id.ukpds.org/schema/constituencyGroupHasHouseSeat>
-                       <http://id.ukpds.org/WWkZz8BZ> .\r\n"
+      string: "<https://id.parliament.uk/QI3Y4up4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+                       <https://id.parliament.uk/schema/ConstituencyGroup> .\r\n<https://id.parliament.uk/QI3Y4up4>
+                       <https://id.parliament.uk/schema/constituencyGroupName> \"constituencyGroupName
+                       - 1\" .\r\n<https://id.parliament.uk/QI3Y4up4> <https://id.parliament.uk/schema/constituencyGroupHasHouseSeat>
+                       <https://id.parliament.uk/WWkZz8BZ> .\r\n"
     http_version:
   recorded_at: Mon, 16 Oct 2017 15:47:55 GMT
 recorded_with: VCR 3.0.3

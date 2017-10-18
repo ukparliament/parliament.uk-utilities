@@ -21,6 +21,6 @@ class ResourceController < ApplicationController
 
   def resource_params
     @resource_id = params[:resource_id]
-    @resource_uri = "http://id.ukpds.org/#{@resource_id}"
+    @resource_uri = Parliament::Utils::Helpers::RequestHelper.namespace_uri_path("/#{@resource_id}")
   end
 end
