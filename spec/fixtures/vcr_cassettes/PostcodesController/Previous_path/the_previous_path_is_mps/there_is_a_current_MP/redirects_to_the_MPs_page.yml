@@ -22,53 +22,51 @@ http_interactions:
       message: OK
     headers:
       Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
+      - public, must-revalidate, max-age=709
       Content-Length:
-      - '2237'
+      - '487'
       Content-Type:
       - application/n-triples
       Expires:
-      - "-1"
-      Server:
-      - Microsoft-IIS/8.0
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
+      - Mon, 16 Oct 2017 15:59:36 GMT
+      Last-Modified:
+      - Mon, 16 Oct 2017 15:29:36 GMT
+      Vary:
+      - Accept,Accept-Charset,Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
       Set-Cookie:
-      - ARRAffinity=805c2491375cb99688705ea9b53fd3699437dea86054c9e040cc24406d1ad374;Path=/;HttpOnly;Domain=paramsrobust.azurewebsites.net
+      - ARRAffinity=08e31a4953421e4acc8f85a9de4c15a37fb2c04b2d4bea64f09dfa61db9f7085;Path=/;HttpOnly;Domain=fixedquery201710091000.azurewebsites.net
       Date:
-      - Tue, 01 Aug 2017 14:23:27 GMT
+      - Mon, 16 Oct 2017 15:47:47 GMT
     body:
-      encoding: UTF-8
-      string: "<http://id.ukpds.org/QI3Y4up4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/ConstituencyGroup> .\r\n<http://id.ukpds.org/QI3Y4up4>
+      encoding: ASCII-8BIT
+      string: "<http://id.ukpds.org/ew2nBXJ7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/ConstituencyGroup> .\r\n<http://id.ukpds.org/ew2nBXJ7>
         <http://id.ukpds.org/schema/constituencyGroupName> \"constituencyGroupName
-        - 1\" .\r\n<http://id.ukpds.org/QI3Y4up4> <http://id.ukpds.org/schema/constituencyGroupHasHouseSeat>
-        <http://id.ukpds.org/WWkZz8BZ> .\r\n<http://id.ukpds.org/WWkZz8BZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/HouseSeat> .\r\n<http://id.ukpds.org/WWkZz8BZ>
-        <http://id.ukpds.org/schema/houseSeatHasConstituencyGroup> <http://id.ukpds.org/QI3Y4up4>
-        .\r\n<http://id.ukpds.org/ZzFb682F> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/SeatIncumbency> .\r\n<http://id.ukpds.org/ZzFb682F>
-        <http://id.ukpds.org/schema/parliamentaryIncumbencyStartDate> \"2017-06-08\"^^<http://www.w3.org/2001/XMLSchema#date>
-        .\r\n<http://id.ukpds.org/ZzFb682F> <http://id.ukpds.org/schema/seatIncumbencyHasHouseSeat>
-        <http://id.ukpds.org/WWkZz8BZ> .\r\n<http://id.ukpds.org/03gdr3Yo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/Person> .\r\n<http://id.ukpds.org/03gdr3Yo> <http://id.ukpds.org/schema/personGivenName>
-        \"personGivenName - 1\" .\r\n<http://id.ukpds.org/03gdr3Yo> <http://id.ukpds.org/schema/personFamilyName>
-        \"personFamilyName - 1\" .\r\n<http://id.ukpds.org/03gdr3Yo> <http://example.com/F31CBD81AD8343898B49DC65743F0BDF>
-        \"F31CBD81AD8343898B49DC65743F0BDF - 1\" .\r\n<http://id.ukpds.org/03gdr3Yo>
-        <http://id.ukpds.org/schema/memberHasParliamentaryIncumbency> <http://id.ukpds.org/ZzFb682F>
-        .\r\n<http://id.ukpds.org/03gdr3Yo> <http://id.ukpds.org/schema/partyMemberHasPartyMembership>
-        <http://id.ukpds.org/mDJ7Ly3r> .\r\n<http://id.ukpds.org/mDJ7Ly3r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/PartyMembership> .\r\n<http://id.ukpds.org/mDJ7Ly3r>
-        <http://id.ukpds.org/schema/partyMembershipHasParty> <http://id.ukpds.org/AJgeHzL2>
-        .\r\n<http://id.ukpds.org/mDJ7Ly3r> <http://id.ukpds.org/schema/partyMembershipStartDate>
-        \"2017-06-08\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<http://id.ukpds.org/AJgeHzL2>
+        - 1\" .\r\n<http://id.ukpds.org/ew2nBXJ7> <http://id.ukpds.org/schema/constituencyGroupHasHouseSeat>
+        <http://id.ukpds.org/Qt0BigGT> .\r\n<http://id.ukpds.org/Qt0BigGT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/HouseSeat> .\r\n<http://id.ukpds.org/Qt0BigGT>
+        <http://id.ukpds.org/schema/houseSeatHasConstituencyGroup> <http://id.ukpds.org/ew2nBXJ7>
+        .\r\n<http://id.ukpds.org/sTLwsg0O> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/SeatIncumbency> .\r\n<http://id.ukpds.org/sTLwsg0O>
+        <http://id.ukpds.org/schema/parliamentaryIncumbencyStartDate> \"2017-06-08+00:00\"^^<http://www.w3.org/2001/XMLSchema#date>
+        .\r\n<http://id.ukpds.org/sTLwsg0O> <http://id.ukpds.org/schema/seatIncumbencyHasHouseSeat>
+        <http://id.ukpds.org/Qt0BigGT> .\r\n<http://id.ukpds.org/rk95p4uH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/Person> .\r\n<http://id.ukpds.org/rk95p4uH> <http://id.ukpds.org/schema/personGivenName>
+        \"personGivenName - 1\" .\r\n<http://id.ukpds.org/rk95p4uH> <http://id.ukpds.org/schema/personFamilyName>
+        \"personFamilyName - 1\" .\r\n<http://id.ukpds.org/rk95p4uH> <http://example.com/F31CBD81AD8343898B49DC65743F0BDF>
+        \"F31CBD81AD8343898B49DC65743F0BDF - 1\" .\r\n<http://id.ukpds.org/rk95p4uH>
+        <http://id.ukpds.org/schema/memberHasParliamentaryIncumbency> <http://id.ukpds.org/sTLwsg0O>
+        .\r\n<http://id.ukpds.org/rk95p4uH> <http://id.ukpds.org/schema/partyMemberHasPartyMembership>
+        <http://id.ukpds.org/nD1Cur5w> .\r\n<http://id.ukpds.org/nD1Cur5w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://id.ukpds.org/schema/PartyMembership> .\r\n<http://id.ukpds.org/nD1Cur5w>
+        <http://id.ukpds.org/schema/partyMembershipHasParty> <http://id.ukpds.org/DIifZMjq>
+        .\r\n<http://id.ukpds.org/nD1Cur5w> <http://id.ukpds.org/schema/partyMembershipStartDate>
+        \"2017-06-08+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<http://id.ukpds.org/DIifZMjq>
         <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.ukpds.org/schema/Party>
-        .\r\n<http://id.ukpds.org/AJgeHzL2> <http://id.ukpds.org/schema/partyName>
+        .\r\n<http://id.ukpds.org/DIifZMjq> <http://id.ukpds.org/schema/partyName>
         \"partyName - 1\" .\r\n"
     http_version: 
-  recorded_at: Tue, 01 Aug 2017 14:26:57 GMT
+  recorded_at: Mon, 16 Oct 2017 15:47:55 GMT
 recorded_with: VCR 3.0.3
