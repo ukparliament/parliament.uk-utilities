@@ -16,7 +16,7 @@ class PostcodesController < ApplicationController
     begin
       response = Parliament::Utils::Helpers::PostcodeHelper.lookup(@postcode)
 
-      @constituency, @person = response.filter('http://id.ukpds.org/schema/ConstituencyGroup', 'http://id.ukpds.org/schema/Person')
+      @constituency, @person = response.filter(Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('ConstituencyGroup'), Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Person'))
 
       @constituency = @constituency.first
 
