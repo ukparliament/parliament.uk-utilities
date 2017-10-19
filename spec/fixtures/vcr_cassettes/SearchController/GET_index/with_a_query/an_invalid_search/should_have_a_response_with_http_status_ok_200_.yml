@@ -52,7 +52,7 @@ http_interactions:
         type=\"text/json\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
         type=\"text/xml\" />\r\n  <Url template=\"https://apidataparliament.azure-api.net/search?q={searchTerms}&amp;start={startPage?}&amp;count={count?}\"
         type=\"application/xml\" />\r\n</OpenSearchDescription>"
-    http_version: 
+    http_version:
   recorded_at: Thu, 24 Aug 2017 14:31:06 GMT
 - request:
     method: get
@@ -104,7 +104,7 @@ http_interactions:
         role="request" searchTerms="fdsfsd" totalResults="0" count="10" startIndex="1"
         xmlns="http://a9.com/-/spec/opensearch/1.1/" /><totalResults xmlns="http://a9.com/-/spec/opensearch/1.1/">0</totalResults><startIndex
         xmlns="http://a9.com/-/spec/opensearch/1.1/">1</startIndex><itemsPerPage xmlns="http://a9.com/-/spec/opensearch/1.1/">0</itemsPerPage></feed>'
-    http_version: 
+    http_version:
   recorded_at: Thu, 24 Aug 2017 14:31:07 GMT
 - request:
     method: get
@@ -147,11 +147,11 @@ http_interactions:
       - Thu, 24 Aug 2017 14:31:08 GMT
     body:
       encoding: UTF-8
-      string: "<http://id.ukpds.org/KL2k1BGP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/KL2k1BGP> <http://id.ukpds.org/schema/houseName>
-        \"houseName - 1\" .\r\n<http://id.ukpds.org/m1EgVTLj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://id.ukpds.org/schema/House> .\r\n<http://id.ukpds.org/m1EgVTLj> <http://id.ukpds.org/schema/houseName>
+      string: "<https://id.parliament.uk/KL2k1BGP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/House> .\r\n<https://id.parliament.uk/KL2k1BGP> <https://id.parliament.uk/schema/houseName>
+        \"houseName - 1\" .\r\n<https://id.parliament.uk/m1EgVTLj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/House> .\r\n<https://id.parliament.uk/m1EgVTLj> <https://id.parliament.uk/schema/houseName>
         \"houseName - 2\" .\r\n"
-    http_version: 
+    http_version:
   recorded_at: Thu, 24 Aug 2017 14:31:08 GMT
 recorded_with: VCR 3.0.3
