@@ -27,6 +27,7 @@ passenger.3000.pid
 coverage
 
 /public/_*
+/public/assets/*
 
 .env
 .env.sample.*

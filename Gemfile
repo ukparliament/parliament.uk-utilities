@@ -52,10 +52,6 @@ gem 'rack-rewrite'
 # Include time zone information
 gem 'tzinfo-data'
 
-if %w(2.2.7 2.3.4 2.4.1).include? RUBY_VERSION
-  gem "stopgap_13632", "~> 1.0", :platforms => ["mri", "mingw", "x64_mingw"]
-end
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
