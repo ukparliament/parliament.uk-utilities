@@ -16,13 +16,13 @@
     .container
       = render partial: 'status_old_search'
       %ol.list--block
-        - @results.entries.each do |entry|
+        - @results.entries.each_with_index do |entry, index|
           %li
             .list--details
-              %h2
-                %a{ href: "#{entry.url}" }= entry.title.html_safe
+              %h2= link_to(entry.title, entry.url, onclick: "appInsights.trackPageView(\"search/virtual/result/#{start_index(current_page)+index}\"); return true;")
+              =#%p.search-result-url=entry.url
               - if entry.content
-                %p= entry.content.html_safe
+                %p= entry.content
 
 %section
   .container
