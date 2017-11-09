@@ -1,2 +1,2 @@
 .status--highlight
-  %p= t('search.new_search', link: link_to(t('search.old_search_linktext'), "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@query_parameter}", data: { type: 'old-search' }, onclick: 'appInsights.trackPageView("search/virtual/back-to-old"); return true;')).html_safe
+  %p= t('search.new_search', link: link_to(t('search.old_search_linktext'), "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@query_parameter}", data: { type: 'old-search' }, onclick: 'appInsights.trackEvent("backToOldSearch"); return true;')).html_safe
