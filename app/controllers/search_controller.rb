@@ -26,9 +26,12 @@ before_action :disable_top_navigation
       return
     end
 
-    @start_index = params[:start_index] || Parliament::Request::OpenSearchRequest.open_search_parameters[:start_index]
+    start_index_param = params.fetch(:start_index, '').empty? ? nil : params[:start_index]
+    count_param =       params.fetch(:count, '').empty?       ? nil : params[:count]
+
+    @start_index = start_index_param || Parliament::Request::OpenSearchRequest.open_search_parameters[:start_index]
     @start_index = @start_index.to_i
-    @count = params[:count] || Parliament::Request::OpenSearchRequest.open_search_parameters[:count]
+    @count = count_param || Parliament::Request::OpenSearchRequest.open_search_parameters[:count]
     @count = @count.to_i
 
     request = Parliament::Request::OpenSearchRequest.new(headers: { 'Accept' => 'application/atom+xml',
