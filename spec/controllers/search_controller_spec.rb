@@ -156,6 +156,25 @@ RSpec.describe SearchController, vcr: true do
           end
         end
       end
+
+      context 'with no count or start_index value' do
+        before(:each) do
+          get :index, params: { q: 'Matt Rayner', count: '', start_index: '' }
+        end
+
+        it 'should have a response with http status ok (200)' do
+          expect(response).to have_http_status(:ok)
+        end
+
+        it 'should set count to the default value' do
+          expect(controller.instance_variable_get(:@count)).to eq(10)
+        end
+
+        it 'should set start_index to the default value' do
+          expect(controller.instance_variable_get(:@start_index)).to eq(1)
+        end
+
+      end
     end
   end
 
