@@ -1,6 +1,8 @@
 class SearchController < ApplicationController
 before_action :disable_top_navigation
 
+before_action :enable_pingdom, only: :index
+
   def index
     # Setup Parliament Opensearch
     begin
