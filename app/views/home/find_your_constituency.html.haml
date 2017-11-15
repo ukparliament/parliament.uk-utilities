@@ -19,7 +19,7 @@
             %h2= link_to "A - Z", constituencies_current_a_z_letter_path('a')
             %p= "#{t('view_all').capitalize} #{t('constituency_plural')}."
 
-%section#content
+%section
   .container
     .block--border__bottom
       %h2= t('region_plural').capitalize
@@ -30,5 +30,3 @@
             .list--details
               %h3= link_to "#{region.name}", places_show_constituencies_path(region.gss_code)
               %p= "#{region.constituency_count} #{t('constituency_plural')}"
-
-
