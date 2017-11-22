@@ -398,7 +398,6 @@ en:
         ukparliament: 'UK Parliament cookies'
         ga: 'Google Analytics cookies'
         hj: 'HotJar cookies'
-        azure: 'Azure cookies'
         cloudflare: 'Cloudflare cookies'
       which_cookies: 'Which cookies do we use?'
       cookie:
@@ -407,7 +406,6 @@ en:
           ukparliament: 'We use our own cookies to improve your experience and tell us if you have previously visited our site. We use this information to remove messages you will have seen before.'
           ga: 'We use Google Analytics cookies to collect information about how you use our services. This helps us meet your needs and improve our website.'
           hj: 'We use HotJar to find out how you use our website to improve your experience.'
-          azure: 'Azure helps us manage our site. The cookies we use let us know the service is operating correctly.'
           cloudflare: 'We use Cloudflare to display our content. The cookies we use help us to ensure the connections between our site and Cloudflare is secure.'
         anonymous_statement: 'All the information we collect is anonymous.'
       cookie_table:
@@ -435,7 +433,6 @@ en:
           hjdonetesterswidgets: 'This ensures a form does not reappear once you have completed it.'
           hjminimizedtesterswidgets: 'This ensures a form remains minimised when you move through our site.'
           hjincludedinsample: 'This informs Hotjar whether your visit is included in their sample set.'
-          azure: 'This informs our site that you have connected to their application.'
           cloudflare: 'This allows Cloudflare to identify trusted web traffic from our site.'
           parliament:
             cookiebanner: 'This lets us know you have seen our cookie message.'
