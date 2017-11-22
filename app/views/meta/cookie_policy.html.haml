@@ -92,25 +92,6 @@
 
 %section
   .container
-    %h2= t('.subtitle.azure')
-    %p= t('.cookie.explanations.azure')
-    %p= t('.cookie.anonymous_statement')
-
-    %h3= t('.which_cookies')
-    %table
-      %thead
-        %tr
-          %th= t('.cookie_table.meta.name')
-          %th= t('.cookie_table.meta.purpose')
-          %th= t('.cookie_table.meta.expires')
-      %tbody
-        %tr
-          %td AzureAppProxyUserSessionCookie_*
-          %td= t('.cookie_table.explanations.azure')
-          %td= t('.cookie_table.meta.expiration.years', count: 1)
-
-%section
-  .container
     %h2= t('.subtitle.cloudflare')
     %p= t('.cookie.explanations.cloudflare')
     %p= t('.cookie.anonymous_statement')
