@@ -92,6 +92,29 @@
 
 %section
   .container
+    %h2= t('.subtitle.ai')
+    %p= t('.cookie.explanations.ai')
+    %p= t('.cookie.anonymous_statement')
+
+    %h3= t('.which_cookies')
+    %table
+      %thead
+        %tr
+          %th= t('.cookie_table.meta.name')
+          %th= t('.cookie_table.meta.purpose')
+          %th= t('.cookie_table.meta.expires')
+      %tbody
+        %tr
+          %td ai_user
+          %td= t('.cookie_table.explanations.ai.user')
+          %td= t('.cookie_table.meta.expiration.years', count: 1)
+        %tr
+          %td ai_session
+          %td= t('.cookie_table.explanations.ai.session')
+          %td= t('.cookie_table.meta.expiration.minutes', count: 30)
+
+%section
+  .container
     %h2= t('.subtitle.cloudflare')
     %p= t('.cookie.explanations.cloudflare')
     %p= t('.cookie.anonymous_statement')
