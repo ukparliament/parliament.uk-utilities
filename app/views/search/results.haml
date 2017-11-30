@@ -12,7 +12,7 @@
     %p= "About #{@results_total} results"
 
 - if @results_total.to_i >= 1
-  %section#content
+  %section#content{:tabindex => "0"}
     .container
       = render partial: 'status_old_search'
       %ol.list--block
