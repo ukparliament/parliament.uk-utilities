@@ -49,6 +49,8 @@ before_action :enable_pingdom, only: :index
         %w(summary content).each do |content_method|
           result[content_method].gsub!(/(<br>|<br\/>|<br \/>)/, '') if result[content_method]
         end
+
+        SearchHelper.filter_hints(result)
       end
 
       @results_total = @results.totalResults

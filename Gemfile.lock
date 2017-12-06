@@ -147,7 +147,7 @@ GEM
     parliament-grom-decorators (0.13.0)
     parliament-ntriple (0.2.0)
       grom (~> 0.5)
-    parliament-opensearch (0.2.6)
+    parliament-opensearch (0.3.0)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
     parliament-routes (0.5.1)
@@ -321,7 +321,7 @@ DEPENDENCIES
   parallel_tests
   parliament-grom-decorators (~> 0.11)
   parliament-ntriple (~> 0.1)
-  parliament-opensearch (~> 0.2)
+  parliament-opensearch (~> 0.3)
   parliament-routes (~> 0.4)
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.4)
