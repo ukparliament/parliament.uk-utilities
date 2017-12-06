@@ -17,11 +17,11 @@
         .block
           %h2= t('.find_mp')
           = render partial: 'postcodes/postcode_lookup', locals: { path: postcodes_lookup_path }
-          = link_to t('.find_by_region'), places_regions_path
+          = link_to(t('.find_by_region'), places_regions_path)
         %ol.list--block
           %li
             .list--details
-              %h2= link_to t('.a_z_surname'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id, 'a')
+              %h2= link_to(t('.a_z_surname'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id, 'a'))
               %p= "#{t('view_all').capitalize} #{t('mp_plural')}."
   %section
     .container
@@ -46,6 +46,6 @@
         - @parliaments.each do |parliament|
           %li
             .list--details
-              %h3= link_to "#{parliament.date_range(date_format: '%Y')} #{t('parliament').capitalize}", parliament_house_members_a_z_letter_path(parliament.graph_id, Parliament::Utils::Helpers::HousesHelper.commons_id, 'a')
+              %h3= link_to("#{parliament.date_range(date_format: '%Y')} #{t('parliament').capitalize}", parliament_house_members_a_z_letter_path(parliament.graph_id, Parliament::Utils::Helpers::HousesHelper.commons_id, 'a'))
         %li
-          %h3= link_to "#{t('view_all').capitalize} #{t('parliament_plural').capitalize}", parliaments_path
+          %h3= link_to("#{t('view_all').capitalize} #{t('parliament_plural').capitalize}", parliaments_path)

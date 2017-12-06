@@ -29,18 +29,16 @@
     - if @results_total.to_i >= 1
       %nav.navigation--number{ aria:{ label: 'Pagination' } }
         - unless current_page == 1
-          %a.navigation-control--left{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(previous_page)}&count=#{@count}" }
-            =t('pagination.previous')
+          = link_to(t('pagination.previous'), search_path(q: @query_parameter, start_index: start_index(previous_page), count: @count).html_safe, { class: "navigation-control--left" })
 
         - unless current_page == last_page
-          %a.navigation-control--right{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(next_page)}&count=#{@count}" }
-            =t('pagination.next')
+          = link_to(t('pagination.next'), search_path(q: @query_parameter, start_index: start_index(next_page), count: @count).html_safe, { class: "navigation-control--right" })
 
         %ol
           - page_range.each do |page|
             %li{ class: ('active' if (page == current_page)), data: { number: page } }
               - unless page == current_page
-                %a{ href: "/search?q=#{@query_parameter}&start_index=#{start_index(page)}&count=#{@count}" }= page
+                = link_to(page, search_path(q: @query_parameter, start_index: start_index(page), count: @count).html_safe)
               - else
                 %span= current_page
     - else
