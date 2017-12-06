@@ -43,6 +43,11 @@ RSpec.describe SearchController, vcr: true do
           expect(assigns(:results)).to be_a(Feedjira::Parser::Atom)
         end
 
+        it 'filters hints' do
+          expect(assigns(:results).entries.first.hint_type).to eq('pdf')
+          expect(assigns(:results).entries.last.hint_type).to eq(nil)
+        end
+
         it 'renders the results template' do
           expect(response).to render_template('results')
         end
@@ -173,27 +178,26 @@ RSpec.describe SearchController, vcr: true do
         it 'should set start_index to the default value' do
           expect(controller.instance_variable_get(:@start_index)).to eq(1)
         end
-
       end
     end
   end
 
   describe 'GET redirect' do
-   before(:each) do
-     get :redirect, params: { q: 'Test' }
-   end
+    before(:each) do
+      get :redirect, params: { q: 'Test' }
+    end
 
-   it 'will set a cookie' do
-     expect(cookies[:new_search_opt_out]).to eq('true')
-   end
+    it 'will set a cookie' do
+      expect(cookies[:new_search_opt_out]).to eq('true')
+    end
 
-   it 'will get query' do
-     expect(controller.instance_variable_get(:@query_parameter)).to eq('Test')
-   end
+    it 'will get query' do
+      expect(controller.instance_variable_get(:@query_parameter)).to eq('Test')
+    end
 
-   it 'will redirect to old search' do
-     expect(response).to redirect_to("https://www.parliament.uk/search/results/?new-search-opt-out=true&q=Test")
-   end
+    it 'will redirect to old search' do
+      expect(response).to redirect_to("https://www.parliament.uk/search/results/?new-search-opt-out=true&q=Test")
+    end
   end
 
   describe 'GET opensearch' do

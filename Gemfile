@@ -17,7 +17,7 @@ gem 'haml'
 gem 'parliament-ruby', '~> 0.8'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.2', require: false
+gem 'parliament-opensearch', '~> 0.3', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '~> 0.11'
