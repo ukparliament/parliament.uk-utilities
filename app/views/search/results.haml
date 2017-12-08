@@ -12,7 +12,7 @@
     %p= "About #{@results_total} results"
 
 - if @results_total.to_i >= 1
-  %section#content{:tabindex => "0"}
+  %section#content{ tabindex: "0" }
     .container
       = render partial: 'status_old_search'
       %ol.list--block
@@ -27,7 +27,7 @@
 %section
   .container
     - if @results_total.to_i >= 1
-      %nav.navigation--number{ aria:{ label: 'Pagination' } }
+      %nav.navigation--number{ aria: { label: 'Pagination' } }
         - unless current_page == 1
           = link_to(t('pagination.previous'), search_path(q: @query_parameter, start_index: start_index(previous_page), count: @count).html_safe, { class: "navigation-control--left" })
 
