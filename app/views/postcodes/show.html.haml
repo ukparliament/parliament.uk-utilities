@@ -1,4 +1,4 @@
-#content.section--primary{:tabindex => "0"}
+#content.section--primary{ tabindex: "0" }
   .container
     %h1
       %span= title("#{t('.results_for')} #{@postcode.upcase}")
@@ -13,6 +13,6 @@
           %p
             = t('no_content.empty_list.no_mp')
     - else
-      = render partial: "pugin/elements/list", locals: {item_type: "people", data: @person}
+      = render partial: "pugin/elements/list", locals: { item_type: "people", data: @person }
     %p
       = link_to(t('.check_different_postcode').capitalize, postcodes_path)
