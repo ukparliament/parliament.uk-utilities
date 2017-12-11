@@ -145,7 +145,7 @@ GEM
     parallel_tests (2.19.0)
       parallel
     parliament-grom-decorators (0.14.1)
-    parliament-ntriple (0.2.0)
+    parliament-ntriple (0.2.1)
       grom (~> 0.5)
     parliament-opensearch (0.4.0)
       activesupport (>= 5.0.0.1)
@@ -167,7 +167,7 @@ GEM
       ast (~> 2.3)
     powerpack (0.1.1)
     public_suffix (3.0.1)
-    pugin (1.6.3)
+    pugin (1.6.4)
     puma (3.10.0)
     rack (2.0.3)
     rack-rewrite (1.5.1)
