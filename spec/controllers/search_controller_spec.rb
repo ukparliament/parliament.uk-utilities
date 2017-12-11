@@ -43,6 +43,11 @@ RSpec.describe SearchController, vcr: true do
           expect(assigns(:results)).to be_a(Feedjira::Parser::Atom)
         end
 
+        it 'filters hints' do
+          expect(assigns(:results).entries.first.hint_type).to eq('pdf')
+          expect(assigns(:results).entries.last.hint_type).to eq(nil)
+        end
+
         it 'renders the results template' do
           expect(response).to render_template('results')
         end
