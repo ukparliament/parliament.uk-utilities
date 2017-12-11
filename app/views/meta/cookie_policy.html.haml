@@ -1,6 +1,6 @@
 - page_title = title(t('.title'))
 
-#content.section--primary
+#content.section--primary{ tabindex: "0" }
   .container
     %h1= page_title
     %p= t('.cookie.definition')
@@ -92,8 +92,8 @@
 
 %section
   .container
-    %h2= t('.subtitle.azure')
-    %p= t('.cookie.explanations.azure')
+    %h2= t('.subtitle.ai')
+    %p= t('.cookie.explanations.ai')
     %p= t('.cookie.anonymous_statement')
 
     %h3= t('.which_cookies')
@@ -105,9 +105,13 @@
           %th= t('.cookie_table.meta.expires')
       %tbody
         %tr
-          %td AzureAppProxyUserSessionCookie_*
-          %td= t('.cookie_table.explanations.azure')
+          %td ai_user
+          %td= t('.cookie_table.explanations.ai.user')
           %td= t('.cookie_table.meta.expiration.years', count: 1)
+        %tr
+          %td ai_session
+          %td= t('.cookie_table.explanations.ai.session')
+          %td= t('.cookie_table.meta.expiration.minutes', count: 30)
 
 %section
   .container

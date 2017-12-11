@@ -17,7 +17,7 @@ gem 'haml'
 gem 'parliament-ruby', '~> 0.8'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.2', require: false
+gem 'parliament-opensearch', '~> 0.3', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '~> 0.11'
@@ -35,7 +35,7 @@ gem 'parliament-ntriple', '~> 0.1', require: false
 gem 'bandiera-client'
 
 # Use Pugin for front-end components and templates
-gem 'pugin', '~> 1.5', require: false
+gem 'pugin', '~> 1.6', require: false
 
 # Use dotenv to override environment variables
 gem 'dotenv'

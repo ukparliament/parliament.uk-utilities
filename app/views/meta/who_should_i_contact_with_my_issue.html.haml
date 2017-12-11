@@ -1,4 +1,4 @@
-#content.section--primary
+#content.section--primary{ tabindex: "0" }
   .container.container--offset
     %h1= t('.title')
     %p= t('.intro_text_1')
@@ -13,11 +13,11 @@
       %li= t('.when_should_i_contact_my_mp.bullet_immigration')
       %li= t('.when_should_i_contact_my_mp.bullet_school')
       %li= t('.when_should_i_contact_my_mp.bullet_transport')
-    %p= link_to t('.when_should_i_contact_my_mp.find_mp'), mps_path
+    %p= link_to(t('.when_should_i_contact_my_mp.find_mp'), mps_path)
 
     %h2= t('.when_should_i_contact_a_lord.title')
     %p= t('.when_should_i_contact_a_lord.intro_text')
-    %p= link_to t('.when_should_i_contact_a_lord.find_lord'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.lords_id, 'a')
+    %p= link_to(t('.when_should_i_contact_a_lord.find_lord'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.lords_id, 'a'))
 
     %h2= t('.when_should_i_contact_my_local_council.title')
     %p= t('.when_should_i_contact_my_local_council.intro_text')
@@ -28,7 +28,7 @@
       %li= t('.when_should_i_contact_my_local_council.bullet_street')
       %li= t('.when_should_i_contact_my_local_council.bullet_children')
       %li= t('.when_should_i_contact_my_local_council.bullet_schools')
-    %p= link_to t('.when_should_i_contact_my_local_council.find_local_council'), 'https://www.gov.uk/find-local-council'
+    %p= link_to(t('.when_should_i_contact_my_local_council.find_local_council'), 'https://www.gov.uk/find-local-council')
 
     %h2= t('.when_should_i_contact_citizens_advice.title')
     %p= t('.when_should_i_contact_citizens_advice.intro_text', link: link_to(t('.when_should_i_contact_citizens_advice.intro_text_link'), 'https://www.citizensadvice.org.uk/')).html_safe
@@ -62,7 +62,7 @@
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.scotland.bullet_law')
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.scotland.bullet_transport')
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.scotland.bullet_social')
-    %p= link_to t('.do_you_live_in_scotland_wales_or_northern_ireland.scotland.find_msp'), 'http://www.parliament.scot/msps.aspx'
+    %p= link_to(t('.do_you_live_in_scotland_wales_or_northern_ireland.scotland.find_msp'), 'http://www.parliament.scot/msps.aspx')
 
     %h3= t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.title')
     %p= t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.intro_text')
@@ -72,7 +72,7 @@
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.bullet_transport')
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.bullet_flood')
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.bullet_social')
-    %p= link_to t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.find_am'), 'http://senedd.assembly.wales/mgFindMember.aspx'
+    %p= link_to(t('.do_you_live_in_scotland_wales_or_northern_ireland.wales.find_am'), 'http://senedd.assembly.wales/mgFindMember.aspx')
 
     %h3= t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.title')
     %p= t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.intro_text')
@@ -82,4 +82,4 @@
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.bullet_employment')
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.bullet_social')
       %li= t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.bullet_trade')
-    %p= link_to t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.find_mla'), 'http://www.niassembly.gov.uk/your-mlas'
+    %p= link_to(t('.do_you_live_in_scotland_wales_or_northern_ireland.northern_ireland.find_mla'), 'http://www.niassembly.gov.uk/your-mlas')

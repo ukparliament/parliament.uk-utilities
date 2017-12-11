@@ -10,6 +10,6 @@
         - statement.each do |section|
           %td
             - if section.uri?
-              = link_to section.to_s, section.to_s
+              = link_to(section.to_s, section.to_s)
             - else
               = section
