@@ -150,7 +150,7 @@ GEM
     parliament-opensearch (0.4.1)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
-    parliament-routes (0.5.1)
+    parliament-routes (0.5.2)
     parliament-ruby (0.10.2)
     parliament-utils (0.6.0)
       bandiera-client
