@@ -4,9 +4,9 @@ RSpec.describe 'postcodes/show', vcr: true do
   before do
     assign(:person,
       [double(:person,
+        current_mp?: true,
         display_name: 'Test Display Name',
         graph_id:     '7TX8ySd4',
-        house_incumbencies: [],
         seat_incumbencies: [
           double(:seat_incumbency,
             current?: true,
