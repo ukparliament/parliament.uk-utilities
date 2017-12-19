@@ -426,10 +426,12 @@ en:
               one: 'After 1 year.'
               other: 'After %{count} years.'
             session: 'When you close your web browser.'
+            gaexp: 'From 3 to 90 days.'
         explanations:
           ga: 'This helps us know how many people have visited beta.parliament.uk by telling us if you’ve visited before.'
           gat: 'This helps us know how long you spend on a page.'
           gid: 'This helps us count how many people have visited beta.parliament.uk by telling us if you’ve visited before.'
+          gaexp: 'This will tell us what you have done on beta.parliament.uk'
           hjdonepolls: 'This ensures a poll will not reappear once you have completed it.'
           hjminimizedpolls: 'This ensures a poll remains minimised when you move through our site.'
           hjdonetesterswidgets: 'This ensures a form does not reappear once you have completed it.'
