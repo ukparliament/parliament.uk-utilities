@@ -144,13 +144,13 @@ GEM
     parallel (1.12.0)
     parallel_tests (2.19.0)
       parallel
-    parliament-grom-decorators (0.14.1)
+    parliament-grom-decorators (0.16.1)
     parliament-ntriple (0.2.1)
       grom (~> 0.5)
     parliament-opensearch (0.4.1)
       activesupport (>= 5.0.0.1)
       feedjira (~> 2.1, >= 2.1.2)
-    parliament-routes (0.5.1)
+    parliament-routes (0.5.2)
     parliament-ruby (0.10.2)
     parliament-utils (0.6.0)
       bandiera-client
