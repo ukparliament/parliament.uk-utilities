@@ -20,7 +20,13 @@
           %li
             .list--details
               %h2= link_to(entry.title, entry.url, data: { azure: 'appInsights', 'search-result': "#{start_index(current_page)+index}" })
-              %p{ data: { testable: true } }=entry.url
+              %ul.list--inline
+                - entry.hint_types.each do |hint|
+                  - if hint == 'Beta'
+                    %li.hint.theme--vibrant--yellow= hint
+                  - else
+                    %li.hint.theme--grey-4= hint
+                %li.url{ data: { testable: true } }= entry.formatted_url
               - if entry.content
                 %p= entry.content
 
