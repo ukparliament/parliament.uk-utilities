@@ -23,7 +23,7 @@
               %ul.list--inline
                 - entry.hint_types.each do |hint|
                   - if hint == 'Beta'
-                    %li.hint.theme--caution= hint
+                    %li.hint.theme--vibrant--yellow= hint
                   - else
                     %li.hint.theme--grey-4= hint
                 %li.url{ data: { testable: true } }= entry.formatted_url
