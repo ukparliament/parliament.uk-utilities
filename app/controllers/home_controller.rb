@@ -14,23 +14,15 @@ class HomeController < ApplicationController
   def index; end
 
   def mps
-    @parliaments, @parties, @speaker = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
-        @request,
-        Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('ParliamentPeriod'),
-        Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Party'),
-        Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Person')
-    )
+    @parliaments, @parties, @speaker = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'ParliamentPeriod', 'Party', 'Person')
 
     @parties = @parties.multi_direction_sort({ member_count: :desc, name: :asc })
   end
 
   def find_your_constituency
-    @regions = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
-      @request,
-      'http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion'
-    )
+    @places = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'ordnance')
 
-    @regions = @regions.sort_by(:gss_code)
+    @places = @places.sort_by(:gss_code)
   end
 
 end

@@ -309,8 +309,11 @@ en:
     results:
       title: 'Search results for'
     no_results: 'There are no results for your search.'
-    new_search: "You’re using our new search. View your results on the %{link}."
+    new_search_eol_message: "You’re using our new search. View your results on the %{link}. We are %{blog_link} on 19 January 2018."
     old_search_linktext: 'old search'
+    switching_off_linktext: 'switching off the old search'
+    new_search: 'You are using our new search. We %{blog_link} on 19 January 2018.'
+    switched_off_linktext: 'switched off the old search'
     empty_search: 'Please enter a search term'
   # parliament translations
   parliaments:
@@ -383,8 +386,8 @@ en:
       find_by_region: 'Find by region'
       find_mp_party: 'Find an MP by party.'
       find_mp_date_range: 'Find a former MP by date range'
-      speaker_link: 'The Speaker'
-      speaker_clarification: '%{speaker_link} is not a member of a party.'
+      the_speaker: 'The Speaker'
+      speaker_clarification: '%{the_speaker} is not a member of a party.'
     find_your_constituency:
       find_constituency: 'Find your constituency'
       find_by_region: 'Find a constituency by region.'
@@ -426,10 +429,12 @@ en:
               one: 'After 1 year.'
               other: 'After %{count} years.'
             session: 'When you close your web browser.'
+            gaexp: 'From 3 to 90 days.'
         explanations:
           ga: 'This helps us know how many people have visited beta.parliament.uk by telling us if you’ve visited before.'
           gat: 'This helps us know how long you spend on a page.'
           gid: 'This helps us count how many people have visited beta.parliament.uk by telling us if you’ve visited before.'
+          gaexp: 'This will tell us what you have done on beta.parliament.uk'
           hjdonepolls: 'This ensures a poll will not reappear once you have completed it.'
           hjminimizedpolls: 'This ensures a poll remains minimised when you move through our site.'
           hjdonetesterswidgets: 'This ensures a form does not reappear once you have completed it.'

@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
-before_action :disable_top_navigation
+before_action :disable_top_navigation, :disable_global_search
+
+before_action :enable_pingdom, only: :index
 
 before_action :enable_pingdom, only: :index
 
