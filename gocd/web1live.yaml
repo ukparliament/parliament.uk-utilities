@@ -9,7 +9,7 @@ pipelines:
     materials:
       parliament.uk-utilities-git:
         git: https://github.com/ukparliament/parliament.uk-utilities.git
-        branch: master
+        branch: development
         auto_update: true
     stages:
       - build:
