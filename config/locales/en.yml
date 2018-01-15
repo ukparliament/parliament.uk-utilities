@@ -309,8 +309,11 @@ en:
     results:
       title: 'Search results for'
     no_results: 'There are no results for your search.'
-    new_search: "You’re using our new search. View your results on the %{link}."
+    new_search_eol_message: "You’re using our new search. View your results on the %{link}. We are %{blog_link} on 19 January 2018."
     old_search_linktext: 'old search'
+    switching_off_linktext: 'switching off the old search'
+    new_search: 'You are using our new search. We %{blog_link} on 19 January 2018.'
+    switched_off_linktext: 'switched off the old search'
     empty_search: 'Please enter a search term'
   # parliament translations
   parliaments:
