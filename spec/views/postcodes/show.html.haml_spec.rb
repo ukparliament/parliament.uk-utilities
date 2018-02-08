@@ -4,36 +4,39 @@ RSpec.describe 'postcodes/show', vcr: true do
   before do
     assign(:person,
       [double(:person,
-        current_mp?: true,
-        display_name: 'Test Display Name',
-        graph_id:     '7TX8ySd4',
-        seat_incumbencies: [
+        current_mp?:                 true,
+        person_type:                 'member',
+        display_name:                'Test Display Name',
+        graph_id:                    '7TX8ySd4',
+        most_recent_seat_incumbency: [],
+        current_seat_incumbency:     assign(:constituency,
+          double(:constituency, constituency:
+            double(:constituency, name: 'constituency1'))),
+        constituency:                '',
+        seat_incumbencies:           [
           double(:seat_incumbency,
-            current?: true,
-            start_date: "123",
-            end_date: "456",
+            current?:     true,
+            start_date:   '123',
+            end_date:     '456',
             constituency:
-              double(:constituency,
-                name: "constituency1",
-              )
-            )],
-        constituencies: [
+                          double(:constituency,
+                            name: 'constituency1'))
+        ],
+        constituencies:              [
           double(:constituency,
-            name: "constituency1",
-            )],
-        party_memberships: [
+            name: 'constituency1')
+        ],
+        party_memberships:           [
           double(:party_membership,
             current?: true,
-            party: double(:party,
-              name: 'Test Party Name'
-            )
-          )
+            party:    double(:party,
+              name: 'Test Party Name'))
         ],
-        parties:      [
+        parties:                     [
           double(:party,
             name: 'Test Party Name')
-        ])]
-    )
+        ],
+        current_party: double(:current_party, name: 'Test Party Name'))])
     assign(:postcode, 'SW1A 0AA')
     assign(:constituency,
       double(:constituency,
