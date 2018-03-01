@@ -381,9 +381,11 @@ en:
         blog: 'Follow all %{link}.'
         blog_link: 'new website developments on our blog'
       hybrid_bills:
-        title: 'Objecting to a bill'
-        bill_link: 'Object to the High Speed Rail (West Midlands – Crewe) Bill'
-        bill_text: 'The deadline is 5pm on 26 February 2018.'
+        title: 'Object to a bill'
+        bill_link: 'Object to the High Speed Rail (West Midlands to Crewe) Bill'
+        bill_text: 'The deadline has passed.'
+        blog: 'Read the %{link}.'
+        blog_link: 'Object to a bill blog post'
     mps:
       find_mp: 'Find your MP'
       a_z_surname: 'A - Z by surname'

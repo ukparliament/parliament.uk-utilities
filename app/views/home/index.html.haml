@@ -14,6 +14,8 @@
         .list--details
           %h3= link_to(t('.hybrid_bills.bill_link'), hybrid_bill_path('1'))
           %p= t('.hybrid_bills.bill_text')
+    .status--highlight
+      %p= t('.hybrid_bills.blog', link: link_to(t('.hybrid_bills.blog_link'), 'https://pds.blog.parliament.uk/2018/02/09/building-a-new-online-service-petitioning-a-hybrid-bill/')).html_safe
 
     %h2= t('search_s').capitalize
     %ol.list--block
