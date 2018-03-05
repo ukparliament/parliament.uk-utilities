@@ -152,7 +152,7 @@ GEM
       feedjira (~> 2.1, >= 2.1.2)
     parliament-routes (0.6.0)
     parliament-ruby (0.10.2)
-    parliament-utils (0.6.1)
+    parliament-utils (0.7.0)
       bandiera-client
       coveralls
       haml
