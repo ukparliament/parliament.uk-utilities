@@ -42,7 +42,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     airbrake (7.2.1)
       airbrake-ruby (~> 2.5)
-    airbrake-ruby (2.8.1)
+    airbrake-ruby (2.8.2)
     arel (8.0.0)
     ast (2.4.0)
     bandiera-client (3.0.4)
@@ -76,7 +76,7 @@ GEM
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
-    erubi (1.7.0)
+    erubi (1.7.1)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
@@ -152,7 +152,7 @@ GEM
       feedjira (~> 2.1, >= 2.1.2)
     parliament-routes (0.6.0)
     parliament-ruby (0.10.2)
-    parliament-utils (0.7.0)
+    parliament-utils (0.7.1)
       bandiera-client
       coveralls
       haml
@@ -163,7 +163,7 @@ GEM
       pugin
       simplecov
       vcard
-    parser (2.5.0.2)
+    parser (2.5.0.3)
       ast (~> 2.4.0)
     powerpack (0.1.1)
     public_suffix (3.0.2)
@@ -203,7 +203,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
     rake (12.3.0)
-    rb-fsevent (0.10.2)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdf (2.2.3)
@@ -236,9 +236,9 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
-    rubocop (0.52.1)
+    rubocop (0.53.0)
       parallel (~> 1.10)
-      parser (>= 2.4.0.2, < 3.0)
+      parser (>= 2.5)
       powerpack (~> 0.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
