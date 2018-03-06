@@ -353,17 +353,17 @@ en:
   # homepage translations
   home:
     index:
-      title: 'Welcome to the UK Parliament test website'
-      new_website: 'We’re building a %{link}. These pages are being tested and improved – they may be inaccurate or misleading.'
+      title: "Welcome to the UK Parliament's beta website"
+      new_website: "We're building a %{link}. Pages with a beta label are being tested and improved. They may not work for everyone"
       new_website_link: 'new website for Parliament'
-      old_website: 'Test pages are separate from the current %{link} website.'
+      old_website: 'Beta pages are separate from the current %{link} website.'
       old_website_link: 'parliament.uk'
       feedback:
         title: 'Give feedback'
         provide: 'We want your feedback to %{link} further.'
         provide_link: 'help us improve these pages'
       whats_on:
-        title: "What's on our test website"
+        title: "What's on beta.parliament.uk"
       members_info:
         title: 'MPs and Lords information'
         current_mps: 'View all current members of the House of Commons.'
