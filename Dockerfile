@@ -23,7 +23,7 @@ WORKDIR /app
 
 # Install system and application dependencies.
 RUN echo "Environment (RACK_ENV): $RACK_ENV" && \
-    apk --update add --virtual build-dependencies build-base ruby-dev && \
+    apk --update add --virtual build-dependencies build-base ruby-dev libcurl && \
     gem install bundler --no-ri --no-rdoc && \
     if [ "$RACK_ENV" == "production" ]; then \
       bundle install --without development test --path vendor/bundle; \
