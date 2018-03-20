@@ -14,7 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'haml'
 
 # Use Parliament-Ruby for web requests
-gem 'parliament-ruby', '1.0.0.pre4'
+gem 'parliament-ruby', '1.0.0.pre5'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
 gem 'parliament-opensearch', '~> 0.3', require: false
