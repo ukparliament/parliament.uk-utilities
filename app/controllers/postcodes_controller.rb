@@ -13,6 +13,10 @@ class PostcodesController < ApplicationController
   def show
     @postcode = Parliament::Utils::Helpers::PostcodeHelper.unhyphenate(Sanitize.fragment(params[:postcode], Sanitize::Config::RELAXED))
 
+    # Handle redirects if we are coming from the MPs or Find My Constituency pages
+    previous_path = session[:postcode_previous_path].dup
+    session.delete(:postcode_previous_path)
+
     begin
       response = Parliament::Utils::Helpers::PostcodeHelper.lookup(@postcode)
 
@@ -20,27 +24,20 @@ class PostcodesController < ApplicationController
 
       @constituency = @constituency.first
 
-      if session[:postcode_previous_path] == url_for(action: 'mps', controller: 'home')
-        if @person.empty?
-          flash[:error] = "#{I18n.t('error.no_mp')} #{@constituency.name}."
+      # Set our flash message if no MP is found for this postcode
+      if @person.empty? && previous_path == mps_url
+        flash[:error] = "#{I18n.t('error.no_mp')} #{@constituency.name}."
 
-          redirect_to(session[:postcode_previous_path]) && return
-        else
-          redirect_to(person_path(@person.first.graph_id)) && return
-        end
-      elsif session[:postcode_previous_path] == url_for(action: 'find_your_constituency', controller: 'home')
-        if @person.empty?
-          flash[:error] = "#{I18n.t('error.no_mp')} #{@constituency.name}."
-
-          redirect_to(session[:postcode_previous_path]) && return
-        else
-          redirect_to(constituency_path(@constituency.graph_id)) && return
-        end
+        return redirect_to(previous_path)
       end
+
+      # If the user has come from a specific path, send them on their way
+      return redirect_to(person_path(@person.first.graph_id)) if previous_path == mps_url
+      return redirect_to(constituency_path(@constituency.graph_id)) if previous_path == find_your_constituency_url
     rescue Parliament::Utils::Helpers::PostcodeHelper::PostcodeError => error
       flash[:error] = error.message
       flash[:postcode] = @postcode
-      redirect_to(session[:postcode_previous_path])
+      redirect_to(previous_path)
     end
 
     # Instance variable for single MP pages

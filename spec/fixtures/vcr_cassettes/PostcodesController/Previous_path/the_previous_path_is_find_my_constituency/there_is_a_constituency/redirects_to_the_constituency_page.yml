@@ -40,7 +40,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Date:
-      - Tue, 20 Mar 2018 11:09:02 GMT
+      - Tue, 20 Mar 2018 11:08:56 GMT
     body:
       encoding: UTF-8
       string: "<https://id.parliament.uk/ew2nBXJ7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
@@ -76,5 +76,5 @@ http_interactions:
         <https://id.parliament.uk/schema/Party> .\r\n<https://id.parliament.uk/DIifZMjq>
         <https://id.parliament.uk/schema/partyName> \"partyName - 1\" .\r\n"
     http_version: 
-  recorded_at: Tue, 20 Mar 2018 11:09:02 GMT
+  recorded_at: Tue, 20 Mar 2018 11:08:56 GMT
 recorded_with: VCR 4.0.0
