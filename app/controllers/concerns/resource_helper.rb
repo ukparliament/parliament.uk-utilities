@@ -5,7 +5,8 @@ module ResourceHelper
     ConstituencyGroup: 'constituencies',
     Party:             'parties',
     ParliamentPeriod:  'parliaments',
-    Image:             'media'
+    Image:             'media',
+    WebArticle:        'article'
   }.freeze
 
   def self.get_object_type(node_type)
