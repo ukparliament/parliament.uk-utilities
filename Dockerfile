@@ -12,6 +12,7 @@ ARG BANDIERA_URL
 ARG GTM_KEY
 ARG ASSET_LOCATION_URL
 ARG SECRET_KEY_BASE
+ARG RAILS_LOG_TO_STDOUT
 ARG RACK_ENV=production
 
 # Add Gemfiles.
@@ -23,7 +24,8 @@ WORKDIR /app
 
 # Install system and application dependencies.
 RUN echo "Environment (RACK_ENV): $RACK_ENV" && \
-    apk --update add --virtual build-dependencies build-base ruby-dev libcurl && \
+    apk --update add libcurl && \
+    apk --update add --virtual build-dependencies build-base ruby-dev && \
     gem install bundler --no-ri --no-rdoc && \
     if [ "$RACK_ENV" == "production" ]; then \
       bundle install --without development test --path vendor/bundle; \
@@ -55,6 +57,7 @@ ENV BANDIERA_URL $BANDIERA_URL
 ENV GTM_KEY $GTM_KEY
 ENV ASSET_LOCATION_URL $ASSET_LOCATION_URL
 ENV SECRET_KEY_BASE $SECRET_KEY_BASE
+ENV RAILS_LOG_TO_STDOUT $RAILS_LOG_TO_STDOUT
 ENV RACK_ENV $RACK_ENV
 ENV RAILS_SERVE_STATIC_FILES true
 
