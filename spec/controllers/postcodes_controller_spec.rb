@@ -126,6 +126,44 @@ RSpec.describe PostcodesController, vcr: true do
         end
       end
     end
+
+    context 'the previous path is find_my_constituency' do
+      before(:each) do
+        session[:postcode_previous_path] = controller.url_for(action: 'find_your_constituency', controller: 'home')
+      end
+
+      context 'there is a constituency' do
+        before :each do
+          get :show, params: { postcode: 'SW1P 3JA' }
+        end
+
+        it 'should have a response with http status found (302)' do
+          expect(response).to have_http_status(:found)
+        end
+
+        it 'redirects to the constituency page' do
+          expect(response).to redirect_to(constituency_path('ew2nBXJ7'))
+        end
+      end
+
+      context 'there is no constituency' do
+        before :each do
+          get :show, params: { postcode: 'AAA0 AAA' }
+        end
+
+        it 'should have a response with http status found (302)' do
+          expect(response).to have_http_status(:found)
+        end
+
+        it 'redirects to the find_your_constituency page' do
+          expect(response).to redirect_to(find_your_constituency_path)
+        end
+
+        it 'assigns flash[:error]' do
+          expect(flash[:error]).to eq("We couldn't find the postcode you entered.")
+        end
+      end
+    end
   end
 
   describe 'POST lookup' do
