@@ -1,16 +1,9 @@
 class SearchController < ApplicationController
-before_action :disable_top_navigation, :disable_global_search
+  before_action :disable_top_navigation, :disable_global_search
 
-before_action :enable_pingdom, only: :index
+  before_action :enable_pingdom, only: :index
 
   def index
-    # Setup Parliament Opensearch
-    begin
-      Parliament::Request::OpenSearchRequest.description_url = ENV['OPENSEARCH_DESCRIPTION_URL']
-    rescue Errno::ECONNREFUSED => e
-      raise StandardError, "There was an error getting the description file from OPENSEARCH_DESCRIPTION_URL environment variable value: '#{ENV['OPENSEARCH_DESCRIPTION_URL']}' - #{e.message}"
-    end
-
     @query_parameter = params[:q] || nil
 
     # Show the index page if there is no query passed
@@ -18,6 +11,13 @@ before_action :enable_pingdom, only: :index
 
     # Show empty search page if user searches for an empty string
     return render 'empty_search' if @query_parameter.empty?
+
+    # Fetch the description
+    begin
+      Parliament::Request::OpenSearchRequest.configure_description_url(ENV['OPENSEARCH_DESCRIPTION_URL'], @app_insights_request_id)
+    rescue Errno::ECONNREFUSED => e
+      raise StandardError, "There was an error getting the description file from OPENSEARCH_DESCRIPTION_URL environment variable value: '#{ENV['OPENSEARCH_DESCRIPTION_URL']}' - #{e.message}"
+    end
 
     # Escape @query_parameter that replaces all 'unsafe' characters with a UTF-8 hexcode which is safer to use when making an OpenSearch request
     @query_parameter = SearchHelper.sanitize_query(@query_parameter)
@@ -36,8 +36,12 @@ before_action :enable_pingdom, only: :index
     @count = count_param || Parliament::Request::OpenSearchRequest.open_search_parameters[:count]
     @count = @count.to_i
 
-    request = Parliament::Request::OpenSearchRequest.new(headers: { 'Accept' => 'application/atom+xml',
-                                                                    'Ocp-Apim-Subscription-Key' => ENV['OPENSEARCH_AUTH_TOKEN']},
+    headers = {}.tap do |headers|
+      headers['Accept']                     = 'application/atom+xml'
+      headers['Ocp-Apim-Subscription-Key']  = ENV['OPENSEARCH_AUTH_TOKEN']
+      headers['Request-Id']                 = "#{@app_insights_request_id}1" if @app_insights_request_id
+    end
+    request = Parliament::Request::OpenSearchRequest.new(headers: headers,
                                                          builder: Parliament::Builder::OpenSearchResponseBuilder)
 
     begin

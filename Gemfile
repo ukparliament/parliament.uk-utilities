@@ -17,7 +17,7 @@ gem 'haml'
 gem 'parliament-ruby', '1.0.0.pre6'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '0.4.1', require: false
+gem 'parliament-opensearch', '~> 0.4', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '~> 0.16'
@@ -51,6 +51,9 @@ gem 'rack-rewrite'
 
 # Include time zone information
 gem 'tzinfo-data'
+
+# Include ApplicationInsights for application telemetry
+gem 'application_insights'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
