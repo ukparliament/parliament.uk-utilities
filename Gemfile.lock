@@ -165,7 +165,7 @@ GEM
       ast (~> 2.4.0)
     powerpack (0.1.1)
     public_suffix (3.0.2)
-    pugin (1.6.22)
+    pugin (1.7.01)
     puma (3.10.0)
     rack (2.0.4)
     rack-rewrite (1.5.1)
@@ -319,7 +319,7 @@ DEPENDENCIES
   parliament-routes (~> 0.4)
   parliament-ruby (= 1.0.0.pre6)
   parliament-utils
-  pugin (~> 1.6)
+  pugin (~> 1.7)
   puma (~> 3.10.0)
   rack-rewrite
   rack-timeout

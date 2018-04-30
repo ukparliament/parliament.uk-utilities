@@ -15,18 +15,20 @@
         = render partial: 'postcodes/postcode_lookup', locals: { path: postcodes_lookup_path }
       %ol.list--block
         %li
-          .list--details
-            %h2= link_to("A - Z", constituencies_current_a_z_letter_path('a'))
-            %p= "#{t('view_all').capitalize} #{t('constituency_plural')}."
+          .card
+            .card__details
+              %h2= link_to("A - Z", constituencies_current_a_z_letter_path('a'))
+              %p= "#{t('view_all').capitalize} #{t('constituency_plural')}."
 
 %section
   .container
     .block--border__bottom
       %h2= t('region_plural').capitalize
       %p= t('.find_by_region')
-      %ul.list--block__inline-50
+      %ul.list--block.list--2
         - @places.each do |place|
           %li
-            .list--details
-              %h3= link_to(place.name, places_show_constituencies_path(place.gss_code))
-              %p= "#{place.constituency_count} #{t('constituency_plural')}"
+            .card
+              .card__details
+                %h3= link_to(place.name, places_show_constituencies_path(place.gss_code))
+                %p= "#{place.constituency_count} #{t('constituency_plural')}"

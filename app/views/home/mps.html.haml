@@ -20,15 +20,16 @@
           = link_to(t('.find_by_region'), places_regions_path)
         %ol.list--block
           %li
-            .list--details
-              %h2= link_to(t('.a_z_surname'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id, 'a'))
-              %p= "#{t('view_all').capitalize} #{t('mp_plural')}."
+            .card
+              .card__details
+                %h2= link_to(t('.a_z_surname'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.commons_id, 'a'))
+                %p= "#{t('view_all').capitalize} #{t('mp_plural')}."
   %section
     .container
       .block--border__bottom
         %h2= t('party_plural').capitalize
         %p= t('.find_mp_party')
-        %ul.list--block__inline-50
+        %ul.list--block.list--2
           - @parties.each do |party|
             - unless party.name == "Speaker" # Exclude speaker from list
               %li
@@ -45,7 +46,8 @@
       %ul.list--block
         - @parliaments.each do |parliament|
           %li
-            .list--details
-              %h3= link_to("#{parliament.date_range(date_format: '%Y')} #{t('parliament').capitalize}", parliament_house_members_a_z_letter_path(parliament.graph_id, Parliament::Utils::Helpers::HousesHelper.commons_id, 'a'))
+            .card
+              .card__details
+                %h3= link_to("#{parliament.date_range(date_format: '%Y')} #{t('parliament').capitalize}", parliament_house_members_a_z_letter_path(parliament.graph_id, Parliament::Utils::Helpers::HousesHelper.commons_id, 'a'))
         %li
           %h3= link_to("#{t('view_all').capitalize} #{t('parliament_plural').capitalize}", parliaments_path)
