@@ -18,21 +18,22 @@
       %ol.list--block
         - @results.entries.each_with_index do |entry, index|
           %li
-            .list--details
-              %h2
-                - if entry.hint_types.count >= 1
-                  = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}", 'search-hint': "#{entry.hint_types}", 'search-hint-count': "#{entry.hint_types.count}" })
-                - else
-                  = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}" })
-              %ul.list--inline
-                - entry.hint_types.each do |hint|
-                  - if hint == 'Beta'
-                    %li.hint= hint
+            .card
+              .card__details
+                %h2
+                  - if entry.hint_types.count >= 1
+                    = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}", 'search-hint': "#{entry.hint_types}", 'search-hint-count': "#{entry.hint_types.count}" })
                   - else
-                    %li.hint.theme--grey-4= hint
-                %li.url{ data: { testable: true } }= entry.formatted_url
-              - if entry.content
-                %p= entry.content
+                    = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}" })
+                %ul.list--inline
+                  - entry.hint_types.each do |hint|
+                    - if hint == 'Beta'
+                      %li.hint= hint
+                    - else
+                      %li.hint.theme--grey-4= hint
+                  %li.url{ data: { testable: true } }= entry.formatted_url
+                - if entry.content
+                  %p= entry.content
 
 %section
   .container
