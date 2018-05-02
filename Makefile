@@ -27,7 +27,8 @@ RACK_ENV ?= development
 VERSION = 0.2.$(GO_PIPELINE_COUNTER)
 
 # ECS related variables used to build our image name
-ECS_CLUSTER = ecs
+# Cluster: list all clusters to update, separated by semicolons
+ECS_CLUSTER ?= ecs;ecs_green
 AWS_REGION = eu-west-1
 
 # Tenable.io
@@ -117,7 +118,7 @@ rmi: # Remove local versions of our images.
 
 deploy-ecs: # Deploy our new Docker image onto an AWS cluster (Run in GoCD to deploy to various environments).
 	./aws_ecs/register-task-definition.sh $(APP_NAME)
-	aws ecs update-service --service $(APP_NAME) --cluster $(ECS_CLUSTER) --region $(AWS_REGION) --task-definition $(APP_NAME)
+	./aws_ecs/update-services.sh "$(ECS_CLUSTER)" "$(APP_NAME)" "$(AWS_REGION)"
 
 airbrake: # Notify Airbrake that we have made a new deployment
 	curl -X POST -H "Content-Type: application/json" -d "{ \"environment\":\"${AIRBRAKE_ENVIRONMENT}\", \"username\":\"${AWS_ACCOUNT}\", \"repository\":\"${AIRBRAKE_REPOSITORY}\", \"revision\":\"${GIT_SHA}\", \"version\": \"${GIT_TAG}\" }" "https://airbrake.io/api/v4/projects/${AIRBRAKE_PROJECT_ID}/deploys?key=${AIRBRAKE_PROJECT_KEY}"
