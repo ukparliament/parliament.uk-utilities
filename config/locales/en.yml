@@ -383,7 +383,7 @@ en:
       hybrid_bills:
         title: 'Object to a bill'
         bill_link: 'Object to the Additional Provision to the High Speed Rail (West Midlands to Crewe) Bill'
-        bill_text: 'The deadline is 1pm on Friday 27 April 2018.'
+        bill_text: 'The deadline has passed.'
         blog: 'Read the %{link}.'
         blog_link: 'Object to a bill blog post'
     mps:
