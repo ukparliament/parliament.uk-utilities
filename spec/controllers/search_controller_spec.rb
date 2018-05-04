@@ -20,6 +20,8 @@ RSpec.describe SearchController, vcr: true do
     context 'with a query' do
       context 'with a valid search' do
         before(:each) do
+          allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+          ENV['OPENSEARCH_AUTH_TOKEN'] = 'SECRET'
           get :index, params: { q: 'banana' }
         end
 
@@ -45,6 +47,11 @@ RSpec.describe SearchController, vcr: true do
 
         it 'renders the results template' do
           expect(response).to render_template('results')
+        end
+
+        it 'sends the expected headers to the Search API' do
+          expect(WebMock).to have_requested(:get, 'https://api.parliament.uk/Staging/search/description').with(headers: {'Accept'=>'application/opensearchdescription+xml', 'Expect'=>'', 'Ocp-Apim-Subscription-Key'=>'SECRET', 'Request-Id'=>'|1234abcd.description-1', 'User-Agent'=>'Ruby'})
+          expect(WebMock).to have_requested(:get, 'https://apidataparliament.azure-api.net/search?count=10&q=banana&start=1').with(headers: {'Accept'=>'application/atom+xml', 'Expect'=>'', 'Ocp-Apim-Subscription-Key'=>'SECRET', 'Request-Id'=>'|1234abcd.1', 'User-Agent'=>'Ruby'})
         end
       end
 
@@ -119,16 +126,6 @@ RSpec.describe SearchController, vcr: true do
 
         it 'should sanitize the search term' do
           expect(response.body).to include('alert(document.cookie)')
-        end
-      end
-
-      context 'setting up Parliament Opensearch with a connection refused error' do
-        before(:each) do
-          allow(Parliament::Request::OpenSearchRequest).to receive(:description_url=).and_raise(Errno::ECONNREFUSED)
-        end
-
-        it 'should raise an error' do
-          expect { get :index }.to raise_error(StandardError)
         end
       end
 

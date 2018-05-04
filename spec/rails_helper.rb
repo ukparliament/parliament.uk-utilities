@@ -13,6 +13,10 @@ RSpec.configure do |config|
   Parliament::Utils::TestHelpers.included_modules.each do |m|
     m.load_rspec_config(config)
   end
+
+  config.before(:each) do
+    Parliament::OpenSearch::DescriptionCache.instance_variable_set(:@store, nil)
+  end
 end
 
 

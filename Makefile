@@ -82,6 +82,7 @@ build: # Using the variables defined above, run `docker build`, tagging the imag
 		--build-arg AIRBRAKE_PROJECT_ID=$(AIRBRAKE_PROJECT_ID) \
 		--build-arg AIRBRAKE_PROJECT_KEY=$(AIRBRAKE_PROJECT_KEY) \
 		--build-arg BANDIERA_URL=$(BANDIERA_URL) \
+		--build-arg APPLICATION_INSIGHTS_INSTRUMENTATION_KEY=$(APPLICATION_INSIGHTS_INSTRUMENTATION_KEY) \
 		--build-arg GTM_KEY=$(GTM_KEY) \
 		--build-arg ASSET_LOCATION_URL=$(ASSET_LOCATION_URL) \
 		--build-arg SECRET_KEY_BASE=$(SECRET_KEY_BASE) \

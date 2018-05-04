@@ -27,6 +27,11 @@ module MembersPrototype
       r301 %r{^/(.*)/$}, '/$1'
     end
 
+    # Add ApplicationInsights if we have an instrumentation key
+    if ENV['APPLICATION_INSIGHTS_INSTRUMENTATION_KEY'] && !Rails.env.test?
+      config.middleware.use ApplicationInsights::Rack::TrackRequest, ENV['APPLICATION_INSIGHTS_INSTRUMENTATION_KEY']
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

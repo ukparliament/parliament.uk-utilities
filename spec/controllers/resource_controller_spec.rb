@@ -37,6 +37,16 @@ RSpec.describe ResourceController, vcr: true do
       it 'redirects to correct path' do
         expect(response).to redirect_to(person_path('1AeEPhYf'))
       end
+
+      context 'when the uri is a schema' do
+        before(:each)do
+          get :show, params: { resource_id: 'schema/Person' }
+        end
+
+        it 'redirects to correct path' do
+          expect(response).to render_template('show')
+        end
+      end
     end
 
     context 'when no route exists' do
