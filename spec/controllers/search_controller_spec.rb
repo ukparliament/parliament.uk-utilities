@@ -21,6 +21,7 @@ RSpec.describe SearchController, vcr: true do
       context 'with a valid search' do
         before(:each) do
           allow(controller.request).to receive(:env).and_return({'ApplicationInsights.request.id' => '|1234abcd.'})
+          ENV['OPENSEARCH_DESCRIPTION_URL'] = 'https://api.parliament.uk/Staging/search/description'
           ENV['OPENSEARCH_AUTH_TOKEN'] = 'SECRET'
           get :index, params: { q: 'banana' }
         end
