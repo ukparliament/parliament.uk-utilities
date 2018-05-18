@@ -4,7 +4,16 @@ module PaginationHelper
   end
 
   def first_page
-    current_page < 7 ? 1 : current_page - 5
+    # Set first_page value to 1 when current_page is less-than or equal-to 6.
+    return 1 if current_page <= 6
+
+    # Stop page_range from scrolling when current_page is greater-than the last 4.
+    if (current_page > last_page - (10 - 6) && last_page > 10)
+      return last_page - (10 - 1)
+    end
+
+    # Set first_page to current_page minus 5.
+    current_page - (6 - 1)
   end
 
   def last_page
@@ -32,5 +41,15 @@ module PaginationHelper
   # Generate a start index for a given page number
   def start_index(page)
     (page - 1) * @count + 1
+  end
+
+  def active_tile
+    if (current_page > (@count / 2) && current_page < @count - (@count / 2 - 1))
+      6
+    elsif (current_page > @count - (@count / 2 - 1))
+      @count - (last_page - current_page)
+    else
+      current_page
+    end
   end
 end
