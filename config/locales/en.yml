@@ -353,39 +353,28 @@ en:
   # homepage translations
   home:
     index:
-      title: "Welcome to the UK Parliament's beta website"
-      new_website: "We're building a %{link}. Pages with a beta label are being tested and improved. They may not work for everyone."
-      new_website_link: 'new website for Parliament'
-      old_website: 'Beta pages are separate from the current %{link} website.'
-      old_website_link: 'parliament.uk'
-      feedback:
-        title: 'Give feedback'
-        provide: 'We want your feedback to %{link} further.'
-        provide_link: 'help us improve these pages'
+      title: 'UK Parliament beta website'
+      new_website: "We're building a new website for Parliament. Pages with a beta label are being tested and improved. They may not work for everyone."
+      follow_progress:
+        blog: 'Follow %{link}.'
+        blog_link: 'beta progress on our blog'
       whats_on:
         title: "What's on beta.parliament.uk"
-      members_info:
-        title: 'MPs and Lords information'
-        current_mps: 'View all current members of the House of Commons.'
-        current_lords: 'View all current members of the House of Lords.'
-        current_constituencies: 'Find current MPs by the area they represent.'
-        current_parties: 'Find current MPs and Lords by their party or group.'
-      latest_members:
-        blog: 'Read the %{link}.'
-        blog_link: 'MPs and Lords information blog post'
-      search:
-        blog: 'Read the %{link}.'
-        blog_link: 'Search blog post'
-      follow_progress:
-        title: 'Follow our progress'
-        blog: 'Follow all %{link}.'
-        blog_link: 'new website developments on our blog'
-      hybrid_bills:
-        title: 'Object to a bill'
-        bill_link: 'Object to the Additional Provision to the High Speed Rail (West Midlands to Crewe) Bill'
-        bill_text: 'The deadline has passed.'
-        blog: 'Read the %{link}.'
-        blog_link: 'Object to a bill blog post'
+      mps:
+        title: 'MPs'
+        description: 'Find all members of the House of Commons.'
+      lords:
+        title: 'Lords'
+        description: 'View all members of the House of Lords.'
+      constituencies:
+        title: 'Constituencies'
+        description: 'Find MPs by the area they represent.'
+      parties_and_groups:
+        title: 'Parties and groups'
+        description: 'Find MPs and Lords by their party or group.'
+      guide_to_procedure:
+        title: 'MPs Guide to Procedure'
+        description: 'Guidance on House of Commons procedure for MPs and their staff.'
     mps:
       find_mp: 'Find your MP'
       a_z_surname: 'A - Z by surname'
