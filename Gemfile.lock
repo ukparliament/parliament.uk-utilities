@@ -165,7 +165,7 @@ GEM
       ast (~> 2.4.0)
     powerpack (0.1.1)
     public_suffix (3.0.2)
-    pugin (1.8.5)
+    pugin (1.8.6)
     puma (3.10.0)
     rack (2.0.5)
     rack-rewrite (1.5.1)
