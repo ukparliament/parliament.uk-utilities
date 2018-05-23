@@ -57,10 +57,10 @@ pipelines:
                     arguments:
                       - airbrake
                 - exec:
-                  run_if: any
-                  command: make
-                  arguments:
-                    - rmi
+                    run_if: any
+                    command: make
+                    arguments:
+                      - rmi
 
 
 
