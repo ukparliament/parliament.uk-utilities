@@ -308,6 +308,7 @@ en:
       title: 'Search'
     results:
       title: 'Search results for'
+      page: 'Page'
     no_results: 'There are no results for your search.'
     new_search_eol_message: "You’re using our new search. View your results on the %{link}. We are %{blog_link} on 19 January 2018."
     old_search_linktext: 'old search'
