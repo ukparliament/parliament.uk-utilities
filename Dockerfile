@@ -64,7 +64,7 @@ ENV RACK_ENV $RACK_ENV
 ENV RAILS_SERVE_STATIC_FILES true
 
 # Precompile assets
-RUN rails assets:precompile
+RUN bundle exec rails assets:precompile
 
 # Add additional labels to our image
 ARG GIT_SHA=unknown
