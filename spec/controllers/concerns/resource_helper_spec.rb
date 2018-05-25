@@ -17,7 +17,6 @@ RSpec.describe ResourceHelper, vcr: true do
   end
 
   context 'checking for acceptable object type' do
-
     it 'should return route if node type is an acceptable object type' do
       @types = [:ParliamentaryIncumbency, :Person]
       expect(ResourceHelper.check_acceptable_object_type(@types)).to eq('people')
@@ -31,7 +30,6 @@ RSpec.describe ResourceHelper, vcr: true do
 
 
   context 'exctracting object type from url' do
-
     before(:each) do
       @node_type = 'https://id.parliament.uk/schema/Person'
     end
@@ -39,11 +37,9 @@ RSpec.describe ResourceHelper, vcr: true do
     it 'should extract object type from url' do
       expect(ResourceHelper.get_object_type(@node_type)).to eq(:Person)
     end
-
   end
 
   context 'producing statements for view' do
-
     before(:each) do
       resource_uri = "https://id.parliament.uk/7KNGxTli"
       @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resource_by_id.get(params: { uri: resource_uri })
@@ -54,11 +50,9 @@ RSpec.describe ResourceHelper, vcr: true do
       expect(ResourceHelper.produce_statements(@results)[0]).to be_a(Array)
       expect(ResourceHelper.produce_statements(@results).count).to eq(57)
     end
-
   end
 
   context 'produces an array of types' do
-
     before(:each) do
       resource_uri = "https://id.parliament.uk/7KNGxTli"
       @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resource_by_id.get(params: { uri: resource_uri })
@@ -69,5 +63,4 @@ RSpec.describe ResourceHelper, vcr: true do
       expect(ResourceHelper.store_types(@results)).to include(:Person)
     end
   end
-
 end
