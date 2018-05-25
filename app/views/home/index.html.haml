@@ -3,56 +3,31 @@
 #content.hero{ tabindex: "0" }
   .container
     %h1= t('.title')
-    %p= t('.new_website', link: link_to(t('.new_website_link'), 'https://pds.blog.parliament.uk/2017/02/14/a-new-website-for-parliament-first-public-steps/')).html_safe
-    %p= t('.old_website', link: link_to(t('.old_website_link'), 'https://www.parliament.uk')).html_safe
-
-%section
-  .container
-    %h2= t('.whats_on.title').capitalize
-
-    %h3= t('.hybrid_bills.title').capitalize
-    %ol.list--block
-      %li
-        .list--details
-          %h4= link_to(t('.hybrid_bills.bill_link'), hybrid_bill_path('1'))
-          %p= t('.hybrid_bills.bill_text')
-    .status--highlight
-      %p= t('.hybrid_bills.blog', link: link_to(t('.hybrid_bills.blog_link'), 'https://pds.blog.parliament.uk/2018/02/09/building-a-new-online-service-petitioning-a-hybrid-bill/')).html_safe
-
-    %h3= t('search_s').capitalize
-    %ol.list--block
-      %li
-        .list--details
-          %h4= link_to(t('search_s').capitalize, search_path)
-          %p= t('find_results')
-    .status--highlight
-      %p= t('.search.blog', link: link_to(t('.search.blog_link'), 'https://pds.blog.parliament.uk/2017/09/06/launching-the-new-search-service-on-parliament-uk/')).html_safe
-
-    %h3= t('.members_info.title')
-    %ol.list--block
-      %li
-        .list--details
-          %h4= link_to(t('mp_plural'), mps_path)
-          %p= t('.members_info.current_mps')
-      %li
-        .list--details
-          %h4= link_to(t('lord_plural'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.lords_id, 'a'))
-          %p= t('.members_info.current_lords')
-      %li
-        .list--details
-          %h4= link_to(t('constituency_plural').capitalize, find_your_constituency_path)
-          %p= t('.members_info.current_constituencies')
-      %li
-        .list--details
-          %h4= link_to(t('parties_and_groups').capitalize, house_parties_current_path(Parliament::Utils::Helpers::HousesHelper.commons_id))
-          %p= t('.members_info.current_parties')
-    .status--highlight
-      %p= t('.latest_members.blog', link: link_to(t('.latest_members.blog_link'), 'https://pds.blog.parliament.uk/2017/03/27/uk-parliament-website-public-beta/')).html_safe
-
-%section
-  .container
-    %h2= t('.feedback.title')
-    %p= t('.feedback.provide', link: link_to(t('.feedback.provide_link'), 'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/')).html_safe
-
-    %h2= t('.follow_progress.title')
+    %p= t('.new_website')
     %p= t('.follow_progress.blog', link: link_to(t('.follow_progress.blog_link'), 'https://pds.blog.parliament.uk/category/parliament-uk/')).html_safe
+
+%section.section--major
+  .container
+    %h2.sr-only
+      = t('.whats_on.title')
+    %ol.list--block.list--3
+      %li
+        .list--details
+          %h3= link_to(t('.mps.title'), mps_path)
+          %p= t('.mps.description')
+      %li
+        .list--details
+          %h3= link_to(t('.lords.title'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.lords_id, 'a'))
+          %p= t('.lords.description')
+      %li
+        .list--details
+          %h3= link_to(t('.constituencies.title'), find_your_constituency_path)
+          %p= t('.constituencies.description')
+      %li
+        .list--details
+          %h3= link_to(t('.parties_and_groups.title'), house_parties_current_path(Parliament::Utils::Helpers::HousesHelper.commons_id))
+          %p= t('.parties_and_groups.description')
+      %li
+        .list--details
+          %h3= link_to(t('.guide_to_procedure.title'), collection_path('6i8XQAfD'))
+          %p= t('.guide_to_procedure.description')

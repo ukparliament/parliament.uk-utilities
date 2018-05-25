@@ -27,7 +27,8 @@ RACK_ENV ?= development
 VERSION = 0.2.$(GO_PIPELINE_COUNTER)
 
 # ECS related variables used to build our image name
-ECS_CLUSTER = ecs
+# Cluster: list all clusters to update, separated by semicolons
+ECS_CLUSTER ?= ecs;ecs_green
 AWS_REGION = eu-west-1
 
 # Tenable.io
@@ -81,6 +82,7 @@ build: # Using the variables defined above, run `docker build`, tagging the imag
 		--build-arg AIRBRAKE_PROJECT_ID=$(AIRBRAKE_PROJECT_ID) \
 		--build-arg AIRBRAKE_PROJECT_KEY=$(AIRBRAKE_PROJECT_KEY) \
 		--build-arg BANDIERA_URL=$(BANDIERA_URL) \
+		--build-arg APPLICATION_INSIGHTS_INSTRUMENTATION_KEY=$(APPLICATION_INSIGHTS_INSTRUMENTATION_KEY) \
 		--build-arg GTM_KEY=$(GTM_KEY) \
 		--build-arg ASSET_LOCATION_URL=$(ASSET_LOCATION_URL) \
 		--build-arg SECRET_KEY_BASE=$(SECRET_KEY_BASE) \
@@ -94,8 +96,8 @@ run: # Run the Docker image we have created, mapping the HOST_PORT and CONTAINER
 	docker run --rm -p $(HOST_PORT):$(CONTAINER_PORT) $(IMAGE)
 
 test: # Build the docker image in development mode, using a test PARLIAMENT_BASE_URL. Then run rake within a Docker container using our image.
-	RACK_ENV=development PARLIAMENT_BASE_URL=http://localhost:3030 BANDIERA_URL=http://localhost:5000 make build
-	docker run --rm $(IMAGE):latest bundle exec rake parallel:spec
+	RACK_ENV=development PARLIAMENT_BASE_URL=http://localhost:3030 BANDIERA_URL=http://localhost:5000 OPENSEARCH_DESCRIPTION_URL=https://api.parliament.uk/Staging/search/description make build
+	docker run --rm $(IMAGE):latest bundle exec rake
 
 dev: # Build, bundle and run a development version of our application
 	docker-compose up -d bandiera_db
@@ -113,11 +115,11 @@ scan-image:
 rmi: # Remove local versions of our images.
 	docker rmi -f $(IMAGE):$(VERSION)
 	docker rmi -f $(IMAGE):latest
-	docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}') || true
+	docker images -a | grep "^<none>" | awk '{print $3}' | xargs docker rmi || true
 
 deploy-ecs: # Deploy our new Docker image onto an AWS cluster (Run in GoCD to deploy to various environments).
 	./aws_ecs/register-task-definition.sh $(APP_NAME)
-	aws ecs update-service --service $(APP_NAME) --cluster $(ECS_CLUSTER) --region $(AWS_REGION) --task-definition $(APP_NAME)
+	./aws_ecs/update-services.sh "$(ECS_CLUSTER)" "$(APP_NAME)" "$(AWS_REGION)"
 
 airbrake: # Notify Airbrake that we have made a new deployment
 	curl -X POST -H "Content-Type: application/json" -d "{ \"environment\":\"${AIRBRAKE_ENVIRONMENT}\", \"username\":\"${AWS_ACCOUNT}\", \"repository\":\"${AIRBRAKE_REPOSITORY}\", \"revision\":\"${GIT_SHA}\", \"version\": \"${GIT_TAG}\" }" "https://airbrake.io/api/v4/projects/${AIRBRAKE_PROJECT_ID}/deploys?key=${AIRBRAKE_PROJECT_KEY}"

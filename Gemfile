@@ -17,7 +17,7 @@ gem 'haml'
 gem 'parliament-ruby', '1.0.0.pre6'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.3', require: false
+gem 'parliament-opensearch', '~> 0.4', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '~> 0.16'
@@ -35,7 +35,7 @@ gem 'parliament-ntriple', '~> 0.1', require: false
 gem 'bandiera-client'
 
 # Use Pugin for front-end components and templates
-gem 'pugin', '~> 1.6', require: false
+gem 'pugin', '~> 1.7', require: false
 
 # Use dotenv to override environment variables
 gem 'dotenv'
@@ -52,13 +52,12 @@ gem 'rack-rewrite'
 # Include time zone information
 gem 'tzinfo-data'
 
+# Include ApplicationInsights for application telemetry
+gem 'application_insights'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
-  # Use parallel_tests to run specs across all CPU cores locally
-  gem 'parallel_tests'
-
 end
 
 group :development do

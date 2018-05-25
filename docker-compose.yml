@@ -16,7 +16,7 @@ services:
       PARLIAMENT_BASE_URL: 'http://api:5000/api/v1'
       PARLIAMENT_AUTH_KEY: 'secret'
       BANDIERA_URL: 'http://bandiera:5000'
-      ASSET_LOCATION_URL: 'https://s3-eu-west-1.amazonaws.com/web1devci.pugin-website'
+      ASSET_LOCATION_URL: 'https://static.parliament.uk/pugin'
       GTM_KEY: 'GTM-NNXTVV8'
       RACK_ENV: 'development'
     depends_on:

@@ -24,7 +24,7 @@ module ResourceHelper
     @types = []
     results.each do |result|
       result.statements.each do |statement|
-        if statement.predicate.to_s.include?('#type')
+        if statement.predicate == RDF.type
           @types << get_object_type(statement.object.to_s)
         end
       end

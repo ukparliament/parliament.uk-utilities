@@ -7,12 +7,12 @@ class ResourceController < ApplicationController
   end
 
   def show
-    @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.resource.get(params: { uri: @resource_uri })
+    @results = Parliament::Utils::Helpers::ParliamentHelper.parliament_request(@app_insights_request_id).resource.get(params: { uri: @resource_uri })
 
     types = ResourceHelper.store_types(@results)
     path = ResourceHelper.check_acceptable_object_type(types)
 
-    return redirect_to "/#{path}/#{@resource_id}" if path
+    return redirect_to "/#{path}/#{@resource_id}" if path && !@resource_uri.match?(/\/schema\//)
 
     @statements = ResourceHelper.produce_statements(@results)
   end

@@ -3,9 +3,8 @@ pipelines:
     group: main
     label_template: "${COUNT}"
     environment_variables:
-      ASSET_LOCATION_URL: https://s3-eu-west-1.amazonaws.com/web1live.pugin-website
+      ASSET_LOCATION_URL: https://static.parliament.uk/pugin
       STATIC_ASSET_LOCATION_URL: https://s3-eu-west-1.amazonaws.com/web1live.static-assets
-      RACK_ENV: development
     materials:
       parliament.uk-utilities-git:
         git: https://github.com/ukparliament/parliament.uk-utilities.git
@@ -50,6 +49,11 @@ pipelines:
                     command: make
                     arguments:
                       - airbrake
+                - exec:
+                    run_if: any
+                    command: make
+                    arguments:
+                      - rmi
 
 
 

@@ -18,39 +18,48 @@
       %ol.list--block
         - @results.entries.each_with_index do |entry, index|
           %li
-            .list--details
-              %h2
-                - if entry.hint_types.count >= 1
-                  = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}", 'search-hint': "#{entry.hint_types}", 'search-hint-count': "#{entry.hint_types.count}" })
-                - else
-                  = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}" })
-              %ul.list--inline
-                - entry.hint_types.each do |hint|
-                  - if hint == 'Beta'
-                    %li.hint= hint
+            .card
+              .card__details
+                %h2
+                  - if entry.hint_types.count >= 1
+                    = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}", 'search-hint': "#{entry.hint_types}", 'search-hint-count': "#{entry.hint_types.count}" })
                   - else
-                    %li.hint.theme--grey-4= hint
-                %li.url{ data: { testable: true } }= entry.formatted_url
-              - if entry.content
-                %p= entry.content
+                    = link_to(entry.title, entry.url, data: { tracking: 'appInsights', 'search-result': "#{start_index(current_page)+index}" })
+                %ul.list--inline
+                  - entry.hint_types.each do |hint|
+                    - if hint == 'Beta'
+                      %li.hint= hint
+                    - else
+                      %li.hint.theme--grey-4= hint
+                  %li.url{ data: { testable: true } }= entry.formatted_url
+                - if entry.content
+                  %p= entry.content
 
 %section
   .container
     - if @results_total.to_i >= 1
-      %nav.navigation--number{ aria: { label: 'Pagination' } }
-        - unless current_page == 1
-          = link_to(t('pagination.previous'), search_path(q: @query_parameter, start_index: start_index(previous_page), count: @count).html_safe, { class: "navigation-control--left" })
+      %nav.navigation--number{ aria: { label: 'Pagination' }, data: { active: { tile: active_tile }} }
 
-        - unless current_page == last_page
-          = link_to(t('pagination.next'), search_path(q: @query_parameter, start_index: start_index(next_page), count: @count).html_safe, { class: "navigation-control--right" })
+        - unless current_page == 1
+          = link_to(t('pagination.previous'), search_path(q: @query_parameter, start_index: start_index(previous_page), count: @count).html_safe, { class: "navigation-control" })
 
         %ol
           - page_range.each do |page|
             %li{ class: ('active' if (page == current_page)), data: { number: page } }
               - unless page == current_page
-                = link_to(page, search_path(q: @query_parameter, start_index: start_index(page), count: @count).html_safe)
+                = link_to(search_path(q: @query_parameter, start_index: start_index(page), count: @count).html_safe) do
+                  %span= "#{t('search.results.page')} "
+                  %span.count= page
+                  %span= " off #{(@results_total.to_f / @count).ceil}"
               - else
-                %span= current_page
+                %span
+                  %span= "#{t('search.results.page')} "
+                  %span.count= current_page
+                  %span= " off #{(@results_total.to_f / @count).ceil}"
+
+        - unless current_page == last_page
+          = link_to(t('pagination.next'), search_path(q: @query_parameter, start_index: start_index(next_page), count: @count).html_safe, { class: "navigation-control" })
+
     - else
       = render partial: 'status_old_search'
       = render partial: 'status_no_results'
