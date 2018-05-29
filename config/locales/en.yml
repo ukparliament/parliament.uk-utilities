@@ -89,6 +89,23 @@ en:
     lookup_unavailable: 'postcode check is currently unavailable.'
     postcode_invalid: "we couldn't find the postcode you entered."
     no_mp: "We couldn't find an MP for that postcode.  Your constituency is"
+  # statutory instruments translations
+  statutory_instruments:
+    index:
+      statutory_instrument: 'statutory instrument'
+      si_intro_a: 'Statutory instruments (SIs) are documents created by a government department to make a minor change to the law. They are usually published with an explanatory memorandum, which explains the purpose of the SI and why the change is necessary.'
+      si_intro_b: 'SIs often have rule, order or regulation in their title.'
+      find_an_si: 'find a statutory instrument'
+      all_statutory_instruments: 'all statutory instruments'
+      draft: 'draft'
+      made: 'made'
+      affirmative: 'affirmative'
+      negative: 'negative'
+      more_info: 'more information'
+      ukp_sis_link: 'Secondary legislation and SIs'
+      ukp_sis_description: 'Find out more about secondary legislation and SIs on the current Parliament.uk website.'
+      gtp_sis_link: 'MPs Guide to Procedure'
+      gtp_sis_description: 'Guidance on House of Commons secondary legislation and SI procedure for MPs and their staff.'
   # people translations
   people:
     index:
