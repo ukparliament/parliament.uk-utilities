@@ -314,10 +314,10 @@ DEPENDENCIES
   dotenv
   haml
   listen (>= 3.0.5, < 3.2)
-  parliament-grom-decorators (~> 0.16)
+  parliament-grom-decorators (~> 0.2)
   parliament-ntriple (~> 0.1)
   parliament-opensearch (~> 0.4)
-  parliament-routes (~> 0.4)
+  parliament-routes (~> 0.6)
   parliament-ruby (= 1.0.0.pre6)
   parliament-utils
   pugin (~> 1.7)
