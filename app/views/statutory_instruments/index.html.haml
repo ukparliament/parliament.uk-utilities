@@ -17,16 +17,16 @@
           %h3= link_to(t('.all_statutory_instruments').capitalize, work_packages_path)
       %li
         .list--details
-          %h3= link_to("#{t('.draft').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedures_path('H5YJQsK2'))
+          %h3= link_to("#{t('.draft').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedure_path('H5YJQsK2'))
       %li
         .list--details
-          %h3= link_to("#{t('.draft').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedures_path('gTgidlJl'))
+          %h3= link_to("#{t('.draft').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_path('gTgidlJl'))
       %li
         .list--details
-          %h3= link_to("#{t('.made').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedures_path('iWugpxMn'))
+          %h3= link_to("#{t('.made').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedure_path('iWugpxMn'))
       %li
         .list--details
-          %h3= link_to("#{t('.made').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedures_path('5S6p4YsP'))
+          %h3= link_to("#{t('.made').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_path('5S6p4YsP'))
 
 %section
   .container
@@ -35,7 +35,7 @@
     %ol.list--block
       %li
         .list--details
-          %h3= link_to(t('.ukp_sis_link').capitalize, 'https://www.parliament.uk/about/how/laws/delegated/').html_safe
+          %h3= link_to(t('.ukp_sis_link'), 'https://www.parliament.uk/about/how/laws/delegated/').html_safe
           %p= t('.ukp_sis_description')
       %li
         .list--details
