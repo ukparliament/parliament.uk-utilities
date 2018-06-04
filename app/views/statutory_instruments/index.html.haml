@@ -13,20 +13,25 @@
 
     %ol.list--block
       %li
-        .list--details
-          %h3= link_to(t('.all_statutory_instruments').capitalize, work_packages_path)
+        .card
+          .card__details
+            %h3= link_to(t('.all_statutory_instruments').capitalize, work_packages_path)
       %li
-        .list--details
-          %h3= link_to("#{t('.draft').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedure_path('H5YJQsK2'))
+        .card
+          .card__details
+            %h3= link_to("#{t('.draft').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedure_path('H5YJQsK2'))
       %li
-        .list--details
-          %h3= link_to("#{t('.draft').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_path('gTgidljI'))
+        .card
+          .card__details
+            %h3= link_to("#{t('.draft').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_path('gTgidljI'))
       %li
-        .list--details
-          %h3= link_to("#{t('.made').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedure_path('iWugpxMn'))
+        .card
+          .card__details
+            %h3= link_to("#{t('.made').capitalize} #{t('.affirmative')} #{t('.statutory_instrument').pluralize}", procedure_path('iWugpxMn'))
       %li
-        .list--details
-          %h3= link_to("#{t('.made').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_path('5S6p4YsP'))
+        .card
+          .card__details
+            %h3= link_to("#{t('.made').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_path('5S6p4YsP'))
 
 %section
   .container
@@ -34,10 +39,12 @@
 
     %ol.list--block
       %li
-        .list--details
-          %h3= link_to(t('.ukp_sis_link'), 'https://www.parliament.uk/about/how/laws/delegated/').html_safe
-          %p= t('.ukp_sis_description')
+        .card
+          .card__details
+            %h3= link_to(t('.ukp_sis_link'), 'https://www.parliament.uk/about/how/laws/delegated/').html_safe
+            %p= t('.ukp_sis_description')
       %li
-        .list--details
-          %h3= link_to(t('.gtp_sis_link'), collection_path('lA7IUL12'))
-          %p= t('.gtp_sis_description')
+        .card
+          .card__details
+            %h3= link_to(t('.gtp_sis_link'), collection_path('lA7IUL12'))
+            %p= t('.gtp_sis_description')
