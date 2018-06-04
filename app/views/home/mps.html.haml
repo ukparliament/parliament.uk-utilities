@@ -33,9 +33,10 @@
           - @parties.each do |party|
             - unless party.name == "Speaker" # Exclude speaker from list
               %li
-                .list--details__inline
-                  %h3= link_to(party.name, house_parties_party_members_current_path(Parliament::Utils::Helpers::HousesHelper.commons_id,party.graph_id))
-                  %p= "- #{party.member_count} #{t('mp_count', count: party.member_count)}"
+                .card--inline
+                  .card--details
+                    %h3= link_to(party.name, house_parties_party_members_current_path(Parliament::Utils::Helpers::HousesHelper.commons_id,party.graph_id))
+                    %p= "- #{party.member_count} #{t('mp_count', count: party.member_count)}"
         %p= t('.speaker_clarification', the_speaker: link_to(t('.the_speaker'), person_path(@speaker.first.graph_id))).html_safe
 
 %section
