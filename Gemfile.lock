@@ -140,7 +140,7 @@ GEM
     nokogumbo (1.5.0)
       nokogiri
     parallel (1.12.1)
-    parliament-grom-decorators (0.27.1)
+    parliament-grom-decorators (0.27.3)
     parliament-ntriple (0.3.0)
       grom (~> 0.5)
     parliament-opensearch (0.5.2)
@@ -165,7 +165,7 @@ GEM
       ast (~> 2.4.0)
     powerpack (0.1.1)
     public_suffix (3.0.2)
-    pugin (1.8.8)
+    pugin (1.8.9)
     puma (3.10.0)
     rack (2.0.5)
     rack-rewrite (1.5.1)
