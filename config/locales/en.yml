@@ -394,6 +394,9 @@ en:
       guide_to_procedure:
         title: 'MPs Guide to Procedure'
         description: 'Guidance on House of Commons procedure for MPs and their staff.'
+      statutory_instruments:
+        title: 'Statutory instruments'
+        description: 'Find all statutory instruments and follow their progress.'
     mps:
       find_mp: 'Find your MP'
       a_z_surname: 'A - Z by surname'
