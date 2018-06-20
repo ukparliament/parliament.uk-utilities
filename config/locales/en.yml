@@ -94,7 +94,7 @@ en:
   statutory_instruments:
     index:
       statutory_instrument: 'statutory instrument'
-      si_intro_a: 'Statutory instruments (SIs) are documents created by a government department to make a minor change to the law. They are usually published with an explanatory memorandum, which explains the purpose of the SI and why the change is necessary.'
+      si_intro_a: 'Statutory instruments (SIs) are documents created by a government department to make changes to the law. They are usually published with an explanatory memorandum, which explains the purpose of the SI and why the change is necessary.'
       si_intro_b: 'SIs often have rule, order or regulation in their title.'
       find_an_si: 'find a statutory instrument'
       all_statutory_instruments: 'all statutory instruments'
