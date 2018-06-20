@@ -1,6 +1,7 @@
 .section--primary
   .container
-    %h1= title(t('mp_plural'))
+    %h1
+      %span= title(t('mp_plural'))
 
 - if Parliament::Utils::Helpers::FlagHelper.dissolution?
   %section

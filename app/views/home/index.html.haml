@@ -2,7 +2,8 @@
 
 #content.hero{ tabindex: "0" }
   .container
-    %h1= t('.title')
+    %h1
+      %span= t('.title')
     %p= t('.new_website')
     %p= t('.follow_progress.blog', link: link_to(t('.follow_progress.blog_link'), 'https://pds.blog.parliament.uk/category/parliament-uk/')).html_safe
 
