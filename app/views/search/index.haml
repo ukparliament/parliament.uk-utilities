@@ -3,6 +3,7 @@
 
 #content.section--primary{ tabindex: "0" }
   .container
-    %h1= t('search.index.title')
+    %h1
+      %span= t('search.index.title')
 
     = render partial: 'search_box'

@@ -4,7 +4,7 @@
 .section--primary
   .container
     %h1
-      = t('search.index.title')
+      %span= t('search.index.title')
       %span.sr-only &ldquo;#{@query_parameter}&rdquo;
 
     = render partial: 'search_box'

@@ -1,5 +1,6 @@
 #content.section--primary{ tabindex: "0" }
   .container
-    %h1= title(t('.title')).capitalize
+    %h1
+      %span= title(t('.title')).capitalize
 
     = render partial: 'postcodes/postcode_lookup', locals: { path: postcodes_lookup_path }
