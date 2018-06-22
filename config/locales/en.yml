@@ -105,8 +105,6 @@ en:
       more_info: 'more information'
       ukp_sis_link: 'Secondary legislation and SIs'
       ukp_sis_description: 'Find out more about secondary legislation and SIs on the current Parliament.uk website.'
-      gtp_sis_link: 'MPs Guide to Procedure'
-      gtp_sis_description: 'Guidance on House of Commons secondary legislation and SI procedure for MPs and their staff.'
   # people translations
   people:
     index:
