@@ -77,6 +77,7 @@ build: # Using the variables defined above, run `docker build`, tagging the imag
 		--build-arg IMAGE_SERVICE_URL=$(IMAGE_SERVICE_URL) \
 		--build-arg PARLIAMENT_BASE_URL=$(PARLIAMENT_BASE_URL) \
 		--build-arg PARLIAMENT_AUTH_TOKEN=$(PARLIAMENT_AUTH_TOKEN) \
+		--build-arg PARLIAMENT_API_VERSION=$(PARLIAMENT_API_VERSION) \
 		--build-arg OPENSEARCH_DESCRIPTION_URL=$(OPENSEARCH_DESCRIPTION_URL) \
 		--build-arg OPENSEARCH_AUTH_TOKEN=$(OPENSEARCH_AUTH_TOKEN) \
 		--build-arg AIRBRAKE_PROJECT_ID=$(AIRBRAKE_PROJECT_ID) \

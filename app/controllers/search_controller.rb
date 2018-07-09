@@ -39,6 +39,7 @@ class SearchController < ApplicationController
     headers = {}.tap do |headers|
       headers['Accept']                     = 'application/atom+xml'
       headers['Ocp-Apim-Subscription-Key']  = ENV['OPENSEARCH_AUTH_TOKEN']
+      headers['Api-Version']                = ENV['PARLIAMENT_API_VERSION'] if ENV['PARLIAMENT_API_VERSION']
       headers['Request-Id']                 = "#{@app_insights_request_id}1" if @app_insights_request_id
     end
     request = Parliament::Request::OpenSearchRequest.new(headers: headers,
