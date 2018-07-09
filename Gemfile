@@ -14,7 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'haml'
 
 # Use Parliament-Ruby for web requests
-gem 'parliament-ruby', '1.0.0.pre6'
+gem 'parliament-ruby', '~> 1.0'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
 gem 'parliament-opensearch', '~> 0.4', require: false
@@ -36,9 +36,6 @@ gem 'bandiera-client'
 
 # Use Pugin for front-end components and templates
 gem 'pugin', '~> 1.7', require: false
-
-# Use dotenv to override environment variables
-gem 'dotenv'
 
 # Use sanitize to prevent cross site scripting
 gem 'sanitize'

@@ -5,6 +5,8 @@ pipelines:
     environment_variables:
       ASSET_LOCATION_URL: https://static.parliament.uk/pugin
       STATIC_ASSET_LOCATION_URL: https://s3-eu-west-1.amazonaws.com/web1live.static-assets
+      RACK_ENV: development
+      PARLIAMENT_API_VERSION: Staging
     materials:
       parliament.uk-utilities-git:
         git: https://github.com/ukparliament/parliament.uk-utilities.git
