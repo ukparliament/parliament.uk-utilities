@@ -395,6 +395,10 @@ en:
       statutory_instruments:
         title: 'Statutory instruments'
         description: 'Find all statutory instruments and follow their progress.'
+      activity_in_parliament:
+        title: "Activity in Parliament"
+      guides:
+        title: "Guides"
     mps:
       find_mp: 'Find your MP'
       a_z_surname: 'A - Z by surname'

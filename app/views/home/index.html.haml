@@ -9,8 +9,8 @@
 
 %section.section--major.section--wide
   .container
-    %h2.sr-only
-      = t('.whats_on.title')
+    %h2
+      = t('mps_and_lords')
     %ol.list--block.list--3
       %li
         .card
@@ -32,13 +32,22 @@
           .card__details
             %h3= link_to(t('.parties_and_groups.title'), house_parties_current_path(Parliament::Utils::Helpers::HousesHelper.commons_id))
             %p= t('.parties_and_groups.description')
-      %li
-        .card
-          .card__details
-            %h3= link_to(t('.guide_to_procedure.title'), collection_path('6i8XQAfD'))
-            %p= t('.guide_to_procedure.description')
+
+
+    %h2
+      = t('.activity_in_parliament.title')
+    %ol.list--block.list--3
       %li
         .card
           .card__details
             %h3= link_to(t('.statutory_instruments.title'), statutory_instruments_path)
             %p= t('.statutory_instruments.description')
+
+    %h2
+      = t('.guides.title')
+    %ol.list--block.list--3
+      %li
+        .card
+          .card__details
+            %h3= link_to(t('.guide_to_procedure.title'), collection_path('6i8XQAfD'))
+            %p= t('.guide_to_procedure.description')
