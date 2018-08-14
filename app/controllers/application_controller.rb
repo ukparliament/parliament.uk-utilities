@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   # Controller helper methods available from Pugin::Helpers::ControllerHelpers
   #
   # Used to turn Pugin Features on and off at a controller level
-  before_action :populate_request_id, :reset_bandiera_features, :enable_top_navigation, :enable_global_search, :enable_status_banner, :reset_alternates, :disable_pingdom
+  before_action :populate_request_id, :reset_bandiera_features, :enable_global_search, :enable_status_banner, :reset_alternates, :disable_pingdom
 
   # Rescues from a Parliament::ClientError and raises an ActionController::RoutingError
   rescue_from Parliament::ClientError do |error|

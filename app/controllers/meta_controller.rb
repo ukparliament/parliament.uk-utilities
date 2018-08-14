@@ -1,5 +1,4 @@
 class MetaController < ApplicationController
-  before_action :disable_top_navigation
 
   def index
     @meta_routes = []
@@ -20,7 +19,5 @@ class MetaController < ApplicationController
     render 'cookie_policy'
   end
 
-  def who_should_i_contact_with_my_issue
-    enable_top_navigation
-  end
+  def who_should_i_contact_with_my_issue; end
 end
