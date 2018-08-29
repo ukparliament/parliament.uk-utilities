@@ -372,7 +372,7 @@ en:
   home:
     index:
       title: 'UK Parliament beta website'
-      new_website: "We're building a new website for Parliament. Pages with a beta label are being tested and improved. They may not work for everyone."
+      new_website: "We're building a new website for Parliament. Pages are being tested and improved. They may not work for everyone."
       follow_progress:
         blog: 'Follow %{link}.'
         blog_link: 'beta progress on our blog'
