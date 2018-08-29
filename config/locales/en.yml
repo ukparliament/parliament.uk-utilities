@@ -507,7 +507,7 @@ en:
         intro_text: 'For free, impartial advice on money, legal and consumer issues contact %{link}.'
         intro_text_link: 'Citizens Advice'
       when_should_i_contact_the_ombudsman_association:
-        title: 'When should i contact the Ombudsman Association?'
+        title: 'When should I contact the Ombudsman Association?'
         intro_text: 'If you have a private dispute with a landlord, employer or company, the %{link} may be able to help.'
         intro_text_link: 'Ombudsman Association'
       when_should_i_contact_the_government:
