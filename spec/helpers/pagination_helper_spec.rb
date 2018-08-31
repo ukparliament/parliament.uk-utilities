@@ -24,13 +24,13 @@ RSpec.describe PaginationHelper do
 
     it 'calculates the first page when the current page is more than 7' do
       @test_class.instance_variable_set(:@start_index, 81)
-      expect(@test_class.first_page).to eq(4)
+      expect(@test_class.first_page).to eq(5)
     end
 
     it 'calculates the first page when the current page is greater than or equal to 7' do
       @test_class.instance_variable_set(:@start_index, 531)
       @test_class.instance_variable_set(:@results_total, 536)
-      expect(@test_class.first_page).to eq(45)
+      expect(@test_class.first_page).to eq(47)
     end
   end
 
@@ -42,13 +42,13 @@ RSpec.describe PaginationHelper do
 
     it 'calculates the last page when the current page is less than 7' do
       @test_class.instance_variable_set(:@results_total, 154)
-      expect(@test_class.last_page).to eq(10)
+      expect(@test_class.last_page).to eq(8)
     end
 
     it 'calculates the last page when the current page is more than 7 and the results_total / count is more than 4 above the current page' do
       @test_class.instance_variable_set(:@start_index, 81)
       @test_class.instance_variable_set(:@results_total, 154)
-      expect(@test_class.last_page).to eq(13)
+      expect(@test_class.last_page).to eq(12)
     end
 
     it 'calculates the last page when the current page is more than 7 and the results_total / count is less than 4 above the current page' do
@@ -62,7 +62,7 @@ RSpec.describe PaginationHelper do
   context '#page_range' do
     it 'calculates the page_range' do
       @test_class.instance_variable_set(:@results_total, 154)
-      expect(@test_class.page_range).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+      expect(@test_class.page_range).to eq([1, 2, 3, 4, 5, 6, 7, 8])
     end
   end
 
@@ -94,7 +94,7 @@ RSpec.describe PaginationHelper do
     it 'checks if active page is tile 6' do
       @test_class.instance_variable_set(:@start_index, 61)
       @test_class.instance_variable_set(:@results_total, 536)
-      expect(@test_class.active_tile).to eq(6)
+      expect(@test_class.active_tile).to eq(7)
     end
 
     it 'checks if active page is tile 8' do
