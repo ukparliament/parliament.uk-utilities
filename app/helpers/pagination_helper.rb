@@ -8,21 +8,21 @@ module PaginationHelper
     return 1 if current_page <= 6
 
     # Stop page_range from scrolling when current_page is greater-than the last 4.
-    if (current_page > last_page - (10 - 6) && last_page > 10)
-      return last_page - (10 - 1)
+    if (current_page > last_page - (8 - 6) && last_page > 8)
+      return last_page - (8 - 1)
     end
 
     # Set first_page to current_page minus 5.
-    current_page - (6 - 1)
+    current_page - (5 - 1)
   end
 
   def last_page
-    if @results_total.to_i < 10 * @count
+    if @results_total.to_i < 8 * @count
       (@results_total.to_f / @count).ceil
     elsif current_page < 7
-      10
+      8
     else
-      current_page + 4 < (@results_total.to_f / @count).ceil ? current_page + 4 : (@results_total.to_f / @count).ceil
+      current_page + 3 < (@results_total.to_f / @count).ceil ? current_page + 3 : (@results_total.to_f / @count).ceil
     end
   end
 
