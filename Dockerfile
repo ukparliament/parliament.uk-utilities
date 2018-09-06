@@ -1,4 +1,4 @@
-FROM ruby:2.5.0-alpine3.7
+FROM ruby:2.5.1-alpine3.7
 
 # Add command line argument variables used to cusomise the image at build-time.
 ARG IMAGE_SERVICE_URL
