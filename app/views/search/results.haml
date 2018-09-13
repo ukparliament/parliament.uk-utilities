@@ -59,5 +59,7 @@
         = link_to(t('pagination.next'), search_path(q: @query_parameter, start_index: start_index(next_page), count: @count).html_safe, { class: "navigation-control" })
 
 - else
-  = render partial: 'status_old_search'
-  = render partial: 'status_no_results'
+  %section#content{ tabindex: "0" }
+    .container
+      = render partial: 'status_old_search'
+      = render partial: 'status_no_results'
