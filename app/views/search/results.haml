@@ -14,7 +14,6 @@
 - if @results_total.to_i >= 1
   %section#content{ tabindex: "0" }
     .container
-      = render partial: 'status_old_search'
       %ol.list--block
         - @results.entries.each_with_index do |entry, index|
           %li
@@ -61,5 +60,4 @@
 - else
   %section#content{ tabindex: "0" }
     .container
-      = render partial: 'status_old_search'
       = render partial: 'status_no_results'
