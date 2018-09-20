@@ -2,5 +2,5 @@
   .input-group
     %label.sr-only{ for: 'search_box' } Enter a keyword
     %input{ type: 'search', name: 'q', value: @query_parameter, id: 'search_box', maxlength: '1000', pattern: '^(?!.*<script|<Script).*$', required: '' }
-    %button{ class: 'btn--white', type: 'submit', aria: { label: 'submit search'}, data: { tracking: 'search' } }
+    %button{ class: 'btn--white', type: 'submit', aria: { label: 'submit search'} }
       = render partial: 'pugin/icons/search'
