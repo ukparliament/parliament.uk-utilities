@@ -1,5 +1,0 @@
-.status--highlight
-  - if BANDIERA_CLIENT.enabled?('parliament', 'show-classic-search-eol-messaging')
-    %p= t('search.new_search_eol_message', link: link_to(t('search.old_search_linktext'), "https://www.parliament.uk/search/results/?new-search-opt-out=true&q=#{@query_parameter}", data: { tracking: 'appInsights', type: 'backToOldSearch' }), blog_link: link_to(t('search.switching_off_linktext'), 'https://pds.blog.parliament.uk/2018/01/15/switching-off-our-old-search-service/', data: { tracking: 'appInsights', type: 'switchingOffOldSearchBlog' })).html_safe
-  - else
-    %p= t('search.new_search', blog_link: link_to(t('search.switched_off_linktext'), 'https://pds.blog.parliament.uk/2018/01/15/switching-off-our-old-search-service/', data: { tracking: 'appInsights', type: 'switchingOffOldSearchBlog' })).html_safe
