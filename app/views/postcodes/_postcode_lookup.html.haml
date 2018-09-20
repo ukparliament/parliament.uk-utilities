@@ -11,7 +11,6 @@
     = label_tag 'postcode', t('.search_by_postcode')
     = text_field_tag(:postcode, @postcode, value: flash[:postcode], maxlength: 8, pattern:'[0-9a-zA-Z ]{5,}')
     - button_text = @person.nil? && @constituency.nil? ? "Find" : "Check"
-    %button{ class: 'btn--primary', value: button_text, type: 'submit', data: { tracking: 'postcode' } }
-      = button_text
+    %button{ class: 'btn--primary', type: 'submit' }= button_text
 
 %p= t('.do_not_know_postcode', link: link_to(t('.do_not_know_postcode_link'), 'http://www.royalmail.com/find-a-postcode')).html_safe
