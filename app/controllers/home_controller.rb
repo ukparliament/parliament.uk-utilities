@@ -1,12 +1,12 @@
 class HomeController < ApplicationController
   before_action :disable_status_banner
-  before_action :data_check, :build_request, except: :index
+  before_action :data_check, :build_request, except: %i[index find_a_statutory_instrument]
 
   before_action :enable_status_banner
   before_action :enable_pingdom, only: :mps
 
   ROUTE_MAP = {
-    mps: proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.person_mps },
+    mps:                    proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.person_mps },
     find_your_constituency: proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.find_your_constituency }
   }.freeze
 
@@ -25,4 +25,5 @@ class HomeController < ApplicationController
     @places = @places.sort_by(:gss_code)
   end
 
+  def find_a_statutory_instrument; end
 end
