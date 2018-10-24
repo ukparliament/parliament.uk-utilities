@@ -85,7 +85,7 @@ RSpec.describe PostcodesController, vcr: true do
       end
 
       it 'assigns xss flash[:postcode]' do
-        expect(flash[:postcode]).to eq('alert(document.cookie)')
+        expect(flash[:postcode]).to eq('')
       end
 
       it 'redirects xss to constituencies_current' do

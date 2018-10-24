@@ -61,6 +61,20 @@ RSpec.describe HomeController, vcr: true do
     end
   end
 
+  describe 'GET find-a-statutory-instrument' do
+    before(:each) do
+      get :find_a_statutory_instrument
+    end
+
+    it 'should have a response with http status ok (200)' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'should render mps page' do
+      expect(response).to render_template('find_a_statutory_instrument')
+    end
+  end
+
 
   describe '#data_check' do
     context 'data available' do

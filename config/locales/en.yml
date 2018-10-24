@@ -94,6 +94,8 @@ en:
   statutory_instruments:
     index:
       statutory_instrument: 'statutory instrument'
+      status_message: 'This page has moved to %{link}, please update your bookmarks or favourites.'
+      new_location: 'a new location'
       si_intro_a: 'Statutory instruments (SIs) are documents created by a government department to make changes to the law. They are usually published with an explanatory memorandum, which explains the purpose of the SI and why the change is necessary.'
       si_intro_b: 'SIs often have rule, order or regulation in their title.'
       find_an_si: 'find a statutory instrument'
@@ -411,6 +413,20 @@ en:
     find_your_constituency:
       find_constituency: 'Find your constituency'
       find_by_region: 'Find a constituency by region.'
+    find_a_statutory_instrument:
+      statutory_instrument: 'statutory instrument'
+      si_intro_a: 'Statutory instruments (SIs) are documents created by a government department to make changes to the law. They are usually published with an explanatory memorandum, which explains the purpose of the SI and why the change is necessary.'
+      si_intro_b: 'SIs often have rule, order or regulation in their title.'
+      find_an_si: 'find a statutory instrument'
+      all_statutory_instruments: 'all statutory instruments'
+      draft: 'draft'
+      made: 'made'
+      affirmative: 'affirmative'
+      negative: 'negative'
+      proposed: 'proposed'
+      more_info: 'more information'
+      ukp_sis_link: 'Secondary legislation and SIs'
+      ukp_sis_description: 'Find out more about secondary legislation and SIs on the current Parliament.uk website.'
   # meta information translations
   meta:
     index:
