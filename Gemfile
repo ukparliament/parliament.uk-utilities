@@ -17,7 +17,7 @@ gem 'haml'
 gem 'parliament-ruby', '~> 1.0'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.4', require: false
+gem 'parliament-opensearch', '~> 0.7', '>= 0.7.0', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '< 1'
@@ -59,7 +59,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.7.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -69,10 +69,10 @@ end
 group :test do
   gem 'rake'
   gem 'capybara'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.8.1'
   gem 'simplecov', '~> 0.14', require: false
   gem 'vcr'
   gem 'webmock'
   gem 'rubocop'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.2'
 end

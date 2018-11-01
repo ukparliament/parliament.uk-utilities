@@ -109,7 +109,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     macmillan-utils (1.0.44)
@@ -312,7 +312,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   parliament-grom-decorators (< 1)
   parliament-ntriple (~> 0.1)
-  parliament-opensearch (~> 0.4)
+  parliament-opensearch (~> 0.7, >= 0.7.0)
   parliament-routes (~> 0.6)
   parliament-ruby (~> 1.0)
   parliament-utils (>= 0.8.5)
@@ -321,9 +321,9 @@ DEPENDENCIES
   rack-rewrite
   rack-timeout
   rails (~> 5.1.6)
-  rails-controller-testing
+  rails-controller-testing (>= 1.0.2)
   rake
-  rspec-rails
+  rspec-rails (>= 3.8.1)
   rubocop
   sanitize
   simplecov (~> 0.14)
@@ -332,8 +332,8 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   vcr
-  web-console (>= 3.3.0)
+  web-console (>= 3.7.0)
   webmock
 
 BUNDLED WITH
-   1.16.2
+   1.16.6
