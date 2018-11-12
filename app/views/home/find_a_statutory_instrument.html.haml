@@ -1,22 +1,159 @@
-- page_title = title("#{t('.statutory_instrument').capitalize.pluralize}")
+- page_title = title("#{t('.find_an_si').capitalize}")
 
 .section--primary#content{ tabindex: "0" }
   .container
     %h1
       %span= page_title
 
-    %p= t('.si_intro_a')
-    %p= t('.si_intro_b')
+    %p= t('.find_an_si_intro')
+    %p= link_to(t('.all_current_si_link').capitalize, work_packages_paper_type_current_path('statutory-instruments'))
 
 %section
   .container
-    %h2= t('.find_an_si').capitalize
+    %aside{ class: t('dropdown.class'), data: { toggle: t('dropdown.item') } }
+      =button_tag t('.find_by_department').capitalize, class: 'btn--ghost--inverse btn--toggle', type: 'button', data: { toggle: t('dropdown.parent_item') }
 
-    %ol.list--block
+      .dropdown__details{data: { toggle: t('dropdown.content') } }
+        =link_to(t('dropdown.close').capitalize, '#', class: 'btn--close', data: { toggle: t('dropdown.parent_item') })
+        %h2= t('.departments_bodies').capitalize
+        %p= t('.departments_bodies_intro')
+        %ol
+          %li
+            =link_to('Cabinet Office', group_made_available_availability_types_laid_papers_path('7gnSwbLO'))
+          %li
+            =link_to('Department for Business, Energy and Industrial Strategy', group_made_available_availability_types_laid_papers_path('yiuTaSI4'))
+          %li
+            =link_to('Department for Digital, Culture, Media and Sport', group_made_available_availability_types_laid_papers_path('ZU3IXBtP'))
+          %li
+            =link_to('Department for Education', group_made_available_availability_types_laid_papers_path('7dSvuueH'))
+          %li
+            =link_to('Department for Environment, Food and Rural Affairs', group_made_available_availability_types_laid_papers_path('5LQ5Ar74'))
+          %li
+            =link_to('Department for Exiting the European Union', group_made_available_availability_types_laid_papers_path('KSMOf7aM'))
+          %li
+            =link_to('Department for International Development', group_made_available_availability_types_laid_papers_path('g8hByIik'))
+          %li
+            =link_to('Department for International Trade', group_made_available_availability_types_laid_papers_path('ni8aOEk3'))
+          %li
+            =link_to('Department for Transport', group_made_available_availability_types_laid_papers_path('XouN12Ow'))
+          %li
+            =link_to('Department for Work and Pensions', group_made_available_availability_types_laid_papers_path('XbTBTDMo'))
+          %li
+            =link_to('Department of Health and Social Care', group_made_available_availability_types_laid_papers_path('fpWTqVKh'))
+          %li
+            =link_to('Foreign and Commonwealth Office', group_made_available_availability_types_laid_papers_path('UIV7W27r'))
+          %li
+            =link_to('HM Revenue and Customs', group_made_available_availability_types_laid_papers_path('79sn5e3n'))
+          %li
+            =link_to('HM Treasury', group_made_available_availability_types_laid_papers_path('HYfypSOE'))
+          %li
+            =link_to('Home Office', group_made_available_availability_types_laid_papers_path('NDZSYjeE'))
+          %li
+            =link_to('Local Government Boundary Commission for England', group_made_available_availability_types_laid_papers_path('eup4DwE5'))
+          %li
+            =link_to('Ministry of Defence', group_made_available_availability_types_laid_papers_path('DkHdH4kZ'))
+          %li
+            =link_to('Ministry of Housing, Communities and Local Government', group_made_available_availability_types_laid_papers_path('fKqMNz79'))
+          %li
+            =link_to('Ministry of Justice', group_made_available_availability_types_laid_papers_path('BRTNQywN'))
+          %li
+            =link_to('Privy Council Office', group_made_available_availability_types_laid_papers_path('JVJB3tuB'))
+          %li
+            =link_to('Scotland Office', group_made_available_availability_types_laid_papers_path('nFL8Pq3e'))
+          %li
+            =link_to('Wales Office', group_made_available_availability_types_laid_papers_path('kv2Qqfn9'))
+
+    %h2= t('.proposed_negative_title')
+    %p= t('.proposed_negative_intro')
+    %ol.list--pipe
       %li
         .card
-          .card__details
-            %h3= link_to(t('.all_statutory_instruments').capitalize, work_packages_path)
+          .card--details
+            %h3
+              =link_to('Proposed negative statutory instruments', work_packages_paper_type_current_path('proposed-negative-statutory-instruments'))
+
+    %h2= t('.procedure_stage_title').capitalize.pluralize
+    %p= t('.procedure_stage_intro')
+
+    %h3= t('.objection_tabled_title').capitalize
+    %p= t('.objection_tabled_intro')
+    %ol.list--pipe
+      %li
+        .card
+          .card--details
+            %small= t('house_of_commons')
+            %h3
+              =link_to('Motion (prayer) to stop the instrument being law tabled', procedure_step_work_packages_current_path('RnTwilWz'))
+      %li
+        .card
+          .card--details
+            %small= t('house_of_lords')
+            %h3
+              =link_to('Motion (prayer) to stop the instrument being law tabled', procedure_step_work_packages_current_path('pp4QwM9d'))
+
+    %h3= t('.procedure_change_title').capitalize
+    %p= t('.procedure_change_intro')
+    %ol.list--pipe
+      %li
+        .card
+          .card--details
+            %small= t('house_of_commons')
+            %h4
+              =link_to('The European Statutory Instruments Committee (ESIC) recommended that the instrument should follow the affirmative procedure', procedure_step_work_packages_current_path('scSuvkup'))
+      %li
+        .card
+          .card--details
+            %small= t('house_of_lords')
+            %h4
+              =link_to('The Secondary Legislation Scrutiny Committee (SLSC) recommended that the instrument should follow the affirmative procedure', procedure_step_work_packages_current_path('GAGqPaSf'))
+
+    %h3= t('.commmittee_concerns_title').capitalize
+    %p= t('.commmittee_concerns_intro')
+    %ol.list--pipe
+      %li
+        .card
+          .card--details
+            %small= t('both_houses')
+            %h4
+              =link_to('Concerns raised by the Joint Committee on Statutory Instruments (JCSI)', procedure_step_work_packages_current_path('VDT2CWL6'))
+      %li
+        .card
+          .card--details
+            %small= t('house_of_lords')
+            %h4
+              =link_to('Concerns raised by the Secondary Legislation Scrutiny Committee (SLSC)', procedure_step_work_packages_current_path('Kn7FknDd'))
+
+    %h3= t('.debate_scheduled_title').capitalize
+    %p= t('.debate_scheduled_intro')
+    %ol.list--pipe
+      %li
+        .card
+          .card--details
+            %small= t('house_of_commons')
+            %h4
+              =link_to('Scheduled for a Chamber debate', procedure_step_work_packages_current_path('WdiOAL9I'))
+      %li
+        .card
+          .card--details
+            %small= t('house_of_lords')
+            %h4
+              =link_to('Scheduled for a Chamber debate', procedure_step_work_packages_current_path('bEzmXakv'))
+      %li
+        .card
+          .card--details
+            %small= t('house_of_commons')
+            %h4
+              =link_to('Scheduled for a Delegated Legislation Committee (DLC) debate', procedure_step_work_packages_current_path('M28y2NsI'))
+      %li
+        .card
+          .card--details
+            %small= t('house_of_lords')
+            %h4
+              =link_to('Scheduled for a Grand Committee debate', procedure_step_work_packages_current_path('uwTqgHE3'))
+
+    %h2= t('.procedures_title').capitalize.pluralize
+    %p= t('.procedures_intro')
+    %ol.list--pipe
       %li
         .card
           .card__details
@@ -34,18 +171,14 @@
           .card__details
             %h3= link_to("#{t('.made').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_work_packages_path('5S6p4YsP'))
 
+    %h2= t('.all_si_pnsi_title')
+    %p= t('.all_si_pnsi_intro')
+    %ol.list--pipe
       %li
         .card
           .card__details
-            %h3= link_to("#{t('.proposed').capitalize} #{t('.negative')} #{t('.statutory_instrument').pluralize}", procedure_work_packages_path('iCdMN1MW'))
-
-%section
-  .container
-    %h2= t('.more_info').capitalize
-
-    %ol.list--block
+            %h3= link_to(t('.all_si_link').capitalize.pluralize, work_packages_paper_type_path('statutory-instruments'))
       %li
         .card
           .card__details
-            %h3= link_to(t('.ukp_sis_link'), 'https://www.parliament.uk/about/how/laws/secondary-legislation/').html_safe
-            %p= t('.ukp_sis_description')
+            %h3= link_to(t('.all_pnsi_link').capitalize.pluralize, work_packages_paper_type_path('proposed-negative-statutory-instruments'))

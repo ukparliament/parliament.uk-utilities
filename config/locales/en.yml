@@ -49,6 +49,7 @@ en:
   house_plural: 'houses'
   house_of_commons: 'House of Commons'
   house_of_lords: 'House of Lords'
+  both_houses: 'House of Commons and House of Lords'
   commons: 'Commons'
   lords: 'Lords'
   # global parliaments translations
@@ -90,6 +91,14 @@ en:
     lookup_unavailable: 'postcode check is currently unavailable.'
     postcode_invalid: "we couldn't find the postcode you entered."
     no_mp: "We couldn't find an MP for that postcode.  Your constituency is"
+  # global dropdown translations
+  dropdown:
+    class: 'dropdown'
+    item: 'item'
+    parent_item: 'parent-item'
+    content: 'content'
+    open: 'open'
+    close: 'close'
   # statutory instruments translations
   statutory_instruments:
     index:
@@ -370,7 +379,7 @@ en:
       description_text: 'There are currently no MPs. Vote today in the general election to choose yours.'
     post_election_message:
       description_text: "As new MPs are announced following the general election, we're updating our pages."
-  # homepage translations
+  # home directory translations
   home:
     index:
       title: 'UK Parliament beta website'
@@ -413,20 +422,37 @@ en:
     find_your_constituency:
       find_constituency: 'Find your constituency'
       find_by_region: 'Find a constituency by region.'
+    # find a statutory instrument translations
     find_a_statutory_instrument:
       statutory_instrument: 'statutory instrument'
-      si_intro_a: 'Statutory instruments (SIs) are documents created by a government department to make changes to the law. They are usually published with an explanatory memorandum, which explains the purpose of the SI and why the change is necessary.'
-      si_intro_b: 'SIs often have rule, order or regulation in their title.'
-      find_an_si: 'find a statutory instrument'
-      all_statutory_instruments: 'all statutory instruments'
       draft: 'draft'
       made: 'made'
       affirmative: 'affirmative'
       negative: 'negative'
-      proposed: 'proposed'
-      more_info: 'more information'
-      ukp_sis_link: 'Secondary legislation and SIs'
-      ukp_sis_description: 'Find out more about secondary legislation and SIs on the current Parliament.uk website.'
+      find_an_si: 'find a statutory instrument'
+      find_an_si_intro: 'Find all statutory instruments (SIs) and follow their progress.'
+      all_current_si_link: 'view all current statutory instruments'
+      find_by_department: 'find by department or body'
+      departments_bodies: 'departments and bodies'
+      departments_bodies_intro: 'Find SIs by the department or body that laid them.'
+      proposed_negative_title: 'Proposed negative SIs'
+      proposed_negative_intro: 'Find current proposed negative SIs that are waiting for a committee recommendation.'
+      procedure_stage_title: 'procedure stage'
+      procedure_stage_intro: 'Find current SIs by a stage in procedure they have completed.'
+      objection_tabled_title: 'objection tabled'
+      objection_tabled_intro: 'Find current SIs that have had a motion (prayer) tabled against them. If agreed to within the objection period, the SI will stop being law.'
+      procedure_change_title: 'recommended for a change in procedure'
+      procedure_change_intro: 'Find current proposed negative SIs that a committee has recommended should follow a different procedure.'
+      commmittee_concerns_title: 'committee concerns raised'
+      commmittee_concerns_intro: 'Find current SIs that a committee has concerns with.'
+      debate_scheduled_title: 'scheduled for a debate'
+      debate_scheduled_intro: 'Find current SIs that are scheduled for a Chamber or committee debate.'
+      procedures_title: 'procedure'
+      procedures_intro: 'Find current SIs by the procedure they follow.'
+      all_si_pnsi_title: 'All SIs and proposed negative SIs'
+      all_si_pnsi_intro: 'View all current and past SIs and proposed negative SIs.'
+      all_si_link: 'all statutory instruments'
+      all_pnsi_link: 'all proposed negative statutory instruments'
   # meta information translations
   meta:
     index:
