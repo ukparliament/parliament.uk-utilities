@@ -18,50 +18,9 @@
         %h2= t('.departments_bodies').capitalize
         %p= t('.departments_bodies_intro')
         %ol
-          %li
-            =link_to('Cabinet Office', group_made_available_availability_types_laid_papers_path('7gnSwbLO'))
-          %li
-            =link_to('Department for Business, Energy and Industrial Strategy', group_made_available_availability_types_laid_papers_path('yiuTaSI4'))
-          %li
-            =link_to('Department for Digital, Culture, Media and Sport', group_made_available_availability_types_laid_papers_path('ZU3IXBtP'))
-          %li
-            =link_to('Department for Education', group_made_available_availability_types_laid_papers_path('7dSvuueH'))
-          %li
-            =link_to('Department for Environment, Food and Rural Affairs', group_made_available_availability_types_laid_papers_path('5LQ5Ar74'))
-          %li
-            =link_to('Department for Exiting the European Union', group_made_available_availability_types_laid_papers_path('KSMOf7aM'))
-          %li
-            =link_to('Department for International Development', group_made_available_availability_types_laid_papers_path('g8hByIik'))
-          %li
-            =link_to('Department for International Trade', group_made_available_availability_types_laid_papers_path('ni8aOEk3'))
-          %li
-            =link_to('Department for Transport', group_made_available_availability_types_laid_papers_path('XouN12Ow'))
-          %li
-            =link_to('Department for Work and Pensions', group_made_available_availability_types_laid_papers_path('XbTBTDMo'))
-          %li
-            =link_to('Department of Health and Social Care', group_made_available_availability_types_laid_papers_path('fpWTqVKh'))
-          %li
-            =link_to('Foreign and Commonwealth Office', group_made_available_availability_types_laid_papers_path('UIV7W27r'))
-          %li
-            =link_to('HM Revenue and Customs', group_made_available_availability_types_laid_papers_path('79sn5e3n'))
-          %li
-            =link_to('HM Treasury', group_made_available_availability_types_laid_papers_path('HYfypSOE'))
-          %li
-            =link_to('Home Office', group_made_available_availability_types_laid_papers_path('NDZSYjeE'))
-          %li
-            =link_to('Local Government Boundary Commission for England', group_made_available_availability_types_laid_papers_path('eup4DwE5'))
-          %li
-            =link_to('Ministry of Defence', group_made_available_availability_types_laid_papers_path('DkHdH4kZ'))
-          %li
-            =link_to('Ministry of Housing, Communities and Local Government', group_made_available_availability_types_laid_papers_path('fKqMNz79'))
-          %li
-            =link_to('Ministry of Justice', group_made_available_availability_types_laid_papers_path('BRTNQywN'))
-          %li
-            =link_to('Privy Council Office', group_made_available_availability_types_laid_papers_path('JVJB3tuB'))
-          %li
-            =link_to('Scotland Office', group_made_available_availability_types_laid_papers_path('nFL8Pq3e'))
-          %li
-            =link_to('Wales Office', group_made_available_availability_types_laid_papers_path('kv2Qqfn9'))
+          - @laying_bodies.each do |laying_body|
+            %li
+              =link_to(laying_body.try(:groupName), group_made_available_availability_types_laid_papers_path(laying_body.graph_id))
 
     %h2= t('.proposed_negative_title')
     %p= t('.proposed_negative_intro')
