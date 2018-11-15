@@ -1,15 +1,15 @@
 class HomeController < ApplicationController
   before_action :disable_status_banner
-  before_action :data_check, :build_request, except: %i[index find_a_statutory_instrument]
+  before_action :data_check, :build_request, except: %i[index]
 
   before_action :enable_status_banner
   before_action :enable_pingdom, only: :mps
 
   ROUTE_MAP = {
-    mps:                    proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.person_mps },
-    find_your_constituency: proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.find_your_constituency }
+    mps:                         proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.person_mps },
+    find_your_constituency:      proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.find_your_constituency },
+    find_a_statutory_instrument: proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.laying_body_index }
   }.freeze
-
 
   def index; end
 
@@ -25,5 +25,9 @@ class HomeController < ApplicationController
     @places = @places.sort_by(:gss_code)
   end
 
-  def find_a_statutory_instrument; end
+  def find_a_statutory_instrument
+    @laying_bodies = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'LayingBody')
+
+    @laying_bodies = @laying_bodies.sort_by(:groupName)
+  end
 end
