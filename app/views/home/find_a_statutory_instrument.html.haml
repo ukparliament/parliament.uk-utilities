@@ -10,17 +10,18 @@
 
 %section
   .container
-    %aside{ class: t('dropdown.class'), data: { toggle: t('dropdown.item') } }
-      =button_tag t('.find_by_department').capitalize, class: 'btn--ghost--inverse btn--toggle', type: 'button', data: { toggle: t('dropdown.parent_item') }
+    %div{ class: t('dropdown.class'), data: { toggle: t('dropdown.item') } }
+      =button_tag t('.find_by_department').capitalize, class: 'btn--ghost--inverse', type: 'button', data: { toggle: t('dropdown.parent_item') }
 
-      .dropdown__details{data: { toggle: t('dropdown.content') } }
-        =link_to(t('dropdown.close').capitalize, '#', class: 'btn--close', data: { toggle: t('dropdown.parent_item') })
-        %h2= t('.departments_bodies').capitalize
-        %p= t('.departments_bodies_intro')
-        %ol
-          - @laying_bodies.each do |laying_body|
-            %li
-              =link_to(laying_body.try(:groupName), group_made_available_availability_types_laid_papers_path(laying_body.graph_id))
+      .dropdown__content{data: { toggle: t('dropdown.content') } }
+        %aside
+          =link_to(t('dropdown.close').capitalize, '#', class: 'btn--close', data: { toggle: t('dropdown.parent_item') })
+          %h2= t('.departments_bodies').capitalize
+          %p= t('.departments_bodies_intro')
+          %ol
+            - @laying_bodies.each do |laying_body|
+              %li
+                =link_to(laying_body.try(:groupName), group_made_available_availability_types_laid_papers_path(laying_body.graph_id))
 
     %h2= t('.proposed_negative_title')
     %p= t('.proposed_negative_intro')
