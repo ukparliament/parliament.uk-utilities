@@ -47,12 +47,12 @@
             - unless page == current_page
               = link_to(search_path(q: @query_parameter, start_index: start_index(page), count: @count).html_safe) do
                 %span= "#{t('search.results.page')} "
-                %span.count= page
+                %span.count__number= page
                 %span= " #{t('of')} #{(@results_total.to_f / @count).ceil}"
             - else
               %span
                 %span= "#{t('search.results.page')} "
-                %span.count= current_page
+                %span.count__number= current_page
                 %span= " #{t('of')} #{(@results_total.to_f / @count).ceil}"
 
       - unless current_page == last_page
