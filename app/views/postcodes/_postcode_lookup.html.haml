@@ -1,6 +1,6 @@
 - if flash[:error]
   .status--highlight.theme--caution
-    %p= flash[:error]
+    %p= sanitize(flash[:error])
 
 = form_tag(path, method: :post, id: :postcodeSearch) do
   .input-group
@@ -9,7 +9,7 @@
     = hidden_field_tag('constituency_id', @constituency.graph_id) if @constituency
     = hidden_field_tag('person_id', @person.graph_id) if @person
     = label_tag 'postcode', t('.search_by_postcode')
-    = text_field_tag(:postcode, @postcode, value: flash[:postcode], maxlength: 8, pattern:'[0-9a-zA-Z ]{5,}')
+    = text_field_tag(:postcode, @postcode, value: flash[:postcode], maxlength: 8, pattern:'[0-9a-zA-Z ]{5,}', required: 'required')
     - button_text = @person.nil? && @constituency.nil? ? "Find" : "Check"
     %button{ class: 'btn--primary', type: 'submit' }= button_text
 

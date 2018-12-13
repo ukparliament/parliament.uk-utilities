@@ -87,10 +87,9 @@ en:
       default: '%-d %b %Y'
   # global error message translations
   error:
-    no_constituency: "we couldn't find the postcode you entered."
-    lookup_unavailable: 'postcode check is currently unavailable.'
-    postcode_invalid: "we couldn't find the postcode you entered."
-    no_mp: "We couldn't find an MP for that postcode.  Your constituency is"
+    lookup_unavailable: 'Postcode check is not available. Please try again later.'
+    postcode_invalid_html: 'We could not find your postcode. If you have any questions, <a href="https://www.parliament.uk/mps-lords-and-offices/offices/commons/hcio/contact-us">contact the House of Commons Enquiry Service</a>.'
+    no_mp: 'We could not find an MP for your postcode. Your constituency is'
   # global dropdown translations
   dropdown:
     class: 'dropdown'

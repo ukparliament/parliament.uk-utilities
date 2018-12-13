@@ -51,7 +51,7 @@ class PostcodesController < ApplicationController
     previous_path = url_for(controller: previous_controller, action: previous_action)
     session[:postcode_previous_path] = previous_path
 
-    return redirect_to previous_path, flash: { error: I18n.t('error.postcode_invalid').capitalize } if raw_postcode.gsub(/\s+/, '').empty?
+    return redirect_to previous_path, flash: { error: "#{ I18n.t('.error.postcode_invalid_html') }" } if raw_postcode.gsub(/\s+/, '').empty?
 
     hyphenated_postcode = Parliament::Utils::Helpers::PostcodeHelper.hyphenate(raw_postcode)
 

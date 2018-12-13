@@ -45,7 +45,7 @@ RSpec.describe PostcodesController, vcr: true do
       end
 
       it 'assigns flash[:error]' do
-        expect(flash[:error]).to eq("We couldn't find the postcode you entered.")
+        expect(flash[:error]).to eq('We could not find your postcode. If you have any questions, <a href="https://www.parliament.uk/mps-lords-and-offices/offices/commons/hcio/contact-us">contact the House of Commons Enquiry Service</a>.')
       end
 
       it 'redirects to constituencies_current' do
@@ -61,7 +61,7 @@ RSpec.describe PostcodesController, vcr: true do
       end
 
       it 'assigns flash[:error]' do
-        expect(flash[:error]).to eq("We couldn't find the postcode you entered.")
+        expect(flash[:error]).to eq('We could not find your postcode. If you have any questions, <a href="https://www.parliament.uk/mps-lords-and-offices/offices/commons/hcio/contact-us">contact the House of Commons Enquiry Service</a>.')
       end
 
       it 'assigns flash[:postcode]' do
@@ -81,7 +81,7 @@ RSpec.describe PostcodesController, vcr: true do
       end
 
       it 'assigns xss flash[:error]' do
-        expect(flash[:error]).to eq("We couldn't find the postcode you entered.")
+        expect(flash[:error]).to eq('We could not find your postcode. If you have any questions, <a href="https://www.parliament.uk/mps-lords-and-offices/offices/commons/hcio/contact-us">contact the House of Commons Enquiry Service</a>.')
       end
 
       it 'assigns xss flash[:postcode]' do
@@ -114,7 +114,7 @@ RSpec.describe PostcodesController, vcr: true do
 
       context 'there is no current MP' do
         it 'assigns flash[:error]' do
-          expect(flash[:error]).to eq("We couldn't find an MP for that postcode.  Your constituency is constituencyGroupName - 1.")
+          expect(flash[:error]).to eq("We could not find an MP for your postcode. Your constituency is constituencyGroupName - 1.")
         end
 
         it 'should have a response with http status found (302)' do
@@ -160,7 +160,7 @@ RSpec.describe PostcodesController, vcr: true do
         end
 
         it 'assigns flash[:error]' do
-          expect(flash[:error]).to eq("We couldn't find the postcode you entered.")
+          expect(flash[:error]).to eq('We could not find your postcode. If you have any questions, <a href="https://www.parliament.uk/mps-lords-and-offices/offices/commons/hcio/contact-us">contact the House of Commons Enquiry Service</a>.')
         end
       end
     end
@@ -183,7 +183,7 @@ RSpec.describe PostcodesController, vcr: true do
       end
 
       it 'assigns flash[:error]' do
-        expect(flash[:error]).to eq("We couldn't find the postcode you entered.")
+        expect(flash[:error]).to eq('We could not find your postcode. If you have any questions, <a href="https://www.parliament.uk/mps-lords-and-offices/offices/commons/hcio/contact-us">contact the House of Commons Enquiry Service</a>.')
       end
 
       it 'redirects to postcodes index' do
