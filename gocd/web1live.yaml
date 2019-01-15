@@ -67,6 +67,6 @@ pipelines:
 
 
 environments:
-  Web.LIVE:
+  WebLIVE:
     pipelines:
       - parliament.uk-utilities
