@@ -318,7 +318,7 @@ en:
   postcodes:
     find_mp_constituency: 'Find your MP and constituency'
     index:
-      title: 'find your constituency'
+      title: 'Find your constituency'
     show:
       title: # title does not require translation
       check_different_postcode: 'Check for a different postcode'

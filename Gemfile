@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.10.0'
@@ -20,10 +20,10 @@ gem 'parliament-ruby', '~> 1.0'
 gem 'parliament-opensearch', '~> 0.4', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
-gem 'parliament-grom-decorators', '< 1'
+gem 'parliament-grom-decorators', '0.32.1'
 
 # Parliament-Utils gem for generic set up and configuration
-gem 'parliament-utils', '~> 0.11', require: false
+gem 'parliament-utils', '~> 0.11.3', require: false
 
 # Parliament routing
 gem 'parliament-routes', '~> 0.6'
@@ -41,7 +41,7 @@ gem 'pugin', '~> 1.10', require: false
 gem 'sanitize'
 
 # Use Airbrake for error monitoring
-gem 'airbrake'
+gem 'airbrake', '<8'
 
 # Gem to remove trailing slashes
 gem 'rack-rewrite'
