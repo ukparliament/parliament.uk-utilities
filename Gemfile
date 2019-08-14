@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2'
+gem 'rails', '~> 5.2', '>= 5.2.2'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.10.0'
@@ -17,7 +17,7 @@ gem 'haml'
 gem 'parliament-ruby', '~> 1.0'
 
 # Use Parliament-Opensearch to handle our Opensearch requests
-gem 'parliament-opensearch', '~> 0.4', require: false
+gem 'parliament-opensearch', '~> 0.7', '>= 0.7.0', require: false
 
 # Parliament Grom Decorators decorates Grom nodes
 gem 'parliament-grom-decorators', '0.32.1'
@@ -38,7 +38,7 @@ gem 'bandiera-client'
 gem 'pugin', '~> 1.10', require: false
 
 # Use sanitize to prevent cross site scripting
-gem 'sanitize'
+gem 'sanitize', '>= 5.0.0'
 
 # Use Airbrake for error monitoring
 gem 'airbrake', '<8'
@@ -59,7 +59,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.7.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -68,11 +68,11 @@ end
 
 group :test do
   gem 'rake'
-  gem 'capybara'
-  gem 'rspec-rails'
+  gem 'capybara', '>= 3.13.2'
+  gem 'rspec-rails', '>= 3.8.2'
   gem 'simplecov', '~> 0.14', require: false
   gem 'vcr'
   gem 'webmock'
   gem 'rubocop'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.4'
 end
