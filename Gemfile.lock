@@ -180,7 +180,7 @@ GEM
     public_suffix (3.0.3)
     pugin (1.10.10)
     puma (3.10.0)
-    rack (2.0.6)
+    rack (2.2.3)
     rack-rewrite (1.5.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
